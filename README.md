@@ -1,5 +1,5 @@
 # LU.Web.Core
-LevelUp v3 web front end application.
+LevelUp v3 web front end application
 
 ## Dependecies
 
