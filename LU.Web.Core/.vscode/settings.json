@@ -1,0 +1,10 @@
+// Place your settings in this file to overwrite the default settings
+{
+    "files.autoSave": "afterDelay",
+
+    "typescript.referencesCodeLens.enabled": true,
+
+    "typescript.implementationsCodeLens.enabled": true,
+
+    "files.trimTrailingWhitespace": true
+}

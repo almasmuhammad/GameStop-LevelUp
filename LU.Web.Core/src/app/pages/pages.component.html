@@ -1,0 +1,26 @@
+<div id="headerContainer">
+  <div id="Header">
+    <nav id="nav" class="navbar navbar-default navbar-static-top" data-spy="affix" data-offset-top="395">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+        <a class="navbar-brand" id="navLogo">
+            <img class="img-responsive siteHeaderNavigation myStuffNavigation leveluplogo" data-i18n="nav.my-stuff" src="../assets/img/levelUpLogo.png" alt="">
+        </a>
+      </div>
+      <div class="collapse navbar-collapse" id="main-navbar">
+        <ul class="nav navbar-nav">
+            <li><a data-toggle="collapse" data-target="#main-navbar" id="navMyStuff" class="siteHeaderNavigation myStuffNavigation" data-i18n="nav.my-stuff">my stuff</a></li>
+            <li><a data-toggle="collapse" data-target="#main-navbar" id="navMyTraining" class="siteHeaderNavigation myTrainingNavigation">my training</a></li>
+            <li><a data-toggle="collapse" data-target="#main-navbar" id="navMyTeam" class="siteHeaderNavigation myTeamNavigation">my team</a></li>                
+            <li><a data-toggle="collapse" data-target="#main-navbar" id="navReports" class="siteHeaderNavigation reportsNavigation" data-i18n="nav.reports">reports</a></li>
+            <li><a data-toggle="collapse" data-target="#main-navbar" id="navCreator" class="siteHeaderNavigation creatorNavigation" data-i18n="nav.creator">creator</a></li>
+        </ul>
+      </div>
+    </div>
+    </nav>
+  </div>
+</div>
+  <div id="content" class="container-fluid content">
+<router-outlet></router-outlet>    
+  </div>
