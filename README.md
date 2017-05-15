@@ -8,7 +8,8 @@ Angular CLI 1.0.1 for code generation, building/linting, and testing.
 
 ## Visual Studio Code and Extension
 
-Debugger for Chrome from Microsoft - allows starting Chrome using a launch config and stepping through TypeScript.
+  - Debugger for Chrome from Microsoft - allows starting Chrome using a launch config and stepping through TypeScript. 
+  - TSLint for Visual Studio Code
 
 ## Polyfills
 
