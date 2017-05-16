@@ -3,11 +3,18 @@ import { CommonModule } from '@angular/common';
 
 import { MyStuffRoutingModule } from './my-stuff-routing.module';
 
+import { MyStuffComponent } from './my-stuff.component';
+
 @NgModule({
   imports: [
     CommonModule,
     MyStuffRoutingModule
   ],
-  declarations: []
+  declarations: [
+    MyStuffComponent]
 })
-export class MyStuffModule { }
+export class MyStuffModule {
+  constructor() {
+    console.log('MyStuff Module constructing...');
+  }
+ }

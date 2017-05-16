@@ -1,4 +1,4 @@
-<div class="loading" *ngIf="!(_userContextService) || (_userContextService && _userContextService.profileModel == null)">
+<!--<div class="loading" *ngIf="!(_userContextService) || (_userContextService && _userContextService.profileModel == null)">
     <div id="circleG">
       <div id="circleG_1" class="circleG"></div>
       <div id="circleG_2" class="circleG"></div>
@@ -18,9 +18,10 @@
       </div>
       <div class="collapse navbar-collapse" id="main-navbar">
         <ul class="nav navbar-nav">
-            <li><a data-toggle="collapse" data-target="#main-navbar" id="navMyStuff" class="siteHeaderNavigation myStuffNavigation" data-i18n="nav.my-stuff">{{'my stuff'}}</a></li>
+     <li><a routerLink="/pages/my_stuff" routerLinkActive="active">{{'my stuff_'}}</a></li>
+
             <li><a data-toggle="collapse" data-target="#main-navbar" id="navMyTraining" class="siteHeaderNavigation myTrainingNavigation">{{'my training'}}</a></li>
-            <li><a data-toggle="collapse" data-target="#main-navbar" id="navMyTeam" class="siteHeaderNavigation myTeamNavigation">{{'my team'}}</a></li>                
+            <li><a data-toggle="collapse" data-target="#main-navbar" id="navMyTeam" class="siteHeaderNavigation myTeamNavigation">{{'my team'}}</a></li>
             <li><a data-toggle="collapse" data-target="#main-navbar" id="navReports" class="siteHeaderNavigation reportsNavigation" data-i18n="nav.reports">{{'reports'}}</a></li>
             <li *ngIf="_userContextService.profileModel.isCreator"><a data-toggle="collapse" data-target="#main-navbar" id="navCreator" class="siteHeaderNavigation creatorNavigation" data-i18n="nav.creator">{{'creator'}}</a></li>
         </ul>
@@ -30,5 +31,5 @@
   </div>
 </div>
   <div id="content" class="container-fluid content">
+  </div>-->
     <router-outlet></router-outlet>
-  </div>
