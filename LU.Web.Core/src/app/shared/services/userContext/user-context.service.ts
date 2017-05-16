@@ -4,7 +4,7 @@ import { Observable } from 'rxjs/Observable';
 
 import { ProfileModel } from '../../models/profile-model';
 import { UserProfileService } from '../userProfile/user-profile.service';
-import { LoggerService } from '../log/logger.service';
+import { LoggerService } from '../logs/logger-service';
 
 @Injectable()
 export class UserContextService {

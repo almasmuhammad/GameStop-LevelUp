@@ -3,7 +3,7 @@ import { HttpModule } from '@angular/http';
 
 import { UserContextService } from './shared/services/userContext/user-context.service';
 import { UserProfileService } from './shared/services/userProfile/user-profile.service';
-import { LoggerService } from './shared/services/log/logger.service';
+import { LoggerService } from './shared/services/logs/logger-service';
 import { WindowService } from './shared/services/window/window.service';
 import { environment } from '../environments/environment';
 
