@@ -1,6 +1,6 @@
+import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { PagesComponent } from './pages.component';
-import { NgModule } from '@angular/core';
 
 export const routes: Routes = [
   { path: 'pages', redirectTo: 'my-stuff', pathMatch: 'full' },
@@ -17,8 +17,7 @@ export const routes: Routes = [
     ]
 }
 ];
-  
-  
+
 @NgModule({
   imports: [
     RouterModule.forChild(routes)
@@ -29,6 +28,5 @@ export const routes: Routes = [
     exports: [
     RouterModule
   ],
-
 })
-export class PagesRouting{}
+export class PagesRoutingModule { }

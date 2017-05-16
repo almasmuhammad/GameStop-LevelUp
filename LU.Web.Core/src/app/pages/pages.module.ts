@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { routing } from './pages-routing.module';
+import { PagesRoutingModule } from './pages-routing.module';
 
 import { PagesComponent } from './pages.component';
 import { MyStuffComponent } from './my-stuff/my-stuff.component';
@@ -13,7 +13,7 @@ import { CreatorComponent } from './creator/creator.component';
 @NgModule({
   imports: [
     CommonModule,
-    routing
+    PagesRoutingModule
   ],
   declarations: [
     PagesComponent,
