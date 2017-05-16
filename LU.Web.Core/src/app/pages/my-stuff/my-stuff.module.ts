@@ -13,8 +13,4 @@ import { MyStuffComponent } from './my-stuff.component';
   declarations: [
     MyStuffComponent]
 })
-export class MyStuffModule {
-  constructor() {
-    console.log('MyStuff Module constructing...');
-  }
- }
+export class MyStuffModule { }

@@ -9,10 +9,10 @@ export const routes: Routes = [
       children: [
         { path: '', redirectTo: 'my-stuff', pathMatch: 'full' },
         { path: 'my-stuff',  loadChildren: 'app/pages/my-stuff/my-stuff.module#MyStuffModule' },
-        { path: 'my-team', loadChildren: 'app/pages/my-team/my-team.module#MyTeamModule' }
-        // { path: 'my-training', loadChildren: './my-training/my-training.module#MyTrainingModule' },
-        // { path: 'reports', loadChildren: './reports/reports.module#ReportsModule' },
-        // { path: 'creator', loadChildren: './creaor/creator.module#CreatorModule' }
+        { path: 'my-team', loadChildren: 'app/pages/my-team/my-team.module#MyTeamModule' },
+        { path: 'my-training', loadChildren: 'app/pages/my-training/my-training.module#MyTrainingModule' },
+        { path: 'reports', loadChildren: 'app/pages/reports/reports.module#ReportsModule' },
+        { path: 'creator', loadChildren: 'app/pages/creator/creator.module#CreatorModule' }
       ]
   }
 ];

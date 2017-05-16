@@ -4,19 +4,17 @@
     <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
-        <a class="navbar-brand" id="navLogo">
+        <a class="navbar-brand" id="navLogo" routerLink="/pages/my-stuff" routerLinkActive="active">
             <img class="img-responsive siteHeaderNavigation myStuffNavigation leveluplogo" data-i18n="nav.my-stuff" src="../assets/img/levelUpLogo.png" alt="">
         </a>
       </div>
       <div class="collapse navbar-collapse" id="main-navbar">
         <ul class="nav navbar-nav">
-            <li><a routerLink="/pages/my-stuff" routerLinkActive="active">{{'my stuff_'}}</a></li>
-            <li><a routerLink="/pages/my-team" routerLinkActive="active">{{'my team_'}}</a></li>
-            <!--<li><a data-toggle="collapse" data-target="#main-navbar" id="navMyStuff" class="siteHeaderNavigation myStuffNavigation" data-i18n="nav.my-stuff">my stuff</a></li>
-            <li><a data-toggle="collapse" data-target="#main-navbar" id="navMyTraining" class="siteHeaderNavigation myTrainingNavigation">my training</a></li>
-            <li><a data-toggle="collapse" data-target="#main-navbar" id="navMyTeam" class="siteHeaderNavigation myTeamNavigation">my team</a></li>
-            <li><a data-toggle="collapse" data-target="#main-navbar" id="navReports" class="siteHeaderNavigation reportsNavigation" data-i18n="nav.reports">reports</a></li>
-            <li><a data-toggle="collapse" data-target="#main-navbar" id="navCreator" class="siteHeaderNavigation creatorNavigation" data-i18n="nav.creator">creator</a></li>-->
+            <li><a routerLink="/pages/my-stuff" routerLinkActive="active">{{'my stuff'}}</a></li>
+            <li><a routerLink="/pages/my-team" routerLinkActive="active">{{'my team'}}</a></li>
+            <li><a routerLink="/pages/my-training" routerLinkActive="active">{{'my training'}}</a></li>
+            <li><a routerLink="/pages/reports" routerLinkActive="active">{{'reports'}}</a></li>
+            <li><a routerLink="/pages/creator" routerLinkActive="active">{{'creator'}}</a></li>
         </ul>
       </div>
     </div>

@@ -3,11 +3,15 @@ import { CommonModule } from '@angular/common';
 
 import { MyTrainingRoutingModule } from './my-training-routing.module';
 
+import { MyTrainingComponent } from './my-training.component';
+
 @NgModule({
   imports: [
     CommonModule,
     MyTrainingRoutingModule
   ],
-  declarations: []
+  declarations: [
+    MyTrainingComponent
+  ]
 })
 export class MyTrainingModule { }
