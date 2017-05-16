@@ -22,9 +22,6 @@ import { AppRoutingModule } from './app-routing.module';
   ],
   declarations: [AppComponent ],
   providers: [
-    { provide: LocationStrategy,
-      useClass: HashLocationStrategy
-    },
     LoggerService
   ],
   bootstrap: [AppComponent]
