@@ -32,4 +32,12 @@
 </div>
   <div id="content" class="container-fluid content">
   </div>-->
-    <router-outlet></router-outlet>
+    <router-outlet>
+      <div class="loading" *ngIf="!(_userContextService) || (_userContextService && _userContextService.profileModel == null)">
+        <div id="circleG">
+          <div id="circleG_1" class="circleG"></div>
+          <div id="circleG_2" class="circleG"></div>
+          <div id="circleG_3" class="circleG"></div>
+        </div>
+    </div>
+    </router-outlet>
