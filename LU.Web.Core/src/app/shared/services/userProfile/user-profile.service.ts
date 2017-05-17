@@ -43,12 +43,12 @@ export class UserProfileService {
     const profile = Observable.of(stubProfileModel).delay(1000);
 
     // for sprint demo show only
-    const returnProfileAsCreator = false;
+    const returnProfileAsCreator = true;
     const callApiWith401 = false;
     const redirectToSSO = false;
 
     if (returnProfileAsCreator) {
-      // stubProfileModel.isCreator = true;
+      stubProfileModel.roles = ['CreatorRead'];
     }
 
     if (!callApiWith401) { // remove after demo
