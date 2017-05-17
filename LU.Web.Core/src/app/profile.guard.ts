@@ -12,7 +12,7 @@ import {
 import { UserContextService } from './shared/services/userContext/user-context.service';
 
 @Injectable()
-export class ProfileGuard implements CanActivate { // , CanActivateChild, CanLoad {
+export class ProfileGuard implements CanActivate, CanActivateChild { // , CanLoad {
   constructor(private _userContextService: UserContextService, private router: Router) {}
 
   canActivate(
@@ -24,11 +24,11 @@ export class ProfileGuard implements CanActivate { // , CanActivateChild, CanLoa
     return (this._userContextService.profileModel != null);
   }
 
-  // canActivateChild(
-  //     route: ActivatedRouteSnapshot,
-  //     state: RouterStateSnapshot): boolean {
-  //   return this.canActivate(route, state);
-  // }
+  canActivateChild(
+      route: ActivatedRouteSnapshot,
+      state: RouterStateSnapshot): boolean {
+    return this.canActivate(route, state);
+  }
 
   // canLoad(route: Route): boolean {
   //   return false;

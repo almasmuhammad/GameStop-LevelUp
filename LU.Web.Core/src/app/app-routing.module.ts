@@ -4,8 +4,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { ProfileGuard } from './profile.guard';
 
 export const routes: Routes = [
-  { path: '',   redirectTo: 'pages', pathMatch: 'full', canLoad: [ProfileGuard] },
-  { path:  '**', redirectTo:  'page', canLoad: [ProfileGuard] }
+  { path: '',   redirectTo: 'pages', pathMatch: 'full' },
+  { path:  '**', redirectTo:  'page' }
 ];
 
 @NgModule({
