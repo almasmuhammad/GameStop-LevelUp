@@ -1,5 +1,5 @@
 export class ApplicationRoles {
-    public readonly CreatorRead = 'CreatorRead';
-    public readonly CreatorUpdate = 'CreatorUpdate';
-    public readonly CreatorDelete = 'CreatorDelete';
+    public static readonly CreatorRead  = 'CreatorRead';
+    public static readonly CreatorUpdate = 'CreatorUpdate';
+    public static readonly CreatorDelete = 'CreatorDelete';
 }

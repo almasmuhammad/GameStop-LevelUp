@@ -12,7 +12,7 @@ import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/delay';
 
 import { environment } from '../../../../environments/environment';
-import { ProfileModel } from '../../models/profile-model';
+import { ApplicationProfileViewModel } from '../../models/application-profile-view-model';
 import { WindowService } from '../window/window.service';
 
 @Injectable()
@@ -20,9 +20,9 @@ export class UserProfileService {
 
   constructor(private _http: Http, private _windowService: WindowService) {}
 
-  getProfile(): Observable<ProfileModel> {
+  getProfile(): Observable<ApplicationProfileViewModel> {
     // set url
-    const url = environment.apiURL + 'unauth'; // 'profile';
+    const url = environment.apiURL + 'Application/Profile'; // 'profile';
 
     // options
     // this could be handled by abstraction
@@ -39,8 +39,8 @@ export class UserProfileService {
 
     const body = JSON.stringify({ });
 
-    const stubProfileModel = new ProfileModel();
-    const profile = Observable.of(stubProfileModel).delay(500);
+    const stubProfileModel = new ApplicationProfileViewModel();
+    const profile = Observable.of(stubProfileModel).delay(5000);
 
     // for sprint demo show only
     const returnProfileAsCreator = false;
@@ -48,7 +48,7 @@ export class UserProfileService {
     const redirectToSSO = false;
 
     if (returnProfileAsCreator) {
-      stubProfileModel.isCreator = true;
+      // stubProfileModel.isCreator = true;
     }
 
     if (!callApiWith401) { // remove after demo
@@ -58,7 +58,7 @@ export class UserProfileService {
     if (callApiWith401) { // remove if condition after demo
       return this._http.get(url, options)
           .map((response: Response) => {
-              return <ProfileModel>response.json();
+              return <ApplicationProfileViewModel>response.json();
           })
           .catch(e => {
               // this could be handled by abstraction

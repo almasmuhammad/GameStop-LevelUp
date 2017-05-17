@@ -1,9 +1,9 @@
-export class ProfileModel {
-    public isCreator: boolean;
-    public isAuthenticated: boolean;
+// export class ProfileModel {
+//     public isCreator: boolean;
+//     public isAuthenticated: boolean;
 
-    constructor() {
-        this.isAuthenticated = false;
-        this.isCreator = false;
-    }
-}
+//     constructor() {
+//         this.isAuthenticated = false;
+//         this.isCreator = false;
+//     }
+// }
