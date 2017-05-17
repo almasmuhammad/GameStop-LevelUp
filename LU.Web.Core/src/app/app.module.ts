@@ -11,6 +11,8 @@ import { UserProfileService } from './shared/services/userProfile/user-profile.s
 import { LoggerService } from './shared/services/logs/logger-service';
 import { WindowService } from './shared/services/window/window.service';
 
+import { ProfileGuard } from './profile.guard';
+
 // App is our top level component
 import { AppComponent } from './app.component';
 
@@ -30,11 +32,18 @@ import { PagesModule } from './pages/pages.module';
   ],
   providers: [
     LoggerService,
-        WindowService,
-    { provide: UserProfileService, useClass: UserProfileService },
-    UserContextService ],
+    WindowService,
+    UserProfileService,
+    UserContextService,
+    ProfileGuard ],
   declarations: [AppComponent],
   bootstrap: [AppComponent]
 })
 
-export class AppModule { }
+export class AppModule {
+  constructor(
+    private _userContextService: UserContextService,
+    private _router: Router) {
+     this._userContextService.initialUrlRequest = this._router.url;
+  }
+ }

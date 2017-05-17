@@ -9,11 +9,11 @@ import { LoggerService } from '../logs/logger-service';
 
 @Injectable()
 export class UserContextService {
-// holds profile model and refreshes profile
-private _profileLoadCompleteSource = new Subject();
+  private _profileLoadCompleteSource = new Subject<string>();
 
-profileLoadComplete = this._profileLoadCompleteSource.asObservable();
- profileModel: ApplicationProfileViewModel = null;
+  initialUrlRequest: string;
+  profileLoadComplete = this._profileLoadCompleteSource.asObservable();
+  profileModel: ApplicationProfileViewModel = null;
 
   constructor(
     private _userService: UserProfileService,
@@ -21,10 +21,8 @@ profileLoadComplete = this._profileLoadCompleteSource.asObservable();
 
   getProfile(): void {
     this._userService.getProfile().subscribe(profile => {
-      if (profile != null) {
-        this.profileModel = profile;
-        this._profileLoadCompleteSource.next();
-      }
+      this.profileModel = profile;
+      this._profileLoadCompleteSource.next(this.initialUrlRequest);
     },
     error => {
       this.profileModel = null;
@@ -32,5 +30,4 @@ profileLoadComplete = this._profileLoadCompleteSource.asObservable();
       this._profileLoadCompleteSource.next();
     });
   }
-
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpModule } from '@angular/http';
+import { Router } from '@angular/router';
 
 import { UserContextService } from './shared/services/userContext/user-context.service';
 import { UserProfileService } from './shared/services/userProfile/user-profile.service';
@@ -18,11 +19,15 @@ import { environment } from '../environments/environment';
 export class AppComponent implements OnInit {
 
   constructor(
+    private _router: Router,
     public _userContextService: UserContextService,
     private _logger: LoggerService) {
   }
 
   ngOnInit() {
+      this._userContextService.profileLoadComplete.subscribe((url) => {
+        this._router.navigate([url]);
+      });
     this.logSetup();
     this._userContextService.getProfile();
   }

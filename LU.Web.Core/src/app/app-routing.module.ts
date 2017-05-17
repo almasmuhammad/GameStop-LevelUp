@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+import { ProfileGuard } from './profile.guard';
+
 export const routes: Routes = [
-  { path: '',   redirectTo: 'pages', pathMatch: 'full' },
-  { path:  '**', redirectTo:  'pages' }
+  { path: '',   redirectTo: 'pages', pathMatch: 'full', canLoad: [ProfileGuard] },
+  { path:  '**', redirectTo:  'page', canLoad: [ProfileGuard] }
 ];
 
 @NgModule({
