@@ -7,14 +7,13 @@ import { LoggerService } from './shared/services/logs/logger-service';
 import { WindowService } from './shared/services/window/window.service';
 import { environment } from '../environments/environment';
 
+/*
+ * App Component
+ * Top Level Component
+ */
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  providers: [
-    LoggerService,
-    WindowService,
-    { provide: UserProfileService, useClass: UserProfileService },
-    UserContextService ]
 })
 export class AppComponent implements OnInit {
 
