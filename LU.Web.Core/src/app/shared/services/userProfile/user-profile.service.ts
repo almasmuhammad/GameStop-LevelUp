@@ -40,7 +40,7 @@ export class UserProfileService {
     const body = JSON.stringify({ });
 
     const stubProfileModel = new ApplicationProfileViewModel();
-    const profile = Observable.of(stubProfileModel).delay(5000);
+    const profile = Observable.of(stubProfileModel).delay(1000);
 
     // for sprint demo show only
     const returnProfileAsCreator = false;
