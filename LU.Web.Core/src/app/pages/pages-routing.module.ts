@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { PagesComponent } from './pages.component';
 
-
 import { ProfileGuard } from '../profile.guard';
 
 export const routes: Routes = [

@@ -1,2 +1,2 @@
-export class CoreConfig {
-}
+// export class CoreConfig {
+// }

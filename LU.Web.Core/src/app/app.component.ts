@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpModule } from '@angular/http';
-import { Router } from '@angular/router';
+import { Router, Routes } from '@angular/router';
 
 import { UserContextService } from './shared/services/userContext/user-context.service';
 import { UserProfileService } from './shared/services/userProfile/user-profile.service';
@@ -21,18 +21,20 @@ export class AppComponent implements OnInit {
   constructor(
     private _router: Router,
     public _userContextService: UserContextService,
-    private _logger: LoggerService) {
-  }
+    private _logger: LoggerService) { }
 
   ngOnInit() {
+    // load config URLs
+
+    // log environment variables
+    this._logger.logInfo('Envrionment: ' + JSON.stringify(environment));
+
+    // listen for the profile load complete observation
       this._userContextService.profileLoadComplete.subscribe((url) => {
         this._router.navigate([url]);
       });
-    this.logSetup();
-    this._userContextService.getProfile();
-  }
 
-  private logSetup() {
-    this._logger.logInfo('Envrionment: ' + JSON.stringify(environment));
+    // load user profile or be routed to SSO
+    this._userContextService.getProfile();
   }
 }

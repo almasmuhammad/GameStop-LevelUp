@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Routes } from '@angular/router';
+import { Router, Routes } from '@angular/router';
 
 import { UserContextService } from '../shared/services/userContext/user-context.service';
 
@@ -8,11 +8,8 @@ import { UserContextService } from '../shared/services/userContext/user-context.
   templateUrl: './pages.component.html',
   styleUrls: ['./pages.component.css']
 })
-export class PagesComponent implements OnInit {
+export class PagesComponent {
 
   constructor(public _userContextService: UserContextService) { }
-
-  ngOnInit() {
-  }
 
 }
