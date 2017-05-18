@@ -4,12 +4,17 @@ import { Observable } from 'rxjs/Observable';
 import { UserContextService } from './user-context.service';
 import { LoggerService } from '../../../shared/services/logs/logger-service';
 import { UserProfileService } from '../../../shared/services/userProfile/user-profile.service';
-import { ApplicationProfileViewModel } from '../../../shared/models/application-profile-view-model';
+import { UserProfileModel } from '../../../shared/models/user-profile-model';
 
 import { RouterStub } from '../../../testing/router-stub';
 
 class UserProfileServiceStub {
-  getProfile(): Observable<ApplicationProfileViewModel> { return Observable.of(null); }
+  private _userProfileModel: UserProfileModel;
+  constructor() {
+    this._userProfileModel = new UserProfileModel();
+    this._userProfileModel.roles = ['CreatorRead'];
+  }
+  getProfile(): Observable<UserProfileModel> { return Observable.of(this._userProfileModel); }
 }
 
 describe('UserContextService', () => {
@@ -23,7 +28,10 @@ describe('UserContextService', () => {
     });
   });
 
-  it('should ...', inject([UserContextService], (service: UserContextService) => {
-    expect(service).toBeTruthy();
+  it('when a user profile is requested and one is returned from the API then profile should exist',
+  inject([UserContextService], (service: UserContextService) => {
+    service.getProfile();
+    expect(service.profileModel).toBeTruthy();
   }));
+
 });

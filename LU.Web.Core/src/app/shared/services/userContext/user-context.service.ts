@@ -3,8 +3,8 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { Subject } from 'rxjs/Subject';
 
-import { ApplicationProfileViewModel } from '../../models/application-profile-view-model';
-import { UserProfileService } from '../userProfile/user-profile.service';
+import { UserProfileModel } from '../../models/user-profile-model';
+import { UserProfileService } from '../userProfile';
 import { LoggerService } from '../logs/logger-service';
 
 @Injectable()
@@ -13,7 +13,7 @@ export class UserContextService {
 
   initialUrlRequest: string;
   profileLoadComplete = this._profileLoadCompleteSource.asObservable();
-  profileModel: ApplicationProfileViewModel = null;
+  profileModel: UserProfileModel = null;
 
   constructor(
     private _userService: UserProfileService,
@@ -27,7 +27,7 @@ export class UserContextService {
     error => {
       this.profileModel = null;
       this._logger.logError(error);
-      this._profileLoadCompleteSource.next();
+      this._profileLoadCompleteSource.next(null);
     });
   }
 }

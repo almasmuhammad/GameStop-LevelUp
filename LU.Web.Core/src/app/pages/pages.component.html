@@ -14,8 +14,8 @@
             <li><a routerLinkActive="active" routerLink="/pages/my-training">{{'my training'}}</a></li>
             <li><a routerLinkActive="active" routerLink="/pages/my-team">{{'my team'}}</a></li>
             <li><a routerLinkActive="active" routerLink="/pages/reports">{{'reports'}}</a></li>
-            <li *ngIf="_userContextService.profileModel && _userContextService.profileModel.isCreator">
-                <a routerLink="/pages/creator"      routerLinkActive="active">{{'creator'}}</a></li>
+            <li *ngIf="_userContextService.profileModel.isCreator">
+                <a routerLink="/pages/creator" routerLinkActive="active" class="creatorLink">{{'creator'}}</a></li>
         </ul>
       </div>
     </div>

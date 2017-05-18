@@ -13,6 +13,7 @@ import 'rxjs/add/operator/delay';
 
 import { environment } from '../../../../environments/environment';
 import { ApplicationProfileViewModel } from '../../models/application-profile-view-model';
+import { UserProfileModel } from '../../models/user-profile-model';
 import { WindowService } from '../window/window.service';
 
 @Injectable()
@@ -20,7 +21,7 @@ export class UserProfileService {
 
   constructor(private _http: Http, private _windowService: WindowService) {}
 
-  getProfile(): Observable<ApplicationProfileViewModel> {
+  getProfile(): Observable<UserProfileModel> {
     // set url
     const url = environment.apiURL + 'Application/Profile'; // 'profile';
 
@@ -37,35 +38,38 @@ export class UserProfileService {
     // map on good return
     // catch errors, log, if 401 raise event
 
-    const body = JSON.stringify({ });
+    // const body = JSON.stringify({ });
 
-    const stubProfileModel = new ApplicationProfileViewModel();
-    const profile = Observable.of(stubProfileModel).delay(1000);
+    // const stubProfileModel = new UserProfileModel();
+    // const profile = Observable.of(stubProfileModel).delay(1000);
 
-    // for sprint demo show only
-    const returnProfileAsCreator = true;
-    const callApiWith401 = false;
-    const redirectToSSO = false;
+    // const returnProfileAsCreator = true;
+    // const callApiWith401 = false;
+    // const redirectToSSO = false;
 
-    if (returnProfileAsCreator) {
-      stubProfileModel.roles = ['CreatorRead'];
-    }
+    // if (returnProfileAsCreator) {
+    //  stubProfileModel.roles = ['CreatorRead'];
+    // }
 
-    if (!callApiWith401) { // remove after demo
-      return profile;
-    }
+    // if (!callApiWith401) { // remove after demo
+    //  return profile;
+    // }
 
-    if (callApiWith401) { // remove if condition after demo
+    // if (callApiWith401) { // remove if condition after demo
       return this._http.get(url, options)
           .map((response: Response) => {
-              return <ApplicationProfileViewModel>response.json();
+            const userProfileModel = new UserProfileModel();
+            const applicationProfileViewModel = <ApplicationProfileViewModel>response.json();
+            userProfileModel.languages = applicationProfileViewModel.languages;
+            userProfileModel.roles = applicationProfileViewModel.roles;
+            return userProfileModel;
           })
           .catch(e => {
               // this could be handled by abstraction
               if (e.status === 401) {
-                if (redirectToSSO) { // remove after demo
+                // if (redirectToSSO) { // remove after demo
                   this._windowService.redirectToSSO();
-                }
+                // }
 
                 return Observable.of(null);
                 // Observable.throw('Unauthorized');
@@ -73,6 +77,6 @@ export class UserProfileService {
 
               // do any other checking for statuses here
           });
-    }
+    // }
   }
 }

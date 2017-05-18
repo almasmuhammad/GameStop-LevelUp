@@ -15,7 +15,7 @@ import { RouterStub } from './testing/router-stub';
 import { LoggerService } from './shared/services/logs/logger-service';
 import { UserContextService } from './shared/services/userContext/user-context.service';
 import { UserProfileService } from './shared/services/userProfile/user-profile.service';
-import { ApplicationProfileViewModel } from './shared/models/application-profile-view-model';
+import { UserProfileModel } from './shared/models/user-profile-model';
 
 class UserContextServiceStub {
 
@@ -28,7 +28,7 @@ class UserContextServiceStub {
 }
 
 class UserProfileServiceStub {
-  getProfile(): Observable<ApplicationProfileViewModel> { return Observable.of(null); }
+  getProfile(): Observable<UserProfileModel> { return Observable.of(null); }
 }
 
 describe('AppComponent', () => {
@@ -68,7 +68,7 @@ describe('AppComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create the app', async(() => {
+  it('should be created', async(() => {
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
   }));

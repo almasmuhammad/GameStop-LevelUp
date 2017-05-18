@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Injectable, DebugElement } from '@angular/core';
 import { Location } from '@angular/common';
 import { Router } from '@angular/router';
+import { By } from '@angular/platform-browser';
 
 import { async, ComponentFixture, inject, TestBed, getTestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
@@ -11,21 +12,20 @@ import { PagesComponent } from './pages.component';
 
 import { RouterStub } from '../testing/router-stub';
 
-import { LoggerService } from '../shared/services/logs/logger-service';
 import { UserContextService } from '../shared/services/userContext/user-context.service';
-import { UserProfileService } from '../shared/services/userProfile/user-profile.service';
-import { ApplicationProfileViewModel } from '../shared/models/application-profile-view-model';
+import { UserProfileModel } from '../shared/models/user-profile-model';
+import { ApplicationRoles } from '../shared/models/application-roles';
 
 class UserContextServiceStub {
-  getProfile(): void {}
-}
-
-class UserProfileServiceStub {
-  getProfile(): Observable<ApplicationProfileViewModel> { return Observable.of(null); }
+  profileLoadComplete = Observable.of('');
+  profileModel: UserProfileModel;
+  constructor() {
+    this.profileModel = new UserProfileModel();
+    this.profileModel.roles = [ApplicationRoles.CreatorRead];
+   }
 }
 
 describe('PagesComponent', () => {
-  let location, router;
   let component: PagesComponent;
   let fixture: ComponentFixture<PagesComponent>;
 
@@ -38,21 +38,10 @@ describe('PagesComponent', () => {
         ],
       declarations: [ PagesComponent ],
       providers: [
-      { provide: LoggerService, useClass: LoggerService},
-      { provide: UserContextService, useClass: UserContextServiceStub},
-      { provide: UserProfileService, useClass: UserProfileServiceStub }
+        { provide: UserContextService, useClass: UserContextServiceStub}
       ]
     })
     .compileComponents();
-
-    const injector = getTestBed();
-    location = injector.get(Location);
-    router = injector.get(Router);
-  }));
-
-  beforeEach(inject([Router, Location], (_router: Router, _location: Location) => {
-    router = _router;
-    location = _location;
   }));
 
   beforeEach(() => {
@@ -61,7 +50,19 @@ describe('PagesComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should be created', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('when the user has Creator roles then show Creator nav command', () => {
+    const creatorLink = fixture.debugElement.query(By.css('.creatorLink'));
+    expect(creatorLink).toBeTruthy();
+  });
+
+  it('when the user does not have Creator roles then do not show Creator nav command', () => {
+    fixture.componentInstance._userContextService.profileModel.roles = [];
+    fixture.detectChanges();
+    const creatorLink = fixture.debugElement.query(By.css('.creatorLink'));
+    expect(creatorLink).toBeFalsy();
   });
 });

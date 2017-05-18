@@ -9,7 +9,5 @@ import { UserContextService } from '../shared/services/userContext/user-context.
   styleUrls: ['./pages.component.css']
 })
 export class PagesComponent {
-
   constructor(public _userContextService: UserContextService) { }
-
 }
