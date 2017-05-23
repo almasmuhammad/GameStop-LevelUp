@@ -22,9 +22,10 @@
         "assets/css/primary.css",
         "../node_modules/bootstrap/dist/css/bootstrap.min.css",
         "assets/css/main.css",
-        "assets/css/header.css"
+        "assets/css/font-awesome.min.css"
       ],
-      "scripts": [],
+      "scripts": [
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",

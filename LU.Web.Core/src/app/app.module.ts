@@ -11,7 +11,7 @@ import { UserProfileService } from './shared/services/userProfile/user-profile.s
 import { LoggerService } from './shared/services/logs/logger-service';
 import { WindowService } from './shared/services/window/window.service';
 
-import { ProfileGuard } from './profile.guard';
+import { ProfileGuard } from './shared/guards';
 
 // App is our top level component
 import { AppComponent } from './app.component';

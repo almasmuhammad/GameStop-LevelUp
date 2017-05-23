@@ -38,3 +38,5 @@ export class AppComponent implements OnInit {
     this._userContextService.getProfile();
   }
 }
+
+

@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { MyStuffComponent } from './my-stuff.component';
 
-import { ProfileGuard } from '../../profile.guard';
+import { ProfileGuard } from '../../shared/guards';
 
 const routes: Routes = [
   { path: '', component: MyStuffComponent}

@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { PagesComponent } from './pages.component';
 
-import { ProfileGuard } from '../profile.guard';
+import { ProfileGuard } from '../shared/guards';
 
 export const routes: Routes = [
   {

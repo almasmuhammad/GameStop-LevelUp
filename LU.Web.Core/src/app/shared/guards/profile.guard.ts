@@ -2,14 +2,14 @@ import { Injectable } from '@angular/core';
 import {
   CanActivate,
   CanActivateChild,
-  CanLoad,
-  Route,
+  //CanLoad,
+  //Route,
   Router,
   ActivatedRouteSnapshot,
   RouterStateSnapshot
 } from '@angular/router';
 
-import { UserContextService } from './shared/services/userContext/user-context.service';
+import { UserContextService } from '../services/userContext';
 
 @Injectable()
 export class ProfileGuard implements CanActivate, CanActivateChild { // , CanLoad {
