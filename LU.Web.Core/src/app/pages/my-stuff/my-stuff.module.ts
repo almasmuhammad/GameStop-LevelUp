@@ -2,8 +2,24 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { MyStuffRoutingModule } from './my-stuff-routing.module';
-
 import { MyStuffComponent } from './my-stuff.component';
+
+import {
+  ProfileSectionComponent,
+  AvatarSectionComponent,
+  UserInfoSectionComponent,
+  XpSectionComponent,
+  MyProfileAvatarComponent,
+  UnlockIconComponent,
+  UserAwardCountComponent,
+  UserMissionPercentageComponent,
+  UserNameComponent,
+  UserRankComponent,
+  XpCaptainsLogComponent,
+  XpCategoriesComponent,
+  XpLevelComponent,
+  XpProgressbarComponent } from './components/profile-section';
+
 
 @NgModule({
   imports: [
@@ -11,6 +27,21 @@ import { MyStuffComponent } from './my-stuff.component';
     MyStuffRoutingModule
   ],
   declarations: [
-    MyStuffComponent]
+    MyStuffComponent,
+    ProfileSectionComponent,
+    AvatarSectionComponent,
+    UserInfoSectionComponent,
+    XpSectionComponent,
+    MyProfileAvatarComponent,
+    UnlockIconComponent,
+    UserAwardCountComponent,
+    UserMissionPercentageComponent,
+    UserNameComponent,
+    UserRankComponent,
+    XpCaptainsLogComponent,
+    XpCategoriesComponent,
+    XpLevelComponent,
+    XpProgressbarComponent
+    ]
 })
 export class MyStuffModule { }
