@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, Routes } from '@angular/router';
 
-import { UserContextService } from '../shared/services/userContext/user-context.service';
+import { NavbarComponent } from '../shared/components/header/navbar/navbar.component';
 
 @Component({
   selector: 'app-pages',
@@ -9,5 +9,5 @@ import { UserContextService } from '../shared/services/userContext/user-context.
   styleUrls: ['./pages.component.css']
 })
 export class PagesComponent {
-  constructor(public _userContextService: UserContextService) { }
+  constructor() { }
 }
