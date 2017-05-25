@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-rank.component.css']
 })
 export class UserRankComponent implements OnInit {
-
+userrank:string = "epic"
   constructor() { }
 
   ngOnInit() {

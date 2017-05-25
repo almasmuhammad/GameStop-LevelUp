@@ -1,0 +1,13 @@
+
+#xpprogressBar{
+        /*remove background color property once done with formatting*/
+    background-color:black;
+
+    height: 18px;
+    margin-top: 3px;
+    margin-bottom: 35px;
+    overflow: hidden;
+    background-color: transparent !important;
+    border-radius: 8px;
+    border: 2px solid #EF3124;
+}

@@ -1,0 +1,20 @@
+[
+    {
+        "mainAvatar": "assets/img/avatars/full_high_Marvel_Persona_Deadpool.png",
+        "userfirstname": "joey",
+        "userlastname": "allen",
+        "userrank": "epic",
+        "positionProgressPct": " 0.94",
+        "levelNumber": "8",
+        "currentXp": "55",
+        "levelupXp": "100",
+        "Category1": "33",
+        "Category2": "45",
+        "Category3": "55",
+        "Category1Percentage":"0.3",
+        "Category2Percentage":"0.3",
+        "Category3Percentage":"0.3",
+        "captainsLog":" Section for Captains Log"
+        
+    }
+]

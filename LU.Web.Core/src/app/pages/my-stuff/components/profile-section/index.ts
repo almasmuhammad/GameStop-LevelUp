@@ -3,7 +3,6 @@ export * from './avatar-section/avatar-section.component';
 export * from './avatar-section/my-profile-avatar/my-profile-avatar.component';
 export * from './avatar-section/unlock-icon/unlock-icon.component';
 export * from './user-info-section/user-info-section.component';
-export * from './user-info-section/user-award-count/user-award-count.component';
 export * from './user-info-section/user-mission-percentage/user-mission-percentage.component';
 export * from './user-info-section/user-name/user-name.component';
 export * from './user-info-section/user-rank/user-rank.component';

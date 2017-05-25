@@ -1,0 +1,31 @@
+.mainChartItem{
+    /*remove background color property once done with formatting*/
+    background-color:black;
+
+    color:white;
+    font-size: 28px;
+    margin-top: 12px !important;
+
+    width: 100%;
+
+}
+
+.findMissionButton{
+    font-size: 19px;
+    cursor: pointer;
+    line-height: 5px;
+    text-align: center;
+}
+.chart{
+
+    position: relative;
+    display: inline-block;
+    width: 75px;
+    height: 75px;
+    margin-top: 35px;
+    margin-bottom: 10px;
+    text-align: center;
+    cursor: pointer;
+
+    background-color: red;
+}

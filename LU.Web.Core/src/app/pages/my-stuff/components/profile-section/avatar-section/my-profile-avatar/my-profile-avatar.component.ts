@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./my-profile-avatar.component.css']
 })
 export class MyProfileAvatarComponent implements OnInit {
+  mainAvatar:string="assets/img/avatars/full_high_Marvel_Persona_Deadpool.png";
 
   constructor() { }
 
