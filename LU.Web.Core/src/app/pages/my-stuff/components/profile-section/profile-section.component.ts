@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProfileSectionService } from "./profile-section.service";
 
 @Component({
   selector: 'app-profile-section',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./profile-section.component.css']
 })
 export class ProfileSectionComponent implements OnInit {
+    profile: any;
 
-  constructor() { }
+  constructor(/*private profileSectionService:ProfileSectionService*/) { }
 
   ngOnInit() {
+/*   this.profileSectionService.fetchProfile()
+    .subscribe(data => {
+      this.profile = data;
+    })*/
   }
 
 }

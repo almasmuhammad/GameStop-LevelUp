@@ -194,13 +194,13 @@ a,
     z-index: 1065;
 }
 
-#serviceHolder {
+/*#serviceHolder {
     width: 50px;
     margin: auto;
     margin-top: 15px;
     text-align: center;
     font-size: 14pt;
-}
+}*/
 
 #starImg{
     margin-top: -61px;
@@ -1607,10 +1607,7 @@ a:active {
   }
 }
 
-.service-ranking-2 {
-    font-size: 14pt;
-    margin-left: 2px;
-}
+
 
 .alert a{
     color:black;

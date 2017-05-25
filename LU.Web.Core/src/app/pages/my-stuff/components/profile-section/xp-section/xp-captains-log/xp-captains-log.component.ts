@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class XpCaptainsLogComponent implements OnInit {
 
+  captainsLog:string="Captains Log data will go in this section";
+
   constructor() { }
 
   ngOnInit() {

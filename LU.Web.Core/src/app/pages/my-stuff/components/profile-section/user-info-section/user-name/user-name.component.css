@@ -1,4 +1,4 @@
-.user-name{
+.username{
 
 /*remove background color property once done with formatting*/
     background-color: orange;
@@ -12,5 +12,4 @@
     line-height: 40px;
     -webkit-text-size-adjust: 100%;
     display: block;
-
 }

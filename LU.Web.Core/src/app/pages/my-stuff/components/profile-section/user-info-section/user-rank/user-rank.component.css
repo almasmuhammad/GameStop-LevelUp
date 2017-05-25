@@ -1,4 +1,4 @@
-.my-user-rank{
+.userrank{
 
     /*remove background color property once done with formatting*/
     background-color:white;
@@ -6,7 +6,6 @@
     color: #d905e9 !important;
     font-size: 18px;
     cursor: help;
-    text-transform: uppercase;
     
 
 

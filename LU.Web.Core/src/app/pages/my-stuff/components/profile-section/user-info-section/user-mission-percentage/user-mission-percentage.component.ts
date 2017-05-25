@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-mission-percentage.component.css']
 })
 export class UserMissionPercentageComponent implements OnInit {
-
+positionProgressPct:number=0.94;
   constructor() { }
 
   ngOnInit() {

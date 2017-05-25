@@ -6,6 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./xp-level.component.css']
 })
 export class XpLevelComponent implements OnInit {
+  
+levelNumber:number=7;
+currentXp:number=55;
+levelupXp:number=100;
 
   constructor() { }
 
