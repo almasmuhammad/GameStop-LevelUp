@@ -1,10 +1,10 @@
 #xpCategories{
-    background-color:black;
+    /*background-color:black;*/
 }
 
 #topCatText{
 
-    font-size: 13px;
+    /*font-size: 13px;*/
     text-transform: uppercase;
     color: #fbb03b;
     margin-bottom: -25px;
@@ -13,9 +13,7 @@
 }
 
 #topCatCharts{
-
     cursor: help;
-
 }
 
 .chart{
@@ -28,7 +26,7 @@
     margin-bottom: 10px;
     text-align: center;
 
-    background-color: red;
+    /*background-color: red;*/
 }
 #findMissionButton{
     line-height: 5;

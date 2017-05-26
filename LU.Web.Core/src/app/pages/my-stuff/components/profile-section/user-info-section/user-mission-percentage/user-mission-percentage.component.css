@@ -1,6 +1,6 @@
 .mainChartItem{
     /*remove background color property once done with formatting*/
-    background-color:black;
+    /*background-color:black;*/
 
     color:white;
     font-size: 28px;
@@ -27,5 +27,5 @@
     text-align: center;
     cursor: pointer;
 
-    background-color: red;
+    /*background-color: red;*/
 }

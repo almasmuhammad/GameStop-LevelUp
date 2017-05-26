@@ -5,9 +5,9 @@
         "userlastname": "allen",
         "userrank": "epic",
         "positionProgressPct": " 0.94",
-        "levelNumber": "8",
-        "currentXp": "55",
-        "levelupXp": "100",
+        "levelNumber": "17",
+        "currentXp": "55,238",
+        "levelupXp": "60,000",
         "Category1": "33",
         "Category2": "45",
         "Category3": "55",
@@ -15,6 +15,6 @@
         "Category2Percentage":"0.3",
         "Category3Percentage":"0.3",
         "captainsLog":" Section for Captains Log"
-        
+
     }
 ]

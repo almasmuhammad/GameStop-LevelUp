@@ -1,29 +1,29 @@
-                   <div id="xpCategories">
-                    <div class="row">
-                        <div id="topCatText">TOP CATEGORIES</div>
-                    </div>
-                    <div id="topCatCharts" class="row text-center masterTooltip" title="Your progress with GameStop’s Top Categories">
-
-                        <div class="col-xs-4">
-                            <span class="chart small pull-left certifications" data-percent="40">
-                                <span class="percent">{{Category1}}</span>
-                                <canvas height="25" width="75"></canvas>
-                                <span class="chart-label chart-certs">{{Category1Percentage|percent}}</span>
-                            </span>
-                        </div>
-                        <div class="col-xs-4">
-                            <span class="chart small pull-left certifications" data-percent="50">
-                                <span class="percent">{{Category2}}</span>
-                                <canvas height="75" width="75"></canvas>
-                                <span class="chart-label chart-certs">{{Category2Percentage|percent}}</span>
-                            </span>
-                        </div>
-                        <div class="col-xs-4">
-                            <span class="chart small pull-left certifications" data-percent="60">
-                                <span class="percent">{{Category3}}</span>
-                                <canvas height="75" width="75"></canvas>
-                                <span class="chart-label chart-certs">{{Category3Percentage|percent}}</span>
-                            </span>
-                        </div>
-                    </div>
-                    </div>
+<div class="row">
+    <div id="topCatText">TOP CATEGORIES</div>
+</div>
+<div id="topCatCharts" class="row text-center masterTooltip" title="Your progress with GameStop’s Top Categories">
+    <div class="col-xs-4">
+        <span class="chart small pull-left certifications loaded" data-percent="40">
+            <span class="percent">{{Category1Percentage | percent}}</span>
+            <canvas height="75" width="75" style="border: 2px solid red;"></canvas>
+            <span class="chart-label chart-certs">{{Category1}}</span>
+            <canvas height="93" width="93" style="height: 75px; width: 75px;"></canvas>
+        </span>
+    </div>
+    <div class="col-xs-4">
+        <span class="chart small pull-left certifications" data-percent="50">
+            <span class="percent">{{Category2Percentage|percent}}</span>
+            <canvas height="75" width="75" style="border: 2px solid red;"></canvas>
+            <span class="chart-label chart-certs">{{Category2}}</span>
+            <canvas height="93" width="93" style="height: 75px; width: 75px;"></canvas>
+        </span>
+    </div>
+    <div class="col-xs-4">
+        <span class="chart small pull-left certifications" data-percent="60">
+            <span class="percent">{{Category3Percentage|percent}}</span>
+            <canvas height="75" width="75" style="border: 2px solid red;"></canvas>
+            <span class="chart-label chart-certs">{{Category3}}</span>
+            <canvas height="93" width="93" style="height: 75px; width: 75px;"></canvas>
+        </span>
+    </div>
+</div>

@@ -1,10 +1,13 @@
 <div class="mainChartItem col-lg-4 col-md-4 col-sm-4 nopad">
-    <span title="Complete all MY POSITION missions to become CERTIFIED." class="ChooseMissionProfile card-chart chart mid masterTooltip" data-percent="60">
-
+    <span id="ChooseMissionProfile" title="Complete all MY POSITION missions to become CERTIFIED."
+    class="card-chart chart mid masterTooltip" data-percent="60">
         <canvas height="75" width="75"></canvas>
-        <span class="card-chart-label position pull-left"><span class="lg-per percent">{{positionProgressPct | percent}}</span></span>
-        <span class="chart-complete sm-chart" >POSITION</span>
+        <span class="card-chart-label position pull-left">
+            <span class="lg-per percent">{{positionProgressPct | percent}}</span>
+        </span>
+        <span class="chart-complete sm-chart" style="font-size:16pt;" >POSITION</span>
     </span>
 <br>
 <span class="findMissionButton">my missions <i class="fa fa-1x fa-chevron-circle-right"></i></span>
+<canvas height="162" width="162" style="height: 130px; width: 130px;"></canvas>
 </div>
