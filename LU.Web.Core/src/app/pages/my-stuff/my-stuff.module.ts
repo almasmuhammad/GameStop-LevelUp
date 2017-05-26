@@ -19,6 +19,9 @@ import {
   XpLevelComponent,
   XpProgressbarComponent } from './components/profile-section';
 
+  import {
+    MissionSectionComponent } from './components/mission-section';
+
 
 @NgModule({
   imports: [
@@ -39,7 +42,8 @@ import {
     XpCaptainsLogComponent,
     XpCategoriesComponent,
     XpLevelComponent,
-    XpProgressbarComponent
+    XpProgressbarComponent,
+    MissionSectionComponent
     ]
 })
 export class MyStuffModule { }
