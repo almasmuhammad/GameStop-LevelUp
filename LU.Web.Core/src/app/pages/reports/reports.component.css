@@ -1,0 +1,389 @@
+.reports-top {
+    padding-top:65px;
+}
+
+#fullReportContainer{
+    text-transform: uppercase;
+}
+
+.centered-header {
+    font-size: 3.0rem;
+    font-weight: bold;
+    text-align:center;
+    text-transform: uppercase;
+    color: #b3b3b3;
+    padding-bottom: 15px;
+}
+
+.centered-subheader {
+    font-size: 2.0rem;
+    font-weight: bold;
+    text-align:center;
+    text-transform: uppercase;
+    color: #b3b3b3;
+    padding-bottom: 15px;
+}
+.report-row {
+    padding-top:80px;
+}
+.report-row-options {
+    margin-top:60px;
+    padding-top:60px;
+    padding-bottom:80px;
+    border-top:1px solid #000;
+    border-bottom:1px solid #000;
+}
+input[type="checkbox"] {
+    display:none;
+}
+.body-reports input[type="checkbox"] + label span {
+    display:inline-block;
+    width:19px;
+    height:19px;
+    margin:-1px 10px 0 0;
+    vertical-align:middle;
+    background:url('./../../../assets/img/check_radio_sheet.png') left top no-repeat;
+    cursor:pointer;
+}
+.panel-reports{
+    border: none;
+    border-radius: 0 !important;
+    background-color: #000000;
+
+}
+
+.body-reports .panel-title input[type="checkbox"] + label .span {
+    display: inline-block;
+    width: 19px;
+    height: 19px;
+    margin: -1px 15px 0 0;
+    vertical-align: middle;
+    background: url('./../../../assets/img/check_radio_sheet.png') left top no-repeat;
+    cursor: pointer;
+}
+.body-reports input[type="checkbox"]:checked + label span {
+    background:url('./../../../assets/img/check_radio_sheet.png') -19px top no-repeat;
+}
+
+.body-reports .input-group {
+    position: relative;
+    display: table;
+    padding: 10px 0 10px 0 !important;
+    border-collapse: separate;
+}
+.body-reports .input-group-addon {
+    padding: 6px 3px;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1;
+    color: #555;
+    text-align: center;
+    background-color: #1A1A1A !important;
+    border: 1px solid #1A1A1A;
+    border-radius: 4px 0 0 4px;
+}
+.body-reports .panel-group {
+    margin-bottom: 20px;
+    margin-left: -15px;
+    margin-right: -15px;
+    border-top: 2px solid black;
+}
+.body-reports .panel-reports > .panel-heading {
+    color: #fff;
+    background-color: #1A1A1A;
+    border-color: #000000;
+    border-top: 1px solid #1A1A1A;
+}
+.body-reports .panel-body {
+    padding: 0;
+    border-top: none !important;
+}
+.body-reports .panel {
+    border-color:none;
+    background-color: #1A1A1A;
+}
+.body-reports .alert{
+    position: relative !important;
+    padding: 13px;
+    margin-bottom: 0;
+}
+.select-reports-header {
+    border-top: 1px solid #1A1A1A;
+    border-bottom: 1px solid #1A1A1A;
+    color:#808080;
+    margin-left: -15px;
+    margin-right: -15px;
+    padding: 13px;
+}
+
+.alert-reports {
+    color: #f5f5f5;
+    background-color: #1A1A1A;
+    border-color: rgba(71, 71, 71, 0.22);
+    margin-left: -15px;
+    width: 106%;
+    text-align:left;
+}
+.alert-reports .alert-dismissable .close, .alert-dismissible .close {
+    position: relative;
+    top: 2px;
+    right: 10px;
+    color: inherit;
+}
+.alert-reports .fa-times {
+    color:#fff;
+}
+.body-reports .alert::after {
+    content: '';
+    position: fixed;
+    height: 0;
+ }
+.btn-reports {
+    color: #FFF;
+    background-color: #000;
+    border-color: #292929;
+    width: 265px;
+    font-size: 18px !important;
+    text-align: left;
+    border-radius: 10px;
+}
+.btn-reports.dropdown-toggle {
+    padding:20px;
+}
+
+.body-reports .btn-cc-submit {
+    background-color: transparent;
+    border-color: gray;
+    margin: 15px 0 15px 0;
+}
+
+.body-reports .btn-cc-submit:hover {
+    background-color: #EF3124;
+    border-color: #EF3124;
+}
+
+.body-reports div.btn-cc-submit.selected {
+    background-color: #EF3124;
+    border-color: white;
+}
+
+.open > .btn-reports {
+    border-bottom: none;
+    border-radius: 0;
+    -webkit-border-top-left-radius: 10px;
+    -webkit-border-top-right-radius: 10px;
+    -moz-border-radius-topleft: 10px;
+    -moz-border-radius-topright: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.btn-reports.dropdown-menu {
+    color: #fff !important;
+    background-color: rgba(0, 0, 0, 0.91);
+    border-color: #292929;
+    width: 265px;
+    border-top: none;
+    padding-top: 15px;
+    margin-top: -15px;
+    text-align: left;
+    border-radius: 0px;
+    -webkit-border-bottom-right-radius: 10px;
+    -webkit-border-bottom-left-radius: 10px;
+    -moz-border-radius-bottomright: 10px;
+    -moz-border-radius-bottomleft: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-image: none;
+}
+
+.btn-reports.dropdown-menu > li {
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    clear: both;
+    font-size: 18px;
+    font-weight: normal;
+    border-top: 1px solid rgba(255, 255, 255, 0.20);
+    line-height: 1.42857143;
+    color: #fff;
+    white-space: nowrap;
+    background-image: none;
+}
+.btn-reports.dropdown-menu > li:hover {
+    color: #EF3124 !important;
+
+}
+
+.reports-search-items li {
+    list-style:none !important;
+}
+.reports-search-items li.hidden {
+    display: none;
+}
+
+.reports-input-group .form-control{
+	border-right:0;
+	box-shadow:0 0 0;
+    font-size:18px !important;
+    background-color:#1a1a1a;
+    border-color:#1a1a1a;
+}
+.reports-input-group .form-control:focus {
+  border-color: #1a1a1a;
+  outline: 0 none;
+  color:#fff;
+}
+.reports-input-group button{
+    border:0;
+    background:transparent;
+    color:#b3b3b3;
+}
+
+.reports-borders-left {
+
+    height:100%
+}
+.reports-borders-right {
+    border-right:1px solid rgba(255, 255, 255, 0.20);
+}
+
+
+.reports-search-con {
+    background-color:#1A1A1A;
+}
+
+#reports-1, #reports-2, #reports-review {
+    display:none;
+}
+
+label[for="reportsEmailAddress"] {
+    margin-top: 15px;
+}
+
+.panel-title > a:before{
+    content: "\f068";
+    font-family: FontAwesome;
+    float: right;
+    padding-right: 15px;
+    padding-left: 50%;
+}
+
+.panel-title > a.collapsed:before{
+    content:"\f067";
+    font-family: FontAwesome;
+    float:right;
+}
+
+
+.body-reports img.reportCategoryExpand, .body-reports img.reportEntityExpand {
+    height: 15px;
+}
+
+.body-reports a.collapsed img.reportCategoryExpand, .body-reports a.collapsed img.reportEntityExpand {
+    height: 15px;
+
+}
+
+.body-reports label {
+    font-size: 19px;
+    font-weight: normal;
+}
+
+.body-reports img.reportCloseAll {
+    content: url("./../../../assets/img/icons/delete-icon.png");
+}
+.body-reports table {
+    width: 100%;
+}
+.body-reports tr {
+    vertical-align: top;
+}
+.body-reports td {
+    width: 50%;
+}
+
+.reportsNavigation.hidden {
+    visibility: hidden;
+    display: block;
+}
+#instructionText{
+    text-transform: none;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    text-align: center;
+    font-weight:lighter;
+}
+
+.body-reports div.reportsScroll {
+    overflow-y: scroll;
+    height: 450px;
+    transition: .6s;
+    border-bottom: 2px solid black;
+}
+.body-reports table {
+    height: 150px;
+    width: 100%;
+}
+.body-reports table td {
+    width: 50%;
+}
+
+.reportsGenerateCheckboxGroup {
+    text-align: left;
+    margin-bottom: 15px;
+}
+.body-reports a {
+    text-decoration: none;
+}
+.body-reports a:hover, .body-reports a:focus {
+    color: #EF3124;
+}
+
+.reportsNavigationText {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.reportsNext{
+    color:#f7931e !important;
+}
+
+.reportsGenerate{
+    color:#f7931e !important;
+}
+
+.reports-item {
+    padding-bottom: 15px;
+}
+.reports-subheader {
+    padding-top: 18px;
+    padding-bottom: 28px;
+}
+
+#fullSummary{
+    padding-top:25px;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+#reportsMissionSummary{
+    height:600px;
+    padding-top:15px;
+}
+
+.reports-top-selected {
+    overflow-y: auto;
+    font-size: 18px;
+    margin: 10px 0px 50px 0px;
+}
+.body-reports .form-control {
+    background-color: #000;
+}
+
+@media only screen and (max-width: 768px){
+    #selectTextReports{
+        display: none;
+    }
+}

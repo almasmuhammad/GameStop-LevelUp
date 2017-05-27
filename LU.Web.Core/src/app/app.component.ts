@@ -9,7 +9,6 @@ import { WindowService } from './shared/services/window/window.service';
 import { environment } from '../environments/environment';
 
 /*
- * App Component
  * Top Level Component
  */
 @Component({
@@ -18,12 +17,16 @@ import { environment } from '../environments/environment';
 })
 export class AppComponent implements OnInit {
 
+  public loadingProfile: boolean = false;
+
   constructor(
     private _router: Router,
     public _userContextService: UserContextService,
     private _logger: LoggerService) { }
 
   ngOnInit() {
+    this.loadingProfile = true;
+
     // load config URLs
 
     // log environment variables

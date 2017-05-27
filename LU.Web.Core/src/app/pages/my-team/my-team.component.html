@@ -1,1 +1,580 @@
-<img src="../../../assets/img/demoimages/3.jpg" style= "width:1600px ; height:750px;" alt="">
+<div id="MyTeam" style="display:block">
+
+<div class="container pad-up team-drop">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="current-mission-header col-sm-6"><i class="fa fa-gamepad" style="margin-right:10px;"></i>My Team</div>
+            <div id="myTeamSearch" class="input-group-team col-sm-6">
+                <span class="input-group-addon"><i class="fa fa-11x fa-search"></i></span>
+                <input type="text" class="form-control" placeholder="search for any associate by name">
+                <i id="myTeamSearchClear" class="fa fa-times-circle"></i>
+            </div>
+            <div class="sm-sm-12">
+                <div class="col-sm-6"></div>
+                <div id="searchHelpText" class="col-sm-6" style="font-size:15px;text-transform:uppercase;color:rgba(247, 147, 30, 0.68);text-align:right;margin-bottom:20px;">Searching Globally</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="col-sm-7 breadcrumbs-team" style="visibility: visible;"><span class="teambreadcrumb" data-entityparent="West" data-entitylevel="3">West Market<i style="padding-left: 10px;" class="fa fa-1x fa-chevron-circle-right">  </i></span><span class="teambreadcrumb" data-entityparent="10" data-entitylevel="2">Region 10<i style="padding-left: 10px;" class="fa fa-1x fa-chevron-circle-right">  </i></span><span class="teambreadcrumb" data-entityparent="224" data-entitylevel="1">District 224<i style="padding-left: 10px;" class="fa fa-1x fa-chevron-circle-right">  </i></span><span class="teambreadcrumb" data-entityparent="1782" data-entitylevel="0">Store 1782</span></div>
+            <div class="col-sm-3">
+            <div id="myteamLocalDropdown" class="dropdown" current="0">
+                <button class="btn btn-leaderboards dropdown-toggle" type="button" id="myteamChooseGroupDropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    <span class="ddr">Choose group</span>
+                    <div class="chevron-leader">
+                        <img src="./assets/img/icons/transparentbgcevron.png"></div>
+                </button>
+
+                <ul class="leaderboards dropdown-menu" aria-labelledby="myteamChooseGroupDropdownMenu">
+                    <li data-val="0"><a href="#">Choose group</a></li>
+                    <li data-val="4"><a href="#">Market</a></li>
+                    <li data-val="3"><a href="#">Region</a></li>
+                    <li data-val="2"><a href="#">District</a></li>
+                    <li data-val="1"><a href="#">Store</a></li>
+                    <li data-val="5"><a href="#">SSC</a></li>
+                </ul>
+            </div>
+            </div>
+            <div class="col-sm-2">
+            <div id="myteamSSCDropdown" class="dropdown" current="1">
+                <button class="btn btn-leaderboards dropdown-toggle" type="button" id="myteamChooseSCCDropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    <span class="ddr">Name</span>
+                    <div class="chevron-leader">
+                        <img src="./assets/img/icons/transparentbgcevron.png">
+                    </div>
+                </button>
+
+                <ul class="leaderboards dropdown-menu" aria-labelledby="myteamChooseSCCDropdownMenu">
+                    <li data-val="1"><a href="#">Name</a></li>
+                    <li data-val="5"><a href="#">XP</a></li>
+                </ul>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+
+    </div>
+</div>
+
+<div id="myTeamList" class="container">
+    <div class="row">
+        <div class="col-md-12 col-md-offset-0 col-sm-10 col-sm-offset-1">
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <section class="player-card-container">
+                    <div class="card player-card currentUser" style="perspective: 586px; position: relative; transform-style: preserve-3d;">
+                        <div class="avatarContainer front" style="background: url('./assets/img/content/backgrounds/Special_BG_Autism_Speaks.jpg') black; height: 100%; width: 100%; backface-visibility: hidden; transform-style: preserve-3d; position: absolute; z-index: 1; transition: all 0.5s ease-out;">
+                            <div class="playerCardHeader" style="backface-visibility: hidden;">
+                                BENNET SMITH
+                                <div style="backface-visibility: hidden;">
+                                    <img class="flip-icon" src="./assets/img/icons/flip-arrow_03.png" style="backface-visibility: hidden;">
+                                </div>
+                            </div>
+                            <div class="row" style="backface-visibility: hidden;">
+                                <div class="col-sm-6" style="backface-visibility: hidden;">
+                                    <div class="col-sm-8 leaderboard-col-star" style="backface-visibility: hidden;">
+                                        <div class="lbc-star service-ranking" style="backface-visibility: hidden;">0</div>
+                                        <img src="./assets/img/icons/star-service-award.png" style="backface-visibility: hidden;">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6" style="backface-visibility: hidden;">
+                                    <div class=" pull-right col-sm-8 leaderboard-col-check" style="backface-visibility: hidden;">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" style="backface-visibility: hidden;">
+                                <div class="col-sm-12" style="backface-visibility: hidden;">
+                                    <img class="leaderBoardCardAvatar" src="./assets/img/content/avatars/full_high_Marvel_Persona_Deadpool.png" style="backface-visibility: hidden;">
+                                </div>
+                            </div>
+                            <div class="row" style="backface-visibility: hidden;">
+                                <div class="col-sm-12 player-card-xp" style="backface-visibility: hidden;">55,288 XP</div>
+                                <div class="myTeam-viewDetail" data-userid="66519" style="backface-visibility: hidden;">
+                                    <span class="btn btn-wac btn-clock" style="backface-visibility: hidden;">view details</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="playerCardBack back" style="transform: rotateY(-180deg); height: 100%; width: 100%; backface-visibility: hidden; transform-style: preserve-3d; position: absolute; z-index: 0; transition: all 0.5s ease-out;">
+                            <div class="playerCardHeader" style="backface-visibility: hidden;">BENNET SMITH<img class="flip-icon" src="./assets/img/icons/flip-arrow-reversed.png" style="backface-visibility: hidden;"></div>
+                            <div class="row" style="backface-visibility: hidden;">
+                                <div class="col-sm-12" style="backface-visibility: hidden;">
+                                    <div class="contentContainer" style="backface-visibility: hidden;">
+                                        <span class="cardLeft-first" style="backface-visibility: hidden;">Store Leader - Hourly</span>
+                                    </div>
+                                    <div class="contentContainer" style="backface-visibility: hidden;">
+                                        <span class="cardLeft" style="backface-visibility: hidden;">Onboarding</span>
+                                        <span class="cardRight" style="backface-visibility: hidden;">100%</span>
+                                        <span class="center" style="backface-visibility: hidden;">&nbsp;</span>
+                                    </div>
+                                    <div class="contentContainer" style="backface-visibility: hidden;">
+                                        <span class="cardLeft" style="backface-visibility: hidden;">Circle of Life</span>
+                                        <span class="cardRight" style="backface-visibility: hidden;">50%</span>
+                                        <span class="center" style="backface-visibility: hidden;">&nbsp;</span>
+                                    </div>
+                                    <div class="contentContainer" style="backface-visibility: hidden;">
+                                        <span class="cardLeft" style="backface-visibility: hidden;">Selling and Service</span>
+                                        <span class="cardRight" style="backface-visibility: hidden;">50%</span>
+                                        <span class="center" style="backface-visibility: hidden;">&nbsp;</span>
+                                    </div>
+                                    <div class="card-divider" style="backface-visibility: hidden;"></div>
+
+                                        <span title="% CERTIFIED at associate's position" class="card-chart chart mid masterTooltip loaded" data-percent="86" style="backface-visibility: hidden;">
+                                            <canvas height="75" width="75" style="backface-visibility: hidden;"></canvas>
+                                            <span class="card-chart-label position pull-left" style="backface-visibility: hidden;"><span class="lg-per percent" style="backface-visibility: hidden;">86</span></span>
+                                            <span class="chart-complete sm-chart" style="font-size: 16pt; backface-visibility: hidden;">POSITION</span>
+                                        <canvas height="156" width="156" style="height: 125px; width: 125px;"></canvas></span>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <section class="player-card-container">
+                    <div class="card player-card " style="perspective: 588px; position: relative; transform-style: preserve-3d;">
+                        <div class="avatarContainer front" style="background: url('./assets/img/content/backgrounds/StarWars_BG_Battlefront_2.jpg') black; height: 100%; width: 100%; backface-visibility: hidden; transform-style: preserve-3d; position: absolute; z-index: 1; transition: all 0.5s ease-out;">
+                            <div class="playerCardHeader" style="backface-visibility: hidden;">
+                                corbin watkins
+                                <div style="backface-visibility: hidden;">
+                                    <img class="flip-icon" src="./assets/img/icons/flip-arrow_03.png" style="backface-visibility: hidden;">
+                                </div>
+                            </div>
+                            <div class="row" style="backface-visibility: hidden;">
+                                <div class="col-sm-6" style="backface-visibility: hidden;">
+                                    <div class="col-sm-8 leaderboard-col-star" style="backface-visibility: hidden;">
+                                        <div class="lbc-star service-ranking" style="backface-visibility: hidden;">0</div>
+                                        <img src="./assets/img/icons/star-service-award.png" style="backface-visibility: hidden;">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6" style="backface-visibility: hidden;">
+                                    <div class=" pull-right col-sm-8 leaderboard-col-check" style="backface-visibility: hidden;">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" style="backface-visibility: hidden;">
+                                <div class="col-sm-12" style="backface-visibility: hidden;">
+                                    <img class="leaderBoardCardAvatar" src="./assets/img/content/avatars/full_high_DC_Persona_Bane.png" style="backface-visibility: hidden;">
+                                </div>
+                            </div>
+                            <div class="row" style="backface-visibility: hidden;">
+                                <div class="col-sm-12 player-card-xp" style="backface-visibility: hidden;">14,083 XP</div>
+                                <div class="myTeam-viewDetail" data-userid="82510" style="backface-visibility: hidden;">
+                                    <span class="btn btn-wac btn-clock" style="backface-visibility: hidden;">view details</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="playerCardBack back" style="transform: rotateY(-180deg); height: 100%; width: 100%; backface-visibility: hidden; transform-style: preserve-3d; position: absolute; z-index: 0; transition: all 0.5s ease-out;">
+                            <div class="playerCardHeader" style="backface-visibility: hidden;">corbin watkins<img class="flip-icon" src="./assets/img/icons/flip-arrow-reversed.png" style="backface-visibility: hidden;"></div>
+                            <div class="row" style="backface-visibility: hidden;">
+                                <div class="col-sm-12" style="backface-visibility: hidden;">
+                                    <div class="contentContainer" style="backface-visibility: hidden;">
+                                        <span class="cardLeft-first" style="backface-visibility: hidden;">Senior Guest Advisor</span>
+                                    </div>
+                                    <div class="contentContainer" style="backface-visibility: hidden;">
+                                        <span class="cardLeft" style="backface-visibility: hidden;">Onboarding</span>
+                                        <span class="cardRight" style="backface-visibility: hidden;">100%</span>
+                                        <span class="center" style="backface-visibility: hidden;">&nbsp;</span>
+                                    </div>
+                                    <div class="contentContainer" style="backface-visibility: hidden;">
+                                        <span class="cardLeft" style="backface-visibility: hidden;">Circle of Life</span>
+                                        <span class="cardRight" style="backface-visibility: hidden;">50%</span>
+                                        <span class="center" style="backface-visibility: hidden;">&nbsp;</span>
+                                    </div>
+                                    <div class="contentContainer" style="backface-visibility: hidden;">
+                                        <span class="cardLeft" style="backface-visibility: hidden;">Selling and Service</span>
+                                        <span class="cardRight" style="backface-visibility: hidden;">50%</span>
+                                        <span class="center" style="backface-visibility: hidden;">&nbsp;</span>
+                                    </div>
+                                    <div class="card-divider" style="backface-visibility: hidden;"></div>
+
+                                        <span title="% CERTIFIED at associate's position" class="card-chart chart mid masterTooltip loaded" data-percent="44" style="backface-visibility: hidden;">
+                                            <canvas height="75" width="75" style="backface-visibility: hidden;"></canvas>
+                                            <span class="card-chart-label position pull-left" style="backface-visibility: hidden;"><span class="lg-per percent" style="backface-visibility: hidden;">44</span></span>
+                                            <span class="chart-complete sm-chart" style="font-size: 16pt; backface-visibility: hidden;">POSITION</span>
+                                        <canvas height="156" width="156" style="height: 125px; width: 125px;"></canvas></span>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <section class="player-card-container">
+                    <div class="card player-card " style="perspective: 588px; position: relative; transform-style: preserve-3d;">
+                        <div class="avatarContainer front" style="background: url('./assets/img/content/backgrounds/Games_BG_LevelUpBackground.jpg') black; height: 100%; width: 100%; backface-visibility: hidden; transform-style: preserve-3d; position: absolute; z-index: 1; transition: all 0.5s ease-out;">
+                            <div class="playerCardHeader" style="backface-visibility: hidden;">
+                                Dylan Walter
+                                <div style="backface-visibility: hidden;">
+                                    <img class="flip-icon" src="./assets/img/icons/flip-arrow_03.png" style="backface-visibility: hidden;">
+                                </div>
+                            </div>
+                            <div class="row" style="backface-visibility: hidden;">
+                                <div class="col-sm-6" style="backface-visibility: hidden;">
+                                    <div class="col-sm-8 leaderboard-col-star" style="backface-visibility: hidden;">
+                                        <div class="lbc-star service-ranking" style="backface-visibility: hidden;">0</div>
+                                        <img src="./assets/img/icons/star-service-award.png" style="backface-visibility: hidden;">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6" style="backface-visibility: hidden;">
+                                    <div class=" pull-right col-sm-8 leaderboard-col-check" style="backface-visibility: hidden;">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" style="backface-visibility: hidden;">
+                                <div class="col-sm-12" style="backface-visibility: hidden;">
+                                    <img class="leaderBoardCardAvatar" src="./assets/img/content/avatars/full_high_Games_Persona_LevelUpLogo.png" style="backface-visibility: hidden;">
+                                </div>
+                            </div>
+                            <div class="row" style="backface-visibility: hidden;">
+                                <div class="col-sm-12 player-card-xp" style="backface-visibility: hidden;">15,394 XP</div>
+                                <div class="myTeam-viewDetail" data-userid="82228" style="backface-visibility: hidden;">
+                                    <span class="btn btn-wac btn-clock" style="backface-visibility: hidden;">view details</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="playerCardBack back" style="transform: rotateY(-180deg); height: 100%; width: 100%; backface-visibility: hidden; transform-style: preserve-3d; position: absolute; z-index: 0; transition: all 0.5s ease-out;">
+                            <div class="playerCardHeader" style="backface-visibility: hidden;">Dylan Walter<img class="flip-icon" src="./assets/img/icons/flip-arrow-reversed.png" style="backface-visibility: hidden;"></div>
+                            <div class="row" style="backface-visibility: hidden;">
+                                <div class="col-sm-12" style="backface-visibility: hidden;">
+                                    <div class="contentContainer" style="backface-visibility: hidden;">
+                                        <span class="cardLeft-first" style="backface-visibility: hidden;">Guest Advisor</span>
+                                    </div>
+                                    <div class="contentContainer" style="backface-visibility: hidden;">
+                                        <span class="cardLeft" style="backface-visibility: hidden;">Onboarding</span>
+                                        <span class="cardRight" style="backface-visibility: hidden;">100%</span>
+                                        <span class="center" style="backface-visibility: hidden;">&nbsp;</span>
+                                    </div>
+                                    <div class="contentContainer" style="backface-visibility: hidden;">
+                                        <span class="cardLeft" style="backface-visibility: hidden;">Circle of Life</span>
+                                        <span class="cardRight" style="backface-visibility: hidden;">50%</span>
+                                        <span class="center" style="backface-visibility: hidden;">&nbsp;</span>
+                                    </div>
+                                    <div class="contentContainer" style="backface-visibility: hidden;">
+                                        <span class="cardLeft" style="backface-visibility: hidden;">Selling and Service</span>
+                                        <span class="cardRight" style="backface-visibility: hidden;">50%</span>
+                                        <span class="center" style="backface-visibility: hidden;">&nbsp;</span>
+                                    </div>
+                                    <div class="card-divider" style="backface-visibility: hidden;"></div>
+
+                                        <span title="% CERTIFIED at associate's position" class="card-chart chart mid masterTooltip loaded" data-percent="66" style="backface-visibility: hidden;">
+                                            <canvas height="75" width="75" style="backface-visibility: hidden;"></canvas>
+                                            <span class="card-chart-label position pull-left" style="backface-visibility: hidden;"><span class="lg-per percent" style="backface-visibility: hidden;">66</span></span>
+                                            <span class="chart-complete sm-chart" style="font-size: 16pt; backface-visibility: hidden;">POSITION</span>
+                                        <canvas height="156" width="156" style="height: 125px; width: 125px;"></canvas></span>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <section class="player-card-container">
+                    <div class="card player-card " style="perspective: 588px; position: relative; transform-style: preserve-3d;">
+                        <div class="avatarContainer front" style="background: url('./assets/img/content/backgrounds/Games_BG_Kingdom_Hearts.jpg') black; height: 100%; width: 100%; backface-visibility: hidden; transform-style: preserve-3d; position: absolute; z-index: 1; transition: all 0.5s ease-out;">
+                            <div class="playerCardHeader" style="backface-visibility: hidden;">
+                                Kathryn Cochran
+                                <div style="backface-visibility: hidden;">
+                                    <img class="flip-icon" src="./assets/img/icons/flip-arrow_03.png" style="backface-visibility: hidden;">
+                                </div>
+                            </div>
+                            <div class="row" style="backface-visibility: hidden;">
+                                <div class="col-sm-6" style="backface-visibility: hidden;">
+                                    <div class="col-sm-8 leaderboard-col-star" style="backface-visibility: hidden;">
+                                        <div class="lbc-star service-ranking" style="backface-visibility: hidden;">0</div>
+                                        <img src="./assets/img/icons/star-service-award.png" style="backface-visibility: hidden;">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6" style="backface-visibility: hidden;">
+                                    <div class=" pull-right col-sm-8 leaderboard-col-check" style="backface-visibility: hidden;">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" style="backface-visibility: hidden;">
+                                <div class="col-sm-12" style="backface-visibility: hidden;">
+                                    <img class="leaderBoardCardAvatar" src="./assets/img/content/avatars/full_high_Games_Persona_Kingdom Hearts Sora.png" style="backface-visibility: hidden;">
+                                </div>
+                            </div>
+                            <div class="row" style="backface-visibility: hidden;">
+                                <div class="col-sm-12 player-card-xp" style="backface-visibility: hidden;">15,797 XP</div>
+                                <div class="myTeam-viewDetail" data-userid="80140" style="backface-visibility: hidden;">
+                                    <span class="btn btn-wac btn-clock" style="backface-visibility: hidden;">view details</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="playerCardBack back" style="transform: rotateY(-180deg); height: 100%; width: 100%; backface-visibility: hidden; transform-style: preserve-3d; position: absolute; z-index: 0; transition: all 0.5s ease-out;">
+                            <div class="playerCardHeader" style="backface-visibility: hidden;">Kathryn Cochran<img class="flip-icon" src="./assets/img/icons/flip-arrow-reversed.png" style="backface-visibility: hidden;"></div>
+                            <div class="row" style="backface-visibility: hidden;">
+                                <div class="col-sm-12" style="backface-visibility: hidden;">
+                                    <div class="contentContainer" style="backface-visibility: hidden;">
+                                        <span class="cardLeft-first" style="backface-visibility: hidden;">Guest Advisor</span>
+                                    </div>
+                                    <div class="contentContainer" style="backface-visibility: hidden;">
+                                        <span class="cardLeft" style="backface-visibility: hidden;">Onboarding</span>
+                                        <span class="cardRight" style="backface-visibility: hidden;">100%</span>
+                                        <span class="center" style="backface-visibility: hidden;">&nbsp;</span>
+                                    </div>
+                                    <div class="contentContainer" style="backface-visibility: hidden;">
+                                        <span class="cardLeft" style="backface-visibility: hidden;">Circle of Life</span>
+                                        <span class="cardRight" style="backface-visibility: hidden;">50%</span>
+                                        <span class="center" style="backface-visibility: hidden;">&nbsp;</span>
+                                    </div>
+                                    <div class="contentContainer" style="backface-visibility: hidden;">
+                                        <span class="cardLeft" style="backface-visibility: hidden;">Selling and Service</span>
+                                        <span class="cardRight" style="backface-visibility: hidden;">50%</span>
+                                        <span class="center" style="backface-visibility: hidden;">&nbsp;</span>
+                                    </div>
+                                    <div class="card-divider" style="backface-visibility: hidden;"></div>
+
+                                        <span title="% CERTIFIED at associate's position" class="card-chart chart mid masterTooltip loaded" data-percent="66" style="backface-visibility: hidden;">
+                                            <canvas height="75" width="75" style="backface-visibility: hidden;"></canvas>
+                                            <span class="card-chart-label position pull-left" style="backface-visibility: hidden;"><span class="lg-per percent" style="backface-visibility: hidden;">66</span></span>
+                                            <span class="chart-complete sm-chart" style="font-size: 16pt; backface-visibility: hidden;">POSITION</span>
+                                        <canvas height="156" width="156" style="height: 125px; width: 125px;"></canvas></span>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <section class="player-card-container">
+                    <div class="card player-card " style="perspective: 588px; position: relative; transform-style: preserve-3d;">
+                        <div class="avatarContainer front" style="background: url('./assets/img/content/backgrounds/Games_BG_CallOfDuty.jpg') black; height: 100%; width: 100%; backface-visibility: hidden; transform-style: preserve-3d; position: absolute; z-index: 1; transition: all 0.5s ease-out;">
+                            <div class="playerCardHeader" style="backface-visibility: hidden;">
+                                Ken Workman
+                                <div style="backface-visibility: hidden;">
+                                    <img class="flip-icon" src="./assets/img/icons/flip-arrow_03.png" style="backface-visibility: hidden;">
+                                </div>
+                            </div>
+                            <div class="row" style="backface-visibility: hidden;">
+                                <div class="col-sm-6" style="backface-visibility: hidden;">
+                                    <div class="col-sm-8 leaderboard-col-star" style="backface-visibility: hidden;">
+                                        <div class="lbc-star service-ranking" style="backface-visibility: hidden;">0</div>
+                                        <img src="./assets/img/icons/star-service-award.png" style="backface-visibility: hidden;">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6" style="backface-visibility: hidden;">
+                                    <div class=" pull-right col-sm-8 leaderboard-col-check" style="backface-visibility: hidden;">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" style="backface-visibility: hidden;">
+                                <div class="col-sm-12" style="backface-visibility: hidden;">
+                                    <img class="leaderBoardCardAvatar" src="./assets/img/content/avatars/full_high_Games_Persona_Fallout X-01 Armor.png" style="backface-visibility: hidden;">
+                                </div>
+                            </div>
+                            <div class="row" style="backface-visibility: hidden;">
+                                <div class="col-sm-12 player-card-xp" style="backface-visibility: hidden;">21,151 XP</div>
+                                <div class="myTeam-viewDetail" data-userid="82821" style="backface-visibility: hidden;">
+                                    <span class="btn btn-wac btn-clock" style="backface-visibility: hidden;">view details</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="playerCardBack back" style="transform: rotateY(-180deg); height: 100%; width: 100%; backface-visibility: hidden; transform-style: preserve-3d; position: absolute; z-index: 0; transition: all 0.5s ease-out;">
+                            <div class="playerCardHeader" style="backface-visibility: hidden;">Ken Workman<img class="flip-icon" src="./assets/img/icons/flip-arrow-reversed.png" style="backface-visibility: hidden;"></div>
+                            <div class="row" style="backface-visibility: hidden;">
+                                <div class="col-sm-12" style="backface-visibility: hidden;">
+                                    <div class="contentContainer" style="backface-visibility: hidden;">
+                                        <span class="cardLeft-first" style="backface-visibility: hidden;">Assistant Store Leader</span>
+                                    </div>
+                                    <div class="contentContainer" style="backface-visibility: hidden;">
+                                        <span class="cardLeft" style="backface-visibility: hidden;">Onboarding</span>
+                                        <span class="cardRight" style="backface-visibility: hidden;">100%</span>
+                                        <span class="center" style="backface-visibility: hidden;">&nbsp;</span>
+                                    </div>
+                                    <div class="contentContainer" style="backface-visibility: hidden;">
+                                        <span class="cardLeft" style="backface-visibility: hidden;">Circle of Life</span>
+                                        <span class="cardRight" style="backface-visibility: hidden;">50%</span>
+                                        <span class="center" style="backface-visibility: hidden;">&nbsp;</span>
+                                    </div>
+                                    <div class="contentContainer" style="backface-visibility: hidden;">
+                                        <span class="cardLeft" style="backface-visibility: hidden;">Selling and Service</span>
+                                        <span class="cardRight" style="backface-visibility: hidden;">50%</span>
+                                        <span class="center" style="backface-visibility: hidden;">&nbsp;</span>
+                                    </div>
+                                    <div class="card-divider" style="backface-visibility: hidden;"></div>
+
+                                        <span title="% CERTIFIED at associate's position" class="card-chart chart mid masterTooltip loaded" data-percent="85" style="backface-visibility: hidden;">
+                                            <canvas height="75" width="75" style="backface-visibility: hidden;"></canvas>
+                                            <span class="card-chart-label position pull-left" style="backface-visibility: hidden;"><span class="lg-per percent" style="backface-visibility: hidden;">85</span></span>
+                                            <span class="chart-complete sm-chart" style="font-size: 16pt; backface-visibility: hidden;">POSITION</span>
+                                        <canvas height="156" width="156" style="height: 125px; width: 125px;"></canvas></span>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <section class="player-card-container">
+                    <div class="card player-card " style="perspective: 588px; position: relative; transform-style: preserve-3d;">
+                        <div class="avatarContainer front" style="background: url('./assets/img/content/backgrounds/Games_BG_LevelUpBackground.jpg') black; height: 100%; width: 100%; backface-visibility: hidden; transform-style: preserve-3d; position: absolute; z-index: 1; transition: all 0.5s ease-out;">
+                            <div class="playerCardHeader" style="backface-visibility: hidden;">
+                                Sam Bilsky
+                                <div style="backface-visibility: hidden;">
+                                    <img class="flip-icon" src="./assets/img/icons/flip-arrow_03.png" style="backface-visibility: hidden;">
+                                </div>
+                            </div>
+                            <div class="row" style="backface-visibility: hidden;">
+                                <div class="col-sm-6" style="backface-visibility: hidden;">
+                                    <div class="col-sm-8 leaderboard-col-star" style="backface-visibility: hidden;">
+                                        <div class="lbc-star service-ranking" style="backface-visibility: hidden;">0</div>
+                                        <img src="./assets/img/icons/star-service-award.png" style="backface-visibility: hidden;">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6" style="backface-visibility: hidden;">
+                                    <div class=" pull-right col-sm-8 leaderboard-col-check" style="backface-visibility: hidden;">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" style="backface-visibility: hidden;">
+                                <div class="col-sm-12" style="backface-visibility: hidden;">
+                                    <img class="leaderBoardCardAvatar" src="./assets/img/content/avatars/full_high_Disney_Persona_Up Carl.png" style="backface-visibility: hidden;">
+                                </div>
+                            </div>
+                            <div class="row" style="backface-visibility: hidden;">
+                                <div class="col-sm-12 player-card-xp" style="backface-visibility: hidden;">17,875 XP</div>
+                                <div class="myTeam-viewDetail" data-userid="86963" style="backface-visibility: hidden;">
+                                    <span class="btn btn-wac btn-clock" style="backface-visibility: hidden;">view details</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="playerCardBack back" style="transform: rotateY(-180deg); height: 100%; width: 100%; backface-visibility: hidden; transform-style: preserve-3d; position: absolute; z-index: 0; transition: all 0.5s ease-out;">
+                            <div class="playerCardHeader" style="backface-visibility: hidden;">Sam Bilsky<img class="flip-icon" src="./assets/img/icons/flip-arrow-reversed.png" style="backface-visibility: hidden;"></div>
+                            <div class="row" style="backface-visibility: hidden;">
+                                <div class="col-sm-12" style="backface-visibility: hidden;">
+                                    <div class="contentContainer" style="backface-visibility: hidden;">
+                                        <span class="cardLeft-first" style="backface-visibility: hidden;">Senior Guest Advisor</span>
+                                    </div>
+                                    <div class="contentContainer" style="backface-visibility: hidden;">
+                                        <span class="cardLeft" style="backface-visibility: hidden;">Onboarding</span>
+                                        <span class="cardRight" style="backface-visibility: hidden;">100%</span>
+                                        <span class="center" style="backface-visibility: hidden;">&nbsp;</span>
+                                    </div>
+                                    <div class="contentContainer" style="backface-visibility: hidden;">
+                                        <span class="cardLeft" style="backface-visibility: hidden;">Circle of Life</span>
+                                        <span class="cardRight" style="backface-visibility: hidden;">50%</span>
+                                        <span class="center" style="backface-visibility: hidden;">&nbsp;</span>
+                                    </div>
+                                    <div class="contentContainer" style="backface-visibility: hidden;">
+                                        <span class="cardLeft" style="backface-visibility: hidden;">Selling and Service</span>
+                                        <span class="cardRight" style="backface-visibility: hidden;">50%</span>
+                                        <span class="center" style="backface-visibility: hidden;">&nbsp;</span>
+                                    </div>
+                                    <div class="card-divider" style="backface-visibility: hidden;"></div>
+
+                                        <span title="% CERTIFIED at associate's position" class="card-chart chart mid masterTooltip loaded" data-percent="70" style="backface-visibility: hidden;">
+                                            <canvas height="75" width="75" style="backface-visibility: hidden;"></canvas>
+                                            <span class="card-chart-label position pull-left" style="backface-visibility: hidden;"><span class="lg-per percent" style="backface-visibility: hidden;">70</span></span>
+                                            <span class="chart-complete sm-chart" style="font-size: 16pt; backface-visibility: hidden;">POSITION</span>
+                                        <canvas height="156" width="156" style="height: 125px; width: 125px;"></canvas></span>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <section class="player-card-container">
+                    <div class="card player-card " style="perspective: 588px; position: relative; transform-style: preserve-3d;">
+                        <div class="avatarContainer front" style="background: url('./assets/img/content/backgrounds/Games_BG_Fallout.jpg') black; height: 100%; width: 100%; backface-visibility: hidden; transform-style: preserve-3d; position: absolute; z-index: 1; transition: all 0.5s ease-out;">
+                            <div class="playerCardHeader" style="backface-visibility: hidden;">
+                                William Bilsky
+                                <div style="backface-visibility: hidden;">
+                                    <img class="flip-icon" src="./assets/img/icons/flip-arrow_03.png" style="backface-visibility: hidden;">
+                                </div>
+                            </div>
+                            <div class="row" style="backface-visibility: hidden;">
+                                <div class="col-sm-6" style="backface-visibility: hidden;">
+                                    <div class="col-sm-8 leaderboard-col-star" style="backface-visibility: hidden;">
+                                        <div class="lbc-star service-ranking" style="backface-visibility: hidden;">0</div>
+                                        <img src="./assets/img/icons/star-service-award.png" style="backface-visibility: hidden;">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6" style="backface-visibility: hidden;">
+                                    <div class=" pull-right col-sm-8 leaderboard-col-check" style="backface-visibility: hidden;">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" style="backface-visibility: hidden;">
+                                <div class="col-sm-12" style="backface-visibility: hidden;">
+                                    <img class="leaderBoardCardAvatar" src="./assets/img/content/avatars/full_high_Disney_Persona_Up Carl.png" style="backface-visibility: hidden;">
+                                </div>
+                            </div>
+                            <div class="row" style="backface-visibility: hidden;">
+                                <div class="col-sm-12 player-card-xp" style="backface-visibility: hidden;">17,115 XP</div>
+                                <div class="myTeam-viewDetail" data-userid="86962" style="backface-visibility: hidden;">
+                                    <span class="btn btn-wac btn-clock" style="backface-visibility: hidden;">view details</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="playerCardBack back" style="transform: rotateY(-180deg); height: 100%; width: 100%; backface-visibility: hidden; transform-style: preserve-3d; position: absolute; z-index: 0; transition: all 0.5s ease-out;">
+                            <div class="playerCardHeader" style="backface-visibility: hidden;">William Bilsky<img class="flip-icon" src="./assets/img/icons/flip-arrow-reversed.png" style="backface-visibility: hidden;"></div>
+                            <div class="row" style="backface-visibility: hidden;">
+                                <div class="col-sm-12" style="backface-visibility: hidden;">
+                                    <div class="contentContainer" style="backface-visibility: hidden;">
+                                        <span class="cardLeft-first" style="backface-visibility: hidden;">Guest Advisor</span>
+                                    </div>
+                                    <div class="contentContainer" style="backface-visibility: hidden;">
+                                        <span class="cardLeft" style="backface-visibility: hidden;">Onboarding</span>
+                                        <span class="cardRight" style="backface-visibility: hidden;">100%</span>
+                                        <span class="center" style="backface-visibility: hidden;">&nbsp;</span>
+                                    </div>
+                                    <div class="contentContainer" style="backface-visibility: hidden;">
+                                        <span class="cardLeft" style="backface-visibility: hidden;">Circle of Life</span>
+                                        <span class="cardRight" style="backface-visibility: hidden;">100%</span>
+                                        <span class="center" style="backface-visibility: hidden;">&nbsp;</span>
+                                    </div>
+                                    <div class="contentContainer" style="backface-visibility: hidden;">
+                                        <span class="cardLeft" style="backface-visibility: hidden;">Selling and Service</span>
+                                        <span class="cardRight" style="backface-visibility: hidden;">50%</span>
+                                        <span class="center" style="backface-visibility: hidden;">&nbsp;</span>
+                                    </div>
+                                    <div class="card-divider" style="backface-visibility: hidden;"></div>
+
+                                        <span title="% CERTIFIED at associate's position" class="card-chart chart mid masterTooltip loaded" data-percent="77" style="backface-visibility: hidden;">
+                                            <canvas height="75" width="75" style="backface-visibility: hidden;"></canvas>
+                                            <span class="card-chart-label position pull-left" style="backface-visibility: hidden;"><span class="lg-per percent" style="backface-visibility: hidden;">77</span></span>
+                                            <span class="chart-complete sm-chart" style="font-size: 16pt; backface-visibility: hidden;">POSITION</span>
+                                        <canvas height="156" width="156" style="height: 125px; width: 125px;"></canvas></span>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <div id="myTeamListNavigation" class="container">
+        <div class="row leader-pagn">
+            <div class="text-center" id="pagination"></div>
+        </div>
+    </div>
+</div>

@@ -5,6 +5,8 @@ import { HttpModule } from '@angular/http';
 import { Router } from '@angular/router';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 
+import {TranslateModule} from '@ngx-translate/core';
+
 // Logger,Window and User Services
 import { UserContextService } from './shared/services/userContext/user-context.service';
 import { UserProfileService } from './shared/services/userProfile/user-profile.service';
@@ -26,6 +28,7 @@ import { PagesModule } from './pages/pages.module';
 @NgModule({
   imports: [
     BrowserModule,
+    TranslateModule.forRoot(),
     HttpModule,
     PagesModule,
     AppRoutingModule
