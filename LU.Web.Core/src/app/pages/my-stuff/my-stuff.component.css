@@ -368,6 +368,11 @@
     margin-left: -15px !important;
 }
 
+  #mainChartItem{
+      text-align:center;
+      padding-bottom: 45px !important;
+  }
+
 .chart {
   position: relative;
   display: inline-block;
@@ -1502,11 +1507,6 @@
   }
   .card-container{
       width:100% !important;
-  }
-
-  #mainChartItem{
-      text-align:center;
-      padding-bottom: 45px !important;
   }
   .navbar-collapse{
       background: black !important;

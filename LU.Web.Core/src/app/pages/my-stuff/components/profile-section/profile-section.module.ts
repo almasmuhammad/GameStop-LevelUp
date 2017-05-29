@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { ProfileSectionComponent } from "app/pages/my-stuff/components/profile-section";
-import { ProfileSectionService } from "app/pages/my-stuff/components/profile-section/profile-section.service";
+import { ProfileSectionComponent } from './profile-section.component';
+import { ProfileSectionService } from './profile-section.service';
 
 @NgModule({
   imports: [

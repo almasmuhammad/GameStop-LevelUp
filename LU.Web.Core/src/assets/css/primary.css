@@ -8,9 +8,7 @@
          url('../fonts/Solido-Book.eot?#iefix') format('embedded-opentype');
     font-weight: normal;
     font-style: normal;
-
 }
-
 @font-face {
     font-family: 'solido_bold';
     src: url('../fonts/solido-bold-webfont.woff2') format('woff2'),
@@ -18,10 +16,7 @@
          url('../fonts/Solido-Bold.otf?#iefix') format('embedded-opentype');
     font-weight: normal;
     font-style: normal;
-
 }
-
-
 @font-face {
     font-family: 'open_sansbold';
     src: url('../fonts/opensans-bold-webfont.woff2') format('woff2'),
@@ -29,7 +24,6 @@
          url('../fonts/OpenSans-Bold.ttf')  format('truetype');
     font-weight: normal;
     font-style: normal;
-
 }
 
 /* Modal Elements */
@@ -178,14 +172,6 @@ a,
     z-index: 1065;
 }
 
-/*#serviceHolder {
-    width: 50px;
-    margin: auto;
-    margin-top: 15px;
-    text-align: center;
-    font-size: 14pt;
-}*/
-
 #starImg{
     margin-top: -61px;
     vertical-align: middle;
@@ -202,6 +188,7 @@ a,
 .btn:active {
   outline: none !important;
 }
+<<<<<<< HEAD
 /* CSS Document for Main Navbar ONLY */
 .navbar {
   border-radius: 0;
@@ -230,6 +217,8 @@ a,
 .navbar-default .navbar-nav > li > a:hover {
   color: #ef3124 !important;
 }
+=======
+>>>>>>> origin/dev
 .fa-2x.fa-power-off {
   font-size: 1.5em;
 }
@@ -242,34 +231,11 @@ a,
 .fa-2x.fa-comment-o {
   font-size: 1.5em;
 }
-/* height of the navbar */
-.navbar-nav > li > a {
-  padding-top: 20px !important;
-}
-.navbar-brand {
-  padding-top: 12px !important;
-  height: 65px;
-}
 /* style of the Power Button */
 .fa-power-off {
   color: #ef3124;
 }
-/* position of the Caret next to the power button */
-.nav .carets {
-  margin-top: -5px;
-  margin-left: 10px;
-}
-/* style of the hamburger menu */
-.navbar-toggle {
-  margin-top: 13px;
-}
-/* Navbar Active */
-.navbar-default .navbar-nav > .active > a,
-.navbar-default .navbar-nav > .active > a:focus,
-.navbar-default .navbar-nav > .active > a:hover {
-  background-color: transparent !important;
-  color: #EF3124 ;
-}
+
 /* -- Controls the style navbar dropdown-- */
 .body-mystuff a.dropdown-toggle.navdbsp {
   padding-right: 0 !important;
@@ -278,8 +244,6 @@ a,
 .dropdown-menu > li > a:focus {
   background-color: transparent;
 }
-
-
 
 #navd.dropdown-menu > li > a {
   display: block;
@@ -335,20 +299,6 @@ a,
 a:hover#logOutButton {
    padding: 12px !important;
     background-color: white !important;
-}
-
-/* Dropddown Button Active Color */
-.navbar-default .navbar-nav > .open > a,
-.navbar-default .navbar-nav > .open > a:hover,
-.navbar-default .navbar-nav > .open > a:focus {
-  background-color: transparent;
-}
-/* Fly-in Navbar */
-.navbar-fly-in {
-  background: #1a1a1a;
-  border-bottom: 1px solid #262626;
-  width: 100%;
-  top: -250px;
 }
 
 @media only screen and (max-width: 992px) {

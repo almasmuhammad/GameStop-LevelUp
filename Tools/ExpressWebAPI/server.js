@@ -55,7 +55,11 @@ app.get('/users/:id', function (req, res) {
 });
 
 app.get('/api/Application/Profile', function (req,res){
-  var applicationProfileViewModel = JSON.parse('{"roles":["CreatorReadx"],"languages":["en-us"]}');
+  var applicationProfileViewModel = JSON.parse('{"roles":["CreatorReady"],"languages":["en-us"]}');
+  for(var i=0; i<999999; i++)
+  {
+    var s = i+1;
+  }
   res.json(applicationProfileViewModel);
 });
 
