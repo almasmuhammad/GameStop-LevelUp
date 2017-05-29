@@ -1,11 +1,16 @@
 // Angular Library Modules
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpModule } from '@angular/http';
+import { Http, HttpModule } from '@angular/http';
 import { Router } from '@angular/router';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 
-import {TranslateModule} from '@ngx-translate/core';
+import {
+  TranslateModule,
+  TranslateLoader,
+  TranslateService,
+  TranslatePipe } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 // Logger,Window and User Services
 import { UserContextService } from './shared/services/userContext/user-context.service';
@@ -24,22 +29,36 @@ import { AppRoutingModule } from './app-routing.module';
 // Top level Feature Module
 import { PagesModule } from './pages/pages.module';
 
+// AoT requires an exported function for factories
+export function HttpLoaderFactory(http: Http) {
+    return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
+
 // import Angular's modules
 @NgModule({
   imports: [
     BrowserModule,
-    TranslateModule.forRoot(),
+    TranslateModule.forRoot({
+            loader: {
+              provide: TranslateLoader,
+              useFactory: HttpLoaderFactory,
+              deps: [Http]
+            }
+        }),
     HttpModule,
     PagesModule,
     AppRoutingModule
   ],
   providers: [
+    TranslateService,
     LoggerService,
     WindowService,
     UserProfileService,
     UserContextService,
     ProfileGuard ],
-  declarations: [AppComponent],
+  declarations: [
+    AppComponent
+    ],
   bootstrap: [AppComponent]
 })
 
