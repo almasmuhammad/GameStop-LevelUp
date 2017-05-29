@@ -217,6 +217,11 @@ a,
   color: #fff !important;
   cursor:pointer;
 }
+/* Navbar Links */
+.navbar-default .navbar-nav > li > a.active {
+  color: #ef3124 !important;
+  cursor:pointer;
+}
 
 .nav navbar-nav navbar-right{
     cursor:pointer;
