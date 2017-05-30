@@ -1,0 +1,416 @@
+.pagination{
+    color:#4d4d4d;
+}
+
+.threeButtonsBottom {
+  text-align:center;
+  margin: 10px auto;
+/*  padding-bottom: 1.5em;*/
+}
+
+/* line 1, ../components/sass/styles.scss */
+
+.truncated {
+    display: block;
+    display: -webkit-box;
+    margin: 0 auto;
+    font-size: 2.0rem;
+    line-height: 1.3;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+    padding-top: 0.65em;
+}
+
+.upArrow {
+    background: url("/images/upArrow.png") no-repeat 110px 18px;
+}
+
+.downArrow {
+    background: transparent url("/images/downArrow.png") no-repeat scroll 59px 20px;
+}
+
+.fourthRow a {
+    text-decoration: none;
+}
+
+.missionCentralRow {
+  margin: 0;
+}
+
+.missionCentralRow.firstRow
+{
+    background-color: #4d4d4d;
+    height: 2.5625em;
+}
+body.body-creator .navbar-default {
+    background-color: #1A1A1A !important;
+}
+
+/* line 11, ../components/sass/styles.scss */
+.mainContainer {
+  background-color: #fff;
+  padding: 0;
+}
+
+/* line 19, ../components/sass/styles.scss */
+.firstRow p {
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.secondRow {
+  height: 70px;
+}
+
+.secondRow img {
+  float: left;
+  margin: 3px 7px 0 13px;
+}
+/* line 29, ../components/sass/styles.scss */
+.secondRow p {
+  margin-top: 1.525em;
+  color: #333;
+  margin-bottom: 23px;
+  cursor: pointer;
+  text-decoration: none;
+  width: 230px;
+}
+/* line 33, ../components/sass/styles.scss */
+.tableHeaders {
+  padding: 0 1.25em 0 1.25em;
+}
+
+/* line 36, ../components/sass/styles.scss */
+.thirdRowCols {
+  height: 2.5em;
+  background-color: #EEEEEE;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+/* line 41, ../components/sass/styles.scss */
+.thirdRowCols p {
+  font-size: .8em;
+  margin-top: .8em;
+  color: #333;
+}
+
+.thirdRowCols img {
+    margin-left: 0.5em;
+    margin-top: -.125em;
+}
+
+/* line 46, ../components/sass/styles.scss */
+.thirdRowFirst {
+  border-left: 1px solid #ddd;
+}
+
+/* line 49, ../components/sass/styles.scss */
+.thirdRowLast {
+  border-right: 1px solid #ddd;
+}
+
+/* line 52, ../components/sass/styles.scss */
+.tableRows {
+  background-color: #fff;
+  padding: 0 1.25em;
+  clear:left;
+}
+
+/* line 56, ../components/sass/styles.scss */
+.fourthRow {
+  border-top: 1px solid #ddd;
+  height: 100%;
+
+/*  padding-bottom: .5em; */
+}
+/* line 61, ../components/sass/styles.scss */
+.fourthRow p {
+    font-size: .8em;
+    color: #4d4d4d;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 5px 0 6px 0;
+}
+/* line 65, ../components/sass/styles.scss */
+.fourthRow p.edit {
+    background-color: #F7931E;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+    width: 80px;
+    height: 24px;
+    display: inline-block;
+    padding-top:3px;
+}
+
+/* line 71, ../components/sass/styles.scss */
+.fourthRow img {
+  float: left;
+  margin-top: -.5em;
+  margin-right: 1em;
+}
+
+.fourthRow i.missionCentralChatIcon {
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.fourthRow i.missionCentralChatIcon.hasChat {
+    color: #F7931E;
+}
+
+/* Tabs */
+/* line 78, ../components/sass/styles.scss */
+.colOne, .colTwoThreeFour {
+  height: 2.5625em;
+}
+/* line 80, ../components/sass/styles.scss */
+.colOne p, .colTwoThreeFour p {
+  color: #fff;
+  margin-top: .6em;
+}
+/* line 84, ../components/sass/styles.scss */
+.colOne img, .colTwoThreeFour img {
+  margin-right: .625em;
+  margin-top: -.2em;
+}
+
+/* line 89, ../components/sass/styles.scss */
+.colOne {
+  background-color: #f7931e;
+}
+
+/* line 92, ../components/sass/styles.scss */
+.colTwoThreeFour {
+  background-color: #4d4d4d;
+}
+
+/* line 95, ../components/sass/styles.scss */
+.pagination li {
+  list-style: none;
+  display: inline;
+}
+/* line 98, ../components/sass/styles.scss */
+.pagination li a {
+  border: 0;
+}
+/* line 100, ../components/sass/styles.scss */
+.pagination li a:hover {
+  background-color: #fff;
+}
+
+/***** new category page *****/
+@media screen and (max-width: 991px) {
+  /* line 108, ../components/sass/styles.scss */
+  body {
+    font-size: 1.2em;
+  }
+}
+
+/* column width for mission central, ensure that sum of widths makes 100% */
+/* icon */
+.col-mc-1 {
+    float: left;
+    width: 3%;
+}
+/* name */
+.col-mc-2 {
+    float: left;
+    width: 15%;
+}
+/* description */
+.col-mc-3 {
+    float: left;
+    width: 29%;
+}
+/* date created */
+.col-mc-4 {
+    float: left;
+    width: 10%;
+}
+/* created by */
+.col-mc-5 {
+    float: left;
+    width: 10%;
+}
+/* date published */
+.col-mc-6 {
+    float: left;
+    width: 10%;
+}
+/* status */
+.col-mc-7 {
+    float: left;
+    width: 7%;
+}
+/* button */
+.col-mc-8 {
+    float: left;
+    width: 16%;
+}
+
+#missionChatModal .modal-content {
+    background-color: #EEEEEE;
+}
+
+.missionChatHeader {
+    width: 100%;
+    line-height: 35px;
+    text-align: center;
+    color: #EEEEEE;
+    background-color: #333;
+}
+#missionChatMissionName {
+    margin: 10px 0;
+    font-size: .9em;
+    color: #333;
+}
+
+#missionChatModal .modal-header {
+    border-bottom: none !important;
+    padding-bottom: 0;
+}
+
+#missionChatModal .modal-body {
+    padding: 0 15px;
+}
+
+#missionChatModal .modal-footer {
+    border-top: none !important;
+    margin-top: 10px;
+}
+
+#missionChatModal .modal-footer .left {
+    width: 70%;
+    float: left;
+}
+
+#missionChatModal .modal-footer .right {
+    width: 30%;
+    float: left;
+}
+#missionChatModal .modal-footer .right > div {
+    width: 50%;
+    float: left;
+    padding-left: 5px;
+}
+
+
+#missionChatEnterNote {
+    color: #333;
+    height: 33px;
+    background-color: #fff;
+    margin: 0 auto;
+    font-size: 0.8em;
+    border: 1px solid #F7931E;
+    float: left;
+    padding: 5px;
+    width: 100%;
+}
+
+#missionChatSendButton {
+  background-color: #F7931E;
+  color: #fff;
+  cursor: pointer;
+  width: 100%;
+  line-height: 33px;
+  text-align: center;
+}
+
+#missionChatCancelButton {
+    background-color: #fff;
+    border: 1px solid #333;
+    color: #333;
+    width: 100%;
+    line-height: 31px;
+    text-align: center;
+}
+
+.mission-chat-row {
+    width: 80%;
+    float: left;
+}
+
+.mission-chat-row.self {
+    float:right;
+}
+
+.mission-chat-identify {
+    float: left;
+    margin: 5px 0;
+}
+
+.mission-chat-avatar {
+    width: 30px;
+    height: 30px;
+    float: left;
+    background-color: #fff;
+    border: 1px solid #eee;
+}
+.mission-chat-user {
+    font-size: 0.8em;
+    color: #333;
+    float: left;
+    line-height: 30px;
+    margin-left: 5px;
+}
+.mission-chat-message-body {
+    background-color: #fff;
+    color: #333;
+    font-size: 0.7em;
+    float: left;
+    padding: 6px;
+    width: 100%;
+    text-align: left;
+}
+
+.mission-chat-date {
+    float: right;
+}
+
+.mission-chat-created-date {
+    font-size: 0.7em;
+    color: #aaa;
+}
+
+.creator-pagination {
+    color: #4d4d4d;
+    margin: 0 8px;
+    cursor: pointer;
+}
+
+.creator-pagination.active {
+    color: #F7931E;
+}
+
+.sort-header {
+    cursor: pointer;
+}
+
+.sort-header p i {
+    display: none;
+    margin-left: 5px;
+}
+
+.sort-header.sorted p i {
+    display: inline-block;
+}
+
+.creator-prevItem img {
+    content: url('./../../../assets/img/icons/arrow-left-active.png');
+}
+
+.creator-prevItem.inactive img {
+    content: url('./../../../assets/img/icons/arrow-left-inactive.png');
+}
+
+.creator-nextItem img {
+    content: url('./../../../assets/img/icons/arrow-right-active.png');
+}
+
+.creator-nextItem.inactive img {
+    content: url('./../../../assets/img/icons/arrow-right-inactive.png');
+}

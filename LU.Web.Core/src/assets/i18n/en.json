@@ -4,5 +4,6 @@
     "nav.my-teams": "my teams",
     "nav.reports": "reports",
     "nav.creator": "creator",
-    "nav.language": "language"
+    "nav.language": "language",
+    "myMissions.title":"my missions"
 }

@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { TranslateModule } from '@ngx-translate/core';
+
 import { MyStuffRoutingModule } from './my-stuff-routing.module';
 import { MyStuffComponent } from './my-stuff.component';
 
@@ -32,6 +34,7 @@ import {
 @NgModule({
   imports: [
     CommonModule,
+    TranslateModule,
     MyStuffRoutingModule
   ],
   declarations: [

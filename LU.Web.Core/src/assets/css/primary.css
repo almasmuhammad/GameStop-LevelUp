@@ -188,37 +188,6 @@ a,
 .btn:active {
   outline: none !important;
 }
-<<<<<<< HEAD
-/* CSS Document for Main Navbar ONLY */
-.navbar {
-  border-radius: 0;
-  margin-bottom: 0;
-}
-/* Navbar Color */
-.navbar-default {
-  background-color: transparent !important;
-  border-color: transparent !important;
-}
-/* Navbar Links */
-.navbar-default .navbar-nav > li > a {
-  color: #fff !important;
-  cursor:pointer;
-}
-/* Navbar Links */
-.navbar-default .navbar-nav > li > a.active {
-  color: #ef3124 !important;
-  cursor:pointer;
-}
-
-.nav navbar-nav navbar-right{
-    cursor:pointer;
-}
-
-.navbar-default .navbar-nav > li > a:hover {
-  color: #ef3124 !important;
-}
-=======
->>>>>>> origin/dev
 .fa-2x.fa-power-off {
   font-size: 1.5em;
 }
