@@ -1,10 +1,13 @@
 {
     "my-stuff": "mis cosas",
     "my-training": "mi entrenamiento",
-    "my-teams": "Mis equipos",
+    "my-teams": "mis equipos",
     "reports": "informes",
     "creator": "creador",
     "language": "idioma",
-    "myMissions":"Mis misiones",
-    "allMissions":"Todas las misiones"
+    "my-missions":"mis misiones",
+    "all-missions":"todas las misiones",
+    "position":"posición",
+    "top-categories":"categorías principales",
+    "level":"nivel"
 }

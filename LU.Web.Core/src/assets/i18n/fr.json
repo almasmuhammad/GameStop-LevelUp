@@ -6,6 +6,10 @@
     "reports": "rapports",
     "creator": "créateur",
     "language": "langue",
-    "myMissions":"ma missions",
-    "allMissions":"Toutes les missions"
+    "my-missions":"ma missions",
+    "all-missions":"toutes les missions",
+    "position":"position",
+    "top-categories":"principales catégories",
+    "level":"niveau"
+
 }

@@ -5,7 +5,10 @@
     "reports": "reports",
     "creator": "creator",
     "language": "language",
-    "myMissions":"my missions",
-    "allMissions":"all missions"
+    "my-missions":"my missions",
+    "all-missions":"all missions",
+    "position":"position",
+    "top-categories":"top categories",
+    "level":"level"
 
 }
