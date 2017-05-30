@@ -12,5 +12,10 @@
         "myMissions":{
             "title":"my missions"
         }
+    },
+    "myTraining": {
+        "allMissions": {
+            "title":"all missions"
+        }
     }
 }
