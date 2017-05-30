@@ -8,9 +8,9 @@ export class ProfileSectionService {
 
   constructor(private http: Http) { }
 
-fetchProfile(){
+fetchProfile() {
   return this.http
     .get('/assets/profile.json')
-    .map(res=> res.json());
+    .map(res => res.json());
 }
 }
