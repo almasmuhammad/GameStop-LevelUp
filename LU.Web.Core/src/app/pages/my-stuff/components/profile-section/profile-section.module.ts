@@ -8,10 +8,10 @@ import { ProfileSectionService } from './profile-section.service';
   imports: [
     CommonModule
   ],
-  exports:[
+  exports: [
     ProfileSectionComponent
     ],
-  providers:[
+  providers: [
    ProfileSectionService
     ],
   declarations: [
