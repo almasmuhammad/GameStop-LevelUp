@@ -1,0 +1,468 @@
+
+.body-mytraining .avatar{
+    text-align: center;
+}
+
+.body-mytraining .subheader-avatar-display {
+    margin-top: 0;
+    margin-left: 0;
+    max-height:250px;
+}
+
+#notCertifiedText{
+    color: #ef3124;
+    white-space: pre-wrap;
+}
+
+.mission-percent .chart.mid {
+margin: 17px auto 16px auto;
+    position: relative;
+}
+
+.mission-percent .card-chart-label.pull-left {
+    margin: 18px 0 0 0;
+    width: 130px;
+    font-size: 38px;
+    height: 44px;
+}
+
+.mission-percent .chart-complete.sm-chart {
+    margin: 0;
+    padding: 0;
+    top: 65px;
+    left: 0;
+    position: absolute;
+    width: 130px;
+    color:#fff;
+}
+
+#myTrainingHistory .chart-complete {
+    margin-top: 60px;
+    position: absolute;
+    left: 18px;
+    top: 0;
+}
+
+
+.body-mytraining .mission-cards {
+    margin-top: 15px;
+    maring-bottom: 200px;
+}
+
+.body-mytraining .text-red {
+    color:#f7931e;
+}
+
+.body-mytraining .last-login {
+    padding-top: 15px;
+    padding-bottom: 30px;
+}
+
+.body-mytraining .certs {
+    margin-top:33px;
+}
+.carousel.slide img {
+width: 100%;
+    height: 144px;
+}
+#carousel-training-history img {
+    height:53px;
+}
+
+#MyTraining .chevron-leader {
+    margin-top: 8px;
+    cursor:pointer;
+}
+.more {
+margin: 20px 0 40px 0;
+}
+.certi {
+    font-size:2.3rem;
+}
+.servi {
+    font-size:2.3rem;
+}
+#myTrainingAddServiceAwardButton {
+    display: inline;
+    float: right;
+}
+.carousel-control .icon-prev:before {
+    content: '';
+}
+
+.carousel-control.left {
+    background-image: none !important;
+    background-repeat: repeat-x;
+}
+.carousel-control .glyphicon-chevron-left, .carousel-control .icon-prev {
+    margin-left: -63%;
+    margin-top: -25px;
+}
+.carousel-control .icon-next:before {
+    content: '';
+}
+.carousel-control  .history.icon-next {
+    margin-right: -85px;
+    margin-top: -25px !important;
+}
+.carousel-control  .history.icon-prev {
+    margin-left: -85px;
+    margin-top: -25px !important;
+}
+.carousel-control.right {
+    background-image: none !important;
+    background-repeat: repeat-x;
+}
+.carousel-control .glyphicon-chevron-left, .carousel-control .icon-next {
+    margin-right: -63%;
+    margin-top: -8px;
+}
+.quiz-numbers {
+    font-size:30px !important;
+    font-weight:bold;
+    padding-top:13px;
+}
+
+.quiz-numbers-label {
+
+    padding-top:15px;
+}
+.carousel-caption {
+    width: 270px;
+    padding-bottom: 0;
+    margin-left: -71px;
+    font-size: 14px;
+}
+@media screen and (max-width: 992px) {
+    .carousel-caption {
+        right: 20%;
+        left: 20%;
+        font-size: 14px;
+        width: 240px;
+    }
+}
+.carousel-caption.history {
+    right: 20%;
+    left: 20%;
+    WIDTH: 270px;
+    margin-left: -72px;
+    bottom:inherit;
+    top:0;
+    padding:0;
+}
+#carousel-training {
+    margin-top:-20px;
+
+}
+.scores {
+    font-size: 4.8rem !important;
+    FONT-WEIGHT: bold;
+}
+
+.mission-history-card {
+    width:340px;
+    background-color: #000;
+    border-radius: 20px;
+    text-align: center;
+    border: 1px solid #282828;
+    margin: 0 auto 30px auto;
+}
+
+@media (min-width: 992px) {
+    .mission-history-card{
+        width:300px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .mission-history-card{
+        width:360px;
+    }
+}
+
+#last-login {
+ margin:10px 0 10px 0;
+}
+#last-login span {
+ color:#ff0000;
+}
+.mission-history-card .header {
+    font-size: 2.4rem;
+    padding: 15px;
+    text-transform:uppercase;
+    border-bottom: 1px solid #1a1a1a;
+    color: #fff;
+    height: 60px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.mission-date {
+    padding: 9px;
+    font-size: 1.6rem;
+    border-bottom: 1px solid #1a1a1a;
+}
+
+.mission-verified {
+    margin-left:0px;
+    margin-right:0px;
+}
+
+.veri {
+
+    line-height: 64px;
+}
+
+.veri span {
+    padding: 0;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.veri i {
+    color: #00ff21;
+}
+
+.quiz span {
+    line-height: 20px;
+}
+
+.current-mission-row .row-neg {
+    margin-right: 0px;
+    margin-left: -15px !important;
+}
+
+.mission-percent {
+}
+
+.mission-link {
+    padding: 13px;
+    text-transform:uppercase;
+    border-top: 1px solid #1a1a1a;
+}
+
+.retro-link{
+    padding: 13px;
+    text-transform:uppercase;
+    border-top: 1px solid #1a1a1a;
+}
+
+.mission-link:hover {
+    color:#ff0000;
+    cursor:pointer;
+}
+.breadcrumbs-training {
+    margin-top: -20px;
+    margin-bottom: 37px;
+    color: #ccc;
+    margin-left:-28px;
+}
+.add-service i {
+background-color: red;
+    padding: 5px 6px 3px 6px;
+    -moz-border-radius: 60px;
+    -webkit-border-radius: 60px;
+    border-radius: 60px;
+    -moz-box-shadow: 0px 0px 2px #888;
+    -webkit-box-shadow: 0px 0px 2px #888;
+    box-shadow: 0px 0px 2px #888;
+    cursor: pointer;
+}
+.b-name {
+    color:#fff !important;
+}
+.input-group-training {
+    position: relative;
+    float: right;
+    display: table;
+    border-collapse: separate;
+    width: 90px;
+}
+
+.large-stats-level{
+    font-size:32px;
+}
+
+.large-stats-xp{
+    font-size:28px;
+}
+
+.input-group-training .input-group-addon {
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1;
+    color: #555;
+    text-align: center;
+    background-color: transparent !important;
+    border: transparent !important;
+    border-radius: 4px;
+}
+.fa-11x {
+    font-size: 1.9rem;
+    margin-top: 3px;
+}
+.input-group-training .form-control {
+    width: 250px;
+    font-size: 19px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+}
+
+.btn-training {
+    color: #FFF;
+    padding: 15px;
+    background-color: #000;
+    width: 100%;
+    font-size: 18px !important;
+    text-align: left;
+    border-radius: 10px;
+}
+.training.dropdown-menu {
+    color: #EF3124 !important;
+    background-color: #000;
+    border-color: #000;
+    width: 100%;
+    border-top: none;
+    padding-bottom: inherit;
+    padding-top: 0;
+    margin-top: -1px;
+    text-align: left;
+    border-radius: 0px;
+    -webkit-border-bottom-right-radius: 10px;
+    -webkit-border-bottom-left-radius: 10px;
+    -moz-border-radius-bottomright: 10px;
+    -moz-border-radius-bottomleft: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-image: none;
+}
+.training.dropdown-menu > li > a {
+    display: block;
+    padding: 15px;
+    clear: both;
+    font-size: 18px;
+    font-weight: normal;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    line-height: 1.42857143;
+    color: #fff;
+    white-space: nowrap;
+    background-image: none;
+}
+.training.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+    background-color: transparent;
+}
+.training.dropdown-menu > li > a:hover {
+    display: block;
+    padding: 15px;
+    clear: both;
+    font-size: 18px;
+    font-weight: normal;
+    border-top: 1px solid rgba(255, 255, 255, 0.20);
+    line-height: 1.42857143;
+    color: #EF3124;
+    white-space: nowrap;
+    background-image: none;
+}
+.open > .btn-training {
+    border-bottom: none;
+    border-radius: 0;
+    -webkit-border-top-left-radius: 10px;
+    -webkit-border-top-right-radius: 10px;
+    -moz-border-radius-topleft: 10px;
+    -moz-border-radius-topright: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.left-neg {
+    margin-left:-15px;
+}
+.right-neg {
+    margin-right:-15px;
+}
+.training-history-slider-row{
+    clear:both;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+.train-dd {
+    clear: both;
+}
+
+#myTrainingInputSearch:focus {
+    width: 250px;
+}
+
+.body-mytraining .hideItem {
+   opacity:0;
+}
+
+#myTrainingSearchClear {
+    position: absolute;
+    top: 3px;
+    right: 20px;
+    opacity: 0;
+}
+
+#myTrainingInputSearch:focus + #myTrainingSearchClear {
+    opacity: 0.75;
+}
+
+#MyTraining ul.training.dropdown-menu li {
+  display: block;
+  padding: 15px;
+  clear: both;
+  font-size: 18px;
+  font-weight: normal;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  line-height: 1.42857143;
+  color: #fff;
+  white-space: nowrap;
+  background-image: none;
+  cursor:pointer;
+}
+
+#MyTraining ul.training.dropdown-menu li:hover {
+    color: #EF3124;
+}
+
+@media only screen and (min-width: 769px) {
+    #trainingStats {
+        margin-left: -15px;
+    }
+
+    #trainingStats-2 {
+        margin-left: -15px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+
+    #trainingStats{
+        margin-left: -15px;
+
+        text-align: center;
+    }
+     #trainingStats-2{
+        margin-left: -15px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .mission-history-card{
+        width: 100% !important;
+    }
+
+    #myTrainingUserRank{
+        max-width: 100%;
+    }
+
+    .small-center{
+        text-align:center;
+    }
+}

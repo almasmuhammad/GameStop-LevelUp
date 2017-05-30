@@ -28,6 +28,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 // Top level Feature Module
 import { PagesModule } from './pages/pages.module';
+import { ModuleLoadingIndicatorComponent } from './shared/components/module-loading-indicator/module-loading-indicator.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: Http) {
@@ -57,7 +58,8 @@ export function HttpLoaderFactory(http: Http) {
     UserContextService,
     ProfileGuard ],
   declarations: [
-    AppComponent
+    AppComponent,
+    ModuleLoadingIndicatorComponent
     ],
   bootstrap: [AppComponent]
 })
