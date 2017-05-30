@@ -1,10 +1,10 @@
 {
-    "nav.my-stuff": "mis cosas",
-    "nav.my-training": "mi entrenamiento",
-    "nav.my-teams": "Mis equipos",
-    "nav.reports": "informes",
-    "nav.creator": "creador",
-    "nav.language": "idioma",
-    "myMissions.title":"Mis misiones",
-    "myTraning.allMissions":"Todas las misiones"
+    "my-stuff": "mis cosas",
+    "my-training": "mi entrenamiento",
+    "my-teams": "Mis equipos",
+    "reports": "informes",
+    "creator": "creador",
+    "language": "idioma",
+    "myMissions":"Mis misiones",
+    "allMissions":"Todas las misiones"
 }

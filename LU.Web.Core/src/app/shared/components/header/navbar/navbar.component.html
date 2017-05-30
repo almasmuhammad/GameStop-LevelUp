@@ -12,12 +12,12 @@
       </div>
       <div class="collapse navbar-collapse" id="main-navbar">
         <ul class="nav navbar-nav">
-            <li><a routerLinkActive="active" routerLink="/pages/my-stuff">{{'nav.my-stuff' | translate}}</a></li>
-            <li><a routerLinkActive="active" routerLink="/pages/my-training">{{'nav.my-training' | translate}}</a></li>
-            <li><a routerLinkActive="active" routerLink="/pages/my-team">{{'nav.my-teams' | translate}}</a></li>
-            <li><a routerLinkActive="active" routerLink="/pages/reports">{{'nav.reports' | translate}}</a></li>
+            <li><a routerLinkActive="active" routerLink="/pages/my-stuff">{{'my-stuff' | translate}}</a></li>
+            <li><a routerLinkActive="active" routerLink="/pages/my-training">{{'my-training' | translate}}</a></li>
+            <li><a routerLinkActive="active" routerLink="/pages/my-team">{{'my-teams' | translate}}</a></li>
+            <li><a routerLinkActive="active" routerLink="/pages/reports">{{'reports' | translate}}</a></li>
             <li *ngIf="_userContextService.profileModel.isCreator">
-                <a routerLink="/pages/creator" routerLinkActive="active" class="creatorLink">{{'nav.creator' | translate}}</a></li>
+                <a routerLink="/pages/creator" routerLinkActive="active" class="creatorLink">{{'creator' | translate}}</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
               <li><a id="notif-toggle" class=""><i class="fa fa-2x fa-envelope-o">
@@ -30,7 +30,7 @@
               
                   <li>
                     <a href="javascript:void(0)">
-                        <i class="fa fa-language"></i> {{ 'nav.language' | translate }} <b class="caret"></b>
+                        <i class="fa fa-language"></i> {{ 'language' | translate }} <b class="caret"></b>
                     </a>
                         <a class="dropdown-item" href="javascript:void(0)" (click)="changeLang('en')">English</a>
                         <a class="dropdown-item" href="javascript:void(0)" (click)="changeLang('fr')">French</a>

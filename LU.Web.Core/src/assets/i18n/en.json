@@ -1,11 +1,11 @@
 {
-    "nav.my-stuff": "my stuff",
-    "nav.my-training": "my training",
-    "nav.my-teams": "my teams",
-    "nav.reports": "reports",
-    "nav.creator": "creator",
-    "nav.language": "language",
-    "myMissions.title":"my missions",
-    "myTraning.allMissions":"all missions"
+    "my-stuff": "my stuff",
+    "my-training": "my training",
+    "my-teams": "my teams",
+    "reports": "reports",
+    "creator": "creator",
+    "language": "language",
+    "myMissions":"my missions",
+    "allMissions":"all missions"
 
 }
