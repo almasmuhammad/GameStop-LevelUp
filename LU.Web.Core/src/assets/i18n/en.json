@@ -1,11 +1,8 @@
 {
-    "navbar": {
-        "links": {
-            "my stuff":"my stuff",
-            "my training":"my training",
-            "my team":"my team",
-            "reports":"reports",
-            "create":"creator"
-        }
-    }
+    "nav.my-stuff": "my stuff",
+    "nav.my-training": "my training",
+    "nav.my-teams": "my teams",
+    "nav.reports": "reports",
+    "nav.creator": "creator",
+    "nav.language": "language"
 }
