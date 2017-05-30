@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+/*import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { ProfileSectionComponent } from './profile-section.component';
@@ -18,4 +18,4 @@ import { ProfileSectionService } from './profile-section.service';
     ProfileSectionComponent
     ]
 })
-export class ProfileSectionModule { }
+export class ProfileSectionModule { }*/

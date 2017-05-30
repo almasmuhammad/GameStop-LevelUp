@@ -1,0 +1,15 @@
+.username{
+
+/*remove background color property once done with formatting*/
+    /*background-color: orange;*/
+
+
+    color:#fff !important;
+    font-size: 28px;
+    font-weight: bold;
+    font-family: solido_book;
+    margin-top: 6px;
+    line-height: 40px;
+    -webkit-text-size-adjust: 100%;
+    display: block;
+}
