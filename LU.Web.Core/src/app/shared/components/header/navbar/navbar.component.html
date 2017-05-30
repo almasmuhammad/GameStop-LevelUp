@@ -12,12 +12,12 @@
       </div>
       <div class="collapse navbar-collapse" id="main-navbar">
         <ul class="nav navbar-nav">
-            <li><a routerLinkActive="active" routerLink="/pages/my-stuff">{{'my stuff'}}</a></li>
-            <li><a routerLinkActive="active" routerLink="/pages/my-training">{{'my training'}}</a></li>
-            <li><a routerLinkActive="active" routerLink="/pages/my-team">{{'my team'}}</a></li>
-            <li><a routerLinkActive="active" routerLink="/pages/reports">{{'reports'}}</a></li>
+            <li><a routerLinkActive="active" routerLink="/pages/my-stuff">{{'navbar.links.my stuff' | translate}}</a></li>
+            <li><a routerLinkActive="active" routerLink="/pages/my-training">{{'navbar.links.my training' | translate}}</a></li>
+            <li><a routerLinkActive="active" routerLink="/pages/my-team">{{'navbar.links.my team' | translate}}</a></li>
+            <li><a routerLinkActive="active" routerLink="/pages/reports">{{'navbar.links.reports' | translate}}</a></li>
             <li *ngIf="_userContextService.profileModel.isCreator">
-                <a routerLink="/pages/creator" routerLinkActive="active" class="creatorLink">{{'creator'}}</a></li>
+                <a routerLink="/pages/creator" routerLinkActive="active" class="creatorLink">{{'navbar.links.creator' | translate}}</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
               <li><a id="notif-toggle" class=""><i class="fa fa-2x fa-envelope-o">

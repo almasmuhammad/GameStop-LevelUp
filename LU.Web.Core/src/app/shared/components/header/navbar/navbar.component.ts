@@ -10,7 +10,9 @@ import { UserContextService } from '../../../services/userContext/user-context.s
 })
 export class NavbarComponent implements OnInit {
 
-  constructor(public _userContextService: UserContextService) { }
+  constructor(
+    public _userContextService: UserContextService
+    ) { }
 
   ngOnInit() {
   }

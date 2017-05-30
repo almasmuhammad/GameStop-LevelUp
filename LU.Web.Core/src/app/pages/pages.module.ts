@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { TranslateModule } from '@ngx-translate/core';
+
 import { PagesRoutingModule } from './pages-routing.module';
 
 import { PagesComponent } from './pages.component';
@@ -9,7 +11,8 @@ import { NavbarComponent } from '../shared/components/header/navbar/navbar.compo
 @NgModule({
   imports: [
     CommonModule,
-    PagesRoutingModule
+    PagesRoutingModule,
+    TranslateModule
   ],
   exports: [
     PagesRoutingModule

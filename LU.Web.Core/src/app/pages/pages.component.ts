@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, Routes } from '@angular/router';
 
-import { NavbarComponent } from '../shared/components/header/navbar/navbar.component';
+import { NavbarComponent } from '../shared/components/header/navbar';
 
 @Component({
   selector: 'app-pages',

@@ -2,10 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { Router, Routes } from '@angular/router';
 
-import { UserContextService } from './shared/services/userContext/user-context.service';
-import { UserProfileService } from './shared/services/userProfile/user-profile.service';
-import { LoggerService } from './shared/services/logs/logger-service';
-import { WindowService } from './shared/services/window/window.service';
+import {TranslateService} from '@ngx-translate/core';
+
+import { UserContextService } from './shared/services/userContext';
+import { UserProfileService } from './shared/services/userProfile';
+import { LoggerService } from './shared/services/logs';
+import { WindowService } from './shared/services/window';
 import { environment } from '../environments/environment';
 
 /*
@@ -22,9 +24,14 @@ export class AppComponent implements OnInit {
   constructor(
     private _router: Router,
     public _userContextService: UserContextService,
-    private _logger: LoggerService) { }
+    private _logger: LoggerService,
+    private _translate: TranslateService) { }
 
   ngOnInit() {
+
+    this._translate.addLangs(['en']);
+    this._translate.setDefaultLang('en');
+
     this.loadingProfile = true;
 
     // load config URLs

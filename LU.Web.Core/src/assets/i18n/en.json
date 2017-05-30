@@ -1,0 +1,11 @@
+{
+    "navbar": {
+        "links": {
+            "my stuff":"my stuff",
+            "my training":"my training",
+            "my team":"my team",
+            "reports":"reports",
+            "create":"creator"
+        }
+    }
+}
