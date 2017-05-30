@@ -6,5 +6,6 @@
     "nav.reports": "rapports",
     "nav.creator": "créateur",
     "nav.language": "langue",
-    "myMissions.title":"ma missions"
+    "myMissions.title":"ma missions",
+    "myTraning.allMissions":"Toutes les missions"
 }
