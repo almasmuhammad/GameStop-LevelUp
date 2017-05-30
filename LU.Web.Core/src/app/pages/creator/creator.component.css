@@ -13,8 +13,6 @@
 .truncated {
     display: block;
     display: -webkit-box;
-    /* max-width: 265px; */
-    /*height: 45px;*/
     margin: 0 auto;
     font-size: 2.0rem;
     line-height: 1.3;
@@ -32,9 +30,6 @@
 
 .downArrow {
     background: transparent url("/images/downArrow.png") no-repeat scroll 59px 20px;
-}
-
-.fourthRow p.desc {
 }
 
 .fourthRow a {
