@@ -1,0 +1,519 @@
+
+<div id="myTrainingTrainingHistory" style="display: block;">
+    <section class="current-mission-tracker" style="margin-bottom: 200px;">
+        <div class="container">
+            <div class="row training-history-row current-mission-header col-sm-12">
+                <div class="col-sm-7 nopad"><span><i class="fa fa-rocket" style="margin-right:10px;"></i>{{'myTraining.allMissions.title' | translate}}</span></div>
+                <div class="col-sm-3 input-group-training">
+                    <span class="input-group-addon" id="basic-addon1"><i class="fa fa-11x fa-search"></i></span>
+                    <input type="text" id="myTrainingInputSearch" class="form-control" placeholder="search by mission name" aria-describedby="basic-addon1">
+                    <i id="myTrainingSearchClear" class="fa fa-times-circle"></i>
+                </div>
+            </div>
+
+            <div class="row train-dd">
+                <div class="col-sm-4 col-xs-12">
+                    <div id="myTrainingCategoryDropdown" class="dropdown" current="-1">
+                        <button class="btn btn-training dropdown-toggle" type="button" id="myTrainingChooseCategoryDropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            <span class="ddr">All Categories</span>
+                            <img data-toggle="dropdown" class="chevron-leader" src="./assets/img/icons/transparentbgcevron.png">
+                        </button>
+                        <ul class="training dropdown-menu" aria-labelledby="myTrainingChooseCategoryDropdownMenu"><li data-val="-1">All Categories</li><li data-val="-6">My Position (33/38)</li><li data-val="2">Retro Missions</li><li data-val="9">ASL (32/34)</li><li data-val="14">Circle of Life (4/4)</li><li data-val="16">Cricket (1/1)</li><li data-val="11">DL (36/38)</li><li data-val="7">GA (16/18)</li><li data-val="5">My Business (13/13)</li><li data-val="6">My Guest (10/11)</li><li data-val="4">My Team (8/8)</li><li data-val="15">Onboarding (1/1)</li><li data-val="12">RL (35/37)</li><li data-val="20">Seasonal Training (2/3)</li><li data-val="21">Selling and Service (1/2)</li><li data-val="8">SGA (25/27)</li><li data-val="13">Side Quest (1/1)</li><li data-val="10">SL (36/38)</li></ul>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-xs-12">
+                    <div id="myTrainingMissionTypeDropdown" class="dropdown" current="-1">
+                        <button class="btn btn-training dropdown-toggle" type="button" id="myTrainingChooseMissionTypeDropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            <span class="ddr">All Missions</span>
+                            <img data-toggle="dropdown" class="chevron-leader" src="./assets/img/icons/transparentbgcevron.png">
+                        </button>
+                        <ul class="training dropdown-menu" aria-labelledby="myTrainingChooseMissionTypeDropdownMenu">
+                            <li data-val="-1">All Missions</li>
+                            <li data-val="2">Completed</li>
+                            <li data-val="1">Started</li>
+                            <li data-val="0">Not Started</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-xs-12">
+                    <div id="myTrainingSortByDropdown" class="dropdown" current="6">
+                        <button class="btn btn-training dropdown-toggle" type="button" id="myTrainingChooseSortDropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            <span class="ddr">Percent Completed</span>
+                            <img data-toggle="dropdown" class="chevron-leader" src="./assets/img/icons/transparentbgcevron.png">
+                        </button>
+                        <ul class="training dropdown-menu" aria-labelledby="myTrainingChooseSortDropdownMenu">
+                            <li data-val="6">Percent Completed</li>
+                            <li data-val="1">Publish Date</li>
+                            <li data-val="0">Name</li>
+                            <li data-val="4">XP</li>
+                            <li data-val="5">Mission Rating</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <section class="mission-cards">
+                <div id="myTrainingHistory">
+                    <div class="loading-indicator" style="margin-bottom: 240px; display: none;">
+                        <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+                        <span class="sr-only">Loading...</span>
+                    </div>
+
+                    <div class="revealedContent" style="display: block;">
+                        <div class="row">
+                                <div class="col-md-4 col-sm-6 col-xs-12">
+                                    <section class="card-container">
+                                        <div class="card" style="perspective: 200px; position: relative; transform-style: preserve-3d;">
+                                            <div class="front" style="background-image: url('./assets/img/content/mission-badges/LevelUp-Introduction.jpg'); background-size: cover; background-position: center center; height: 100%; width: 100%; backface-visibility: hidden; transform-style: preserve-3d; position: absolute; z-index: 1; transition: all 0.5s ease-out;">
+                                                <div class="card-header" style="backface-visibility: hidden;">
+                                                    <div id="missionHeaderName" style="backface-visibility: hidden;"><!--Automation Test--><img class="flip-icon" src="./assets/img/icons/flip-arrow_03.png" style="backface-visibility: hidden;"></div>
+                                                </div>
+                                                <div id="frontInfoLink" class="missionCardMoreInfoLink" data-i18n="mystuff.missions.moreinfo" data-itemid="223" style="backface-visibility: hidden;">more info&nbsp;&nbsp;<i class="fa fa-1x fa-chevron-circle-right" style="backface-visibility: hidden;"></i></div>
+                                                <div class="row star-rating-front" style="backface-visibility: hidden;">
+                                                    <div class="card-rating" style="backface-visibility: hidden;">
+                                                        <div rank="1" mission="223" class="star" style="backface-visibility: hidden;"><i class="fa fa-star-o" style="backface-visibility: hidden;"></i></div>
+                                                        <div rank="2" mission="223" class="star" style="backface-visibility: hidden;"><i class="fa fa-star-o" style="backface-visibility: hidden;"></i></div>
+                                                        <div rank="3" mission="223" class="star" style="backface-visibility: hidden;"><i class="fa fa-star-o" style="backface-visibility: hidden;"></i></div>
+                                                        <div rank="4" mission="223" class="star" style="backface-visibility: hidden;"><i class="fa fa-star-o" style="backface-visibility: hidden;"></i></div>
+                                                        <div rank="5" mission="223" class="star" style="backface-visibility: hidden;"><i class="fa fa-star-o" style="backface-visibility: hidden;"></i></div>
+                                                    </div>
+                                                    <div class="rating-count" style="backface-visibility: hidden;">&nbsp;(0)</div>
+                                                </div>
+                                                <div class="card-footer" style="backface-visibility: hidden;">
+                                                    <div class="card-progress mission-continue" style="backface-visibility: hidden;">
+                                                        <div goalid="223" class="card-progress-bar progress-bar loaded" role="progressbar" aria-valuetransitiongoal="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%; backface-visibility: hidden;">
+                                                                        <span class="continue-card startMissionButton" data-i18n="mystuff.missions.startMission" style="backface-visibility: hidden;">start mission</span>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="back" style="transform: rotateY(-180deg); height: 100%; width: 100%; backface-visibility: hidden; transform-style: preserve-3d; position: absolute; z-index: 0; transition: all 0.5s ease-out;">
+                                                <div class="card-header" style="backface-visibility: hidden;">
+                                                    <div style="backface-visibility: hidden;">Automation Test<!----><img class="flip-icon" src="./assets/img/icons/flip-arrow-reversed.png" style="backface-visibility: hidden;"></div>
+                                                </div>
+                                                <div class="container-fluid" style="backface-visibility: hidden;">
+                                                    <div class="row" style="backface-visibility: hidden;">
+                                                        <div class="missionCardDescription" style="backface-visibility: hidden;">
+                                                            <div class="truncate" style="backface-visibility: hidden;">Testing testing, 1 2 3...</div>
+                                                            <div class="missionCardMoreInfoLink" data-i18n="mystuff.missions.moreinfo" data-itemid="223" style="backface-visibility: hidden;">more info&nbsp;&nbsp;<i class="fa fa-1x fa-chevron-circle-right" style="backface-visibility: hidden;"></i></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="backface-visibility: hidden;">
+                                                        <div class="col-xs-6" style="backface-visibility: hidden;">
+                                                            <span class="card-chart chart mid loaded" data-percent="0" style="backface-visibility: hidden;">
+                                                                <span class="card-chart-label position pull-left" style="backface-visibility: hidden;">
+                                                                    <span class="percent" style="backface-visibility: hidden;">0</span>
+                                                                </span>
+                                                                <span class="chart-complete" data-i18n="mystuff.missions.completed" style="backface-visibility: hidden;">COMPLETED</span>
+                                                            <canvas height="162" width="162" style="height: 130px; width: 130px; backface-visibility: hidden;"></canvas></span>
+                                                        </div>
+                                                        <div class="col-xs-6 text-center" style="margin-top: 40px; backface-visibility: hidden;">
+                                                            <span id="card-mission-xp" style="backface-visibility: hidden;">
+                                                                <span style="font-size: 25px; backface-visibility: hidden;">140</span> <br style="backface-visibility: hidden;">
+                                                                <span data-i18n="mystuff.missions.totalxp" style="backface-visibility: hidden;">TOTAL XP</span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="backface-visibility: hidden;">
+                                                        <div class="container-fluid" style="backface-visibility: hidden;">
+                                                            <div class="row recommended-pos text-center" style="backface-visibility: hidden;">
+                                                                <div class="col-xs-6" style="backface-visibility: hidden;"><div class="pull-right recommended-pos-sub" data-i18n="mystuff.missions.recommend" style="backface-visibility: hidden;">Recommend</div></div>
+                                                                <div class="col-xs-6" style="backface-visibility: hidden;">
+                                                                    <div class="onoffswitch pull-left" style="backface-visibility: hidden;">
+                                                                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox recommendMissionCheckbox" data-selectedgoalid="223" id="recommendMissionSwitch223" style="backface-visibility: hidden;">
+                                                                        <label class="onoffswitch-label" for="recommendMissionSwitch223" style="backface-visibility: hidden;"></label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-xs-12">
+                                    <section class="card-container">
+                                        <div class="card" style="perspective: 200px; position: relative; transform-style: preserve-3d;">
+                                            <div class="front" style="background-image: url('./assets/img/content/mission-badges/Selling-Culture.jpg'); background-size: cover; background-position: center center; height: 100%; width: 100%; backface-visibility: hidden; transform-style: preserve-3d; position: absolute; z-index: 1; transition: all 0.5s ease-out;">
+                                                <div class="card-header" style="backface-visibility: hidden;">
+                                                    <div id="missionHeaderName" style="backface-visibility: hidden;"><!--Selling Culture--><img class="flip-icon" src="./assets/img/icons/flip-arrow_03.png" style="backface-visibility: hidden;"></div>
+                                                </div>
+                                                <div id="frontInfoLink" class="missionCardMoreInfoLink" data-i18n="mystuff.missions.moreinfo" data-itemid="213" style="backface-visibility: hidden;">more info&nbsp;&nbsp;<i class="fa fa-1x fa-chevron-circle-right" style="backface-visibility: hidden;"></i></div>
+                                                <div class="row star-rating-front" style="backface-visibility: hidden;">
+                                                    <div class="card-rating" style="backface-visibility: hidden;">
+                                                        <div rank="1" mission="213" class="star" style="backface-visibility: hidden;"><i class="fa fa-star" style="backface-visibility: hidden;"></i></div>
+                                                        <div rank="2" mission="213" class="star" style="backface-visibility: hidden;"><i class="fa fa-star" style="backface-visibility: hidden;"></i></div>
+                                                        <div rank="3" mission="213" class="star" style="backface-visibility: hidden;"><i class="fa fa-star" style="backface-visibility: hidden;"></i></div>
+                                                        <div rank="4" mission="213" class="star" style="backface-visibility: hidden;"><i class="fa fa-star" style="backface-visibility: hidden;"></i></div>
+                                                        <div rank="5" mission="213" class="star" style="backface-visibility: hidden;"><i class="fa fa-star-half-o" style="backface-visibility: hidden;"></i></div>
+                                                    </div>
+                                                    <div class="rating-count" style="backface-visibility: hidden;">&nbsp;(705)</div>
+                                                </div>
+                                                <div class="card-footer" style="backface-visibility: hidden;">
+                                                    <div class="card-progress mission-continue" style="backface-visibility: hidden;">
+                                                        <div goalid="213" class="card-progress-bar progress-bar loaded" role="progressbar" aria-valuetransitiongoal="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%; backface-visibility: hidden;">
+                                                                        <span class="continue-card startMissionButton" data-i18n="mystuff.missions.startMission" style="backface-visibility: hidden;">start mission</span>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="back" style="transform: rotateY(-180deg); height: 100%; width: 100%; backface-visibility: hidden; transform-style: preserve-3d; position: absolute; z-index: 0; transition: all 0.5s ease-out;">
+                                                <div class="card-header" style="backface-visibility: hidden;">
+                                                    <div style="backface-visibility: hidden;">Selling Culture<!--My Guest--><img class="flip-icon" src="./assets/img/icons/flip-arrow-reversed.png" style="backface-visibility: hidden;"></div>
+                                                </div>
+                                                <div class="container-fluid" style="backface-visibility: hidden;">
+                                                    <div class="row" style="backface-visibility: hidden;">
+                                                        <div class="missionCardDescription" style="backface-visibility: hidden;">
+                                                            <div class="truncate" style="backface-visibility: hidden;">You will be evaluated at GameStop largely on your ability to interact with our guests and sell our products and services. Learn how in this mission.</div>
+                                                            <div class="missionCardMoreInfoLink" data-i18n="mystuff.missions.moreinfo" data-itemid="213" style="backface-visibility: hidden;">more info&nbsp;&nbsp;<i class="fa fa-1x fa-chevron-circle-right" style="backface-visibility: hidden;"></i></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="backface-visibility: hidden;">
+                                                        <div class="col-xs-6" style="backface-visibility: hidden;">
+                                                            <span class="card-chart chart mid loaded" data-percent="0" style="backface-visibility: hidden;">
+                                                                <span class="card-chart-label position pull-left" style="backface-visibility: hidden;">
+                                                                    <span class="percent" style="backface-visibility: hidden;">0</span>
+                                                                </span>
+                                                                <span class="chart-complete" data-i18n="mystuff.missions.completed" style="backface-visibility: hidden;">COMPLETED</span>
+                                                            <canvas height="162" width="162" style="height: 130px; width: 130px; backface-visibility: hidden;"></canvas></span>
+                                                        </div>
+                                                        <div class="col-xs-6 text-center" style="margin-top: 40px; backface-visibility: hidden;">
+                                                            <span id="card-mission-xp" style="backface-visibility: hidden;">
+                                                                <span style="font-size: 25px; backface-visibility: hidden;">1210</span> <br style="backface-visibility: hidden;">
+                                                                <span data-i18n="mystuff.missions.totalxp" style="backface-visibility: hidden;">TOTAL XP</span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="backface-visibility: hidden;">
+                                                        <div class="container-fluid" style="backface-visibility: hidden;">
+                                                            <div class="row recommended-pos text-center" style="backface-visibility: hidden;">
+                                                                <div class="col-xs-6" style="backface-visibility: hidden;"><div class="pull-right recommended-pos-sub" data-i18n="mystuff.missions.recommend" style="backface-visibility: hidden;">Recommend</div></div>
+                                                                <div class="col-xs-6" style="backface-visibility: hidden;">
+                                                                    <div class="onoffswitch pull-left" style="backface-visibility: hidden;">
+                                                                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox recommendMissionCheckbox" data-selectedgoalid="213" id="recommendMissionSwitch213" style="backface-visibility: hidden;">
+                                                                        <label class="onoffswitch-label" for="recommendMissionSwitch213" style="backface-visibility: hidden;"></label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-xs-12">
+                                    <section class="card-container">
+                                        <div class="card" style="perspective: 200px; position: relative; transform-style: preserve-3d;">
+                                            <div class="front" style="background-image: url('./assets/img/content/mission-badges/1.1-GT-Sport-Mission-Card-Bonus.jpg'); background-size: cover; background-position: center center; height: 100%; width: 100%; backface-visibility: hidden; transform-style: preserve-3d; position: absolute; z-index: 1; transition: all 0.5s ease-out;">
+                                                <div class="card-header" style="backface-visibility: hidden;">
+                                                    <div id="missionHeaderName" style="backface-visibility: hidden;"><!--GT Sport Bonus--><img class="flip-icon" src="./assets/img/icons/flip-arrow_03.png" style="backface-visibility: hidden;"></div>
+                                                </div>
+                                                <div id="frontInfoLink" class="missionCardMoreInfoLink" data-i18n="mystuff.missions.moreinfo" data-itemid="212" style="backface-visibility: hidden;">more info&nbsp;&nbsp;<i class="fa fa-1x fa-chevron-circle-right" style="backface-visibility: hidden;"></i></div>
+                                                <div class="row star-rating-front" style="backface-visibility: hidden;">
+                                                    <div class="card-rating" style="backface-visibility: hidden;">
+                                                        <div rank="1" mission="212" class="star" style="backface-visibility: hidden;"><i class="fa fa-star" style="backface-visibility: hidden;"></i></div>
+                                                        <div rank="2" mission="212" class="star" style="backface-visibility: hidden;"><i class="fa fa-star" style="backface-visibility: hidden;"></i></div>
+                                                        <div rank="3" mission="212" class="star" style="backface-visibility: hidden;"><i class="fa fa-star" style="backface-visibility: hidden;"></i></div>
+                                                        <div rank="4" mission="212" class="star" style="backface-visibility: hidden;"><i class="fa fa-star" style="backface-visibility: hidden;"></i></div>
+                                                        <div rank="5" mission="212" class="star" style="backface-visibility: hidden;"><i class="fa fa-star-half-o" style="backface-visibility: hidden;"></i></div>
+                                                    </div>
+                                                    <div class="rating-count" style="backface-visibility: hidden;">&nbsp;(240)</div>
+                                                </div>
+                                                <div class="card-footer" style="backface-visibility: hidden;">
+                                                    <div class="card-progress mission-continue" style="backface-visibility: hidden;">
+                                                        <div goalid="212" class="card-progress-bar progress-bar loaded" role="progressbar" aria-valuetransitiongoal="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%; backface-visibility: hidden;">
+                                                                        <span class="continue-card startMissionButton" data-i18n="mystuff.missions.startMission" style="backface-visibility: hidden;">start mission</span>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="back" style="transform: rotateY(-180deg); height: 100%; width: 100%; backface-visibility: hidden; transform-style: preserve-3d; position: absolute; z-index: 0; transition: all 0.5s ease-out;">
+                                                <div class="card-header" style="backface-visibility: hidden;">
+                                                    <div style="backface-visibility: hidden;">GT Sport Bonus<!--Side Quest--><img class="flip-icon" src="./assets/img/icons/flip-arrow-reversed.png" style="backface-visibility: hidden;"></div>
+                                                </div>
+                                                <div class="container-fluid" style="backface-visibility: hidden;">
+                                                    <div class="row" style="backface-visibility: hidden;">
+                                                        <div class="missionCardDescription" style="backface-visibility: hidden;">
+                                                            <div class="truncate" style="backface-visibility: hidden;">Go deep into the details in this bonus mission for GT Sport. This mission will take some time to complete and includes in depth information.</div>
+                                                            <div class="missionCardMoreInfoLink" data-i18n="mystuff.missions.moreinfo" data-itemid="212" style="backface-visibility: hidden;">more info&nbsp;&nbsp;<i class="fa fa-1x fa-chevron-circle-right" style="backface-visibility: hidden;"></i></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="backface-visibility: hidden;">
+                                                        <div class="col-xs-6" style="backface-visibility: hidden;">
+                                                            <span class="card-chart chart mid loaded" data-percent="0" style="backface-visibility: hidden;">
+                                                                <span class="card-chart-label position pull-left" style="backface-visibility: hidden;">
+                                                                    <span class="percent" style="backface-visibility: hidden;">0</span>
+                                                                </span>
+                                                                <span class="chart-complete" data-i18n="mystuff.missions.completed" style="backface-visibility: hidden;">COMPLETED</span>
+                                                            <canvas height="162" width="162" style="height: 130px; width: 130px; backface-visibility: hidden;"></canvas></span>
+                                                        </div>
+                                                        <div class="col-xs-6 text-center" style="margin-top: 40px; backface-visibility: hidden;">
+                                                            <span id="card-mission-xp" style="backface-visibility: hidden;">
+                                                                <span style="font-size: 25px; backface-visibility: hidden;">875</span> <br style="backface-visibility: hidden;">
+                                                                <span data-i18n="mystuff.missions.totalxp" style="backface-visibility: hidden;">TOTAL XP</span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="backface-visibility: hidden;">
+                                                        <div class="container-fluid" style="backface-visibility: hidden;">
+                                                            <div class="row recommended-pos text-center" style="backface-visibility: hidden;">
+                                                                <div class="col-xs-6" style="backface-visibility: hidden;"><div class="pull-right recommended-pos-sub" data-i18n="mystuff.missions.recommend" style="backface-visibility: hidden;">Recommend</div></div>
+                                                                <div class="col-xs-6" style="backface-visibility: hidden;">
+                                                                    <div class="onoffswitch pull-left" style="backface-visibility: hidden;">
+                                                                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox recommendMissionCheckbox" data-selectedgoalid="212" id="recommendMissionSwitch212" style="backface-visibility: hidden;">
+                                                                        <label class="onoffswitch-label" for="recommendMissionSwitch212" style="backface-visibility: hidden;"></label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-xs-12">
+                                    <section class="card-container">
+                                        <div class="card" style="perspective: 200px; position: relative; transform-style: preserve-3d;">
+                                            <div class="front" style="background-image: url('./assets/img/content/mission-badges/1.1-GT-Sport-Mission-Card-Core-Content.jpg'); background-size: cover; background-position: center center; height: 100%; width: 100%; backface-visibility: hidden; transform-style: preserve-3d; position: absolute; z-index: 1; transition: all 0.5s ease-out;">
+                                                <div class="card-header" style="backface-visibility: hidden;">
+                                                    <div id="missionHeaderName" style="backface-visibility: hidden;"><!--GT Sport--><img class="flip-icon" src="./assets/img/icons/flip-arrow_03.png" style="backface-visibility: hidden;"></div>
+                                                </div>
+                                                <div id="frontInfoLink" class="missionCardMoreInfoLink" data-i18n="mystuff.missions.moreinfo" data-itemid="211" style="backface-visibility: hidden;">more info&nbsp;&nbsp;<i class="fa fa-1x fa-chevron-circle-right" style="backface-visibility: hidden;"></i></div>
+                                                <div class="row star-rating-front" style="backface-visibility: hidden;">
+                                                    <div class="card-rating" style="backface-visibility: hidden;">
+                                                        <div rank="1" mission="211" class="star" style="backface-visibility: hidden;"><i class="fa fa-star" style="backface-visibility: hidden;"></i></div>
+                                                        <div rank="2" mission="211" class="star" style="backface-visibility: hidden;"><i class="fa fa-star" style="backface-visibility: hidden;"></i></div>
+                                                        <div rank="3" mission="211" class="star" style="backface-visibility: hidden;"><i class="fa fa-star" style="backface-visibility: hidden;"></i></div>
+                                                        <div rank="4" mission="211" class="star" style="backface-visibility: hidden;"><i class="fa fa-star" style="backface-visibility: hidden;"></i></div>
+                                                        <div rank="5" mission="211" class="star" style="backface-visibility: hidden;"><i class="fa fa-star-half-o" style="backface-visibility: hidden;"></i></div>
+                                                    </div>
+                                                    <div class="rating-count" style="backface-visibility: hidden;">&nbsp;(292)</div>
+                                                </div>
+                                                <div class="card-footer" style="backface-visibility: hidden;">
+                                                    <div class="card-progress mission-continue" style="backface-visibility: hidden;">
+                                                        <div goalid="211" class="card-progress-bar progress-bar loaded" role="progressbar" aria-valuetransitiongoal="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%; backface-visibility: hidden;">
+                                                                        <span class="continue-card startMissionButton" data-i18n="mystuff.missions.startMission" style="backface-visibility: hidden;">start mission</span>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="back" style="transform: rotateY(-180deg); height: 100%; width: 100%; backface-visibility: hidden; transform-style: preserve-3d; position: absolute; z-index: 0; transition: all 0.5s ease-out;">
+                                                <div class="card-header" style="backface-visibility: hidden;">
+                                                    <div style="backface-visibility: hidden;">GT Sport<!--Side Quest--><img class="flip-icon" src="./assets/img/icons/flip-arrow-reversed.png" style="backface-visibility: hidden;"></div>
+                                                </div>
+                                                <div class="container-fluid" style="backface-visibility: hidden;">
+                                                    <div class="row" style="backface-visibility: hidden;">
+                                                        <div class="missionCardDescription" style="backface-visibility: hidden;">
+                                                            <div class="truncate" style="backface-visibility: hidden;">This basic Side Quest for Gran Turismo Sport will introduce you to the basic features and benefits of the game, along with SKUs and bonus content.</div>
+                                                            <div class="missionCardMoreInfoLink" data-i18n="mystuff.missions.moreinfo" data-itemid="211" style="backface-visibility: hidden;">more info&nbsp;&nbsp;<i class="fa fa-1x fa-chevron-circle-right" style="backface-visibility: hidden;"></i></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="backface-visibility: hidden;">
+                                                        <div class="col-xs-6" style="backface-visibility: hidden;">
+                                                            <span class="card-chart chart mid loaded" data-percent="0" style="backface-visibility: hidden;">
+                                                                <span class="card-chart-label position pull-left" style="backface-visibility: hidden;">
+                                                                    <span class="percent" style="backface-visibility: hidden;">0</span>
+                                                                </span>
+                                                                <span class="chart-complete" data-i18n="mystuff.missions.completed" style="backface-visibility: hidden;">COMPLETED</span>
+                                                            <canvas height="162" width="162" style="height: 130px; width: 130px; backface-visibility: hidden;"></canvas></span>
+                                                        </div>
+                                                        <div class="col-xs-6 text-center" style="margin-top: 40px; backface-visibility: hidden;">
+                                                            <span id="card-mission-xp" style="backface-visibility: hidden;">
+                                                                <span style="font-size: 25px; backface-visibility: hidden;">245</span> <br style="backface-visibility: hidden;">
+                                                                <span data-i18n="mystuff.missions.totalxp" style="backface-visibility: hidden;">TOTAL XP</span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="backface-visibility: hidden;">
+                                                        <div class="container-fluid" style="backface-visibility: hidden;">
+                                                            <div class="row recommended-pos text-center" style="backface-visibility: hidden;">
+                                                                <div class="col-xs-6" style="backface-visibility: hidden;"><div class="pull-right recommended-pos-sub" data-i18n="mystuff.missions.recommend" style="backface-visibility: hidden;">Recommend</div></div>
+                                                                <div class="col-xs-6" style="backface-visibility: hidden;">
+                                                                    <div class="onoffswitch pull-left" style="backface-visibility: hidden;">
+                                                                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox recommendMissionCheckbox" data-selectedgoalid="211" id="recommendMissionSwitch211" style="backface-visibility: hidden;">
+                                                                        <label class="onoffswitch-label" for="recommendMissionSwitch211" style="backface-visibility: hidden;"></label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-xs-12">
+                                    <section class="card-container">
+                                        <div class="card" style="perspective: 200px; position: relative; transform-style: preserve-3d;">
+                                            <div class="front" style="background-image: url('./assets/img/content/GA-Certified-Mission-Card.jpg'); background-size: cover; background-position: center center; height: 100%; width: 100%; backface-visibility: hidden; transform-style: preserve-3d; position: absolute; z-index: 1; transition: all 0.5s ease-out;">
+                                                <div class="card-header" style="backface-visibility: hidden;">
+                                                    <div id="missionHeaderName" style="backface-visibility: hidden;"><!--GA Certified--><img class="flip-icon" src="./assets/img/icons/flip-arrow_03.png" style="backface-visibility: hidden;"></div>
+                                                </div>
+                                                <div id="frontInfoLink" class="missionCardMoreInfoLink" data-i18n="mystuff.missions.moreinfo" data-itemid="189" style="backface-visibility: hidden;">more info&nbsp;&nbsp;<i class="fa fa-1x fa-chevron-circle-right" style="backface-visibility: hidden;"></i></div>
+                                                <div class="row star-rating-front" style="backface-visibility: hidden;">
+                                                    <div class="card-rating" style="backface-visibility: hidden;">
+                                                        <div rank="1" mission="189" class="star" style="backface-visibility: hidden;"><i class="fa fa-star" style="backface-visibility: hidden;"></i></div>
+                                                        <div rank="2" mission="189" class="star" style="backface-visibility: hidden;"><i class="fa fa-star" style="backface-visibility: hidden;"></i></div>
+                                                        <div rank="3" mission="189" class="star" style="backface-visibility: hidden;"><i class="fa fa-star" style="backface-visibility: hidden;"></i></div>
+                                                        <div rank="4" mission="189" class="star" style="backface-visibility: hidden;"><i class="fa fa-star" style="backface-visibility: hidden;"></i></div>
+                                                        <div rank="5" mission="189" class="star" style="backface-visibility: hidden;"><i class="fa fa-star" style="backface-visibility: hidden;"></i></div>
+                                                    </div>
+                                                    <div class="rating-count" style="backface-visibility: hidden;">&nbsp;(292)</div>
+                                                </div>
+                                                <div class="card-footer" style="backface-visibility: hidden;">
+                                                    <div class="card-progress mission-continue" style="backface-visibility: hidden;">
+                                                        <div goalid="189" class="card-progress-bar progress-bar loaded" role="progressbar" aria-valuetransitiongoal="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%; backface-visibility: hidden;">
+                                                                <span class="continue-card viewMissionDetailsButton" data-i18n="mystuff.missions.viewMissionDetails" style="backface-visibility: hidden;">view mission details</span>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="back" style="transform: rotateY(-180deg); height: 100%; width: 100%; backface-visibility: hidden; transform-style: preserve-3d; position: absolute; z-index: 0; transition: all 0.5s ease-out;">
+                                                <div class="card-header" style="backface-visibility: hidden;">
+                                                    <div style="backface-visibility: hidden;">GA Certified<!--GA--><img class="flip-icon" src="./assets/img/icons/flip-arrow-reversed.png" style="backface-visibility: hidden;"></div>
+                                                </div>
+                                                <div class="container-fluid" style="backface-visibility: hidden;">
+                                                    <div class="row" style="backface-visibility: hidden;">
+                                                        <div class="missionCardDescription" style="backface-visibility: hidden;">
+                                                            <div class="truncate" style="backface-visibility: hidden;">In order to unlock this mission, you must complete all your GA assigned training. Click more info to find out the prerequisites.</div>
+                                                            <div class="missionCardMoreInfoLink" data-i18n="mystuff.missions.moreinfo" data-itemid="189" style="backface-visibility: hidden;">more info&nbsp;&nbsp;<i class="fa fa-1x fa-chevron-circle-right" style="backface-visibility: hidden;"></i></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="backface-visibility: hidden;">
+                                                        <div class="col-xs-6" style="backface-visibility: hidden;">
+                                                            <span class="card-chart chart mid loaded" data-percent="0" style="backface-visibility: hidden;">
+                                                                <span class="card-chart-label position pull-left" style="backface-visibility: hidden;">
+                                                                    <span class="percent" style="backface-visibility: hidden;">0</span>
+                                                                </span>
+                                                                <span class="chart-complete" data-i18n="mystuff.missions.completed" style="backface-visibility: hidden;">COMPLETED</span>
+                                                            <canvas height="162" width="162" style="height: 130px; width: 130px; backface-visibility: hidden;"></canvas></span>
+                                                        </div>
+                                                        <div class="col-xs-6 text-center" style="margin-top: 40px; backface-visibility: hidden;">
+                                                            <span id="card-mission-xp" style="backface-visibility: hidden;">
+                                                                <span style="font-size: 25px; backface-visibility: hidden;">30</span> <br style="backface-visibility: hidden;">
+                                                                <span data-i18n="mystuff.missions.totalxp" style="backface-visibility: hidden;">TOTAL XP</span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="backface-visibility: hidden;">
+                                                        <div class="container-fluid" style="backface-visibility: hidden;">
+                                                            <div class="row recommended-pos text-center" style="backface-visibility: hidden;">
+                                                                <div class="col-xs-6" style="backface-visibility: hidden;"><div class="pull-right recommended-pos-sub" data-i18n="mystuff.missions.recommend" style="backface-visibility: hidden;">Recommend</div></div>
+                                                                <div class="col-xs-6" style="backface-visibility: hidden;">
+                                                                    <div class="onoffswitch pull-left" style="backface-visibility: hidden;">
+                                                                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox recommendMissionCheckbox" data-selectedgoalid="189" id="recommendMissionSwitch189" style="backface-visibility: hidden;">
+                                                                        <label class="onoffswitch-label" for="recommendMissionSwitch189" style="backface-visibility: hidden;"></label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-xs-12">
+                                    <section class="card-container">
+                                        <div class="card" style="perspective: 200px; position: relative; transform-style: preserve-3d;">
+                                            <div class="front" style="background-image: url('./assets/img/content/PowerUp-Rewards.jpg'); background-size: cover; background-position: center center; height: 100%; width: 100%; backface-visibility: hidden; transform-style: preserve-3d; position: absolute; z-index: 1; transition: all 0.5s ease-out;">
+                                                <div class="card-header" style="backface-visibility: hidden;">
+                                                    <div id="missionHeaderName" style="backface-visibility: hidden;"><!--PowerUp Rewards--><img class="flip-icon" src="./assets/img/icons/flip-arrow_03.png" style="backface-visibility: hidden;"></div>
+                                                </div>
+                                                <div id="frontInfoLink" class="missionCardMoreInfoLink" data-i18n="mystuff.missions.moreinfo" data-itemid="160" style="backface-visibility: hidden;">more info&nbsp;&nbsp;<i class="fa fa-1x fa-chevron-circle-right" style="backface-visibility: hidden;"></i></div>
+                                                <div class="row star-rating-front" style="backface-visibility: hidden;">
+                                                    <div class="card-rating" style="backface-visibility: hidden;">
+                                                        <div rank="1" mission="160" class="star" style="backface-visibility: hidden;"><i class="fa fa-star" style="backface-visibility: hidden;"></i></div>
+                                                        <div rank="2" mission="160" class="star" style="backface-visibility: hidden;"><i class="fa fa-star" style="backface-visibility: hidden;"></i></div>
+                                                        <div rank="3" mission="160" class="star" style="backface-visibility: hidden;"><i class="fa fa-star" style="backface-visibility: hidden;"></i></div>
+                                                        <div rank="4" mission="160" class="star" style="backface-visibility: hidden;"><i class="fa fa-star" style="backface-visibility: hidden;"></i></div>
+                                                        <div rank="5" mission="160" class="star" style="backface-visibility: hidden;"><i class="fa fa-star-half-o" style="backface-visibility: hidden;"></i></div>
+                                                    </div>
+                                                    <div class="rating-count" style="backface-visibility: hidden;">&nbsp;(751)</div>
+                                                </div>
+                                                <div class="card-footer" style="backface-visibility: hidden;">
+                                                    <div class="card-progress mission-continue" style="backface-visibility: hidden;">
+                                                        <div goalid="160" class="card-progress-bar progress-bar loaded" role="progressbar" aria-valuetransitiongoal="4" aria-valuemin="0" aria-valuemax="100" style="width: 4%; backface-visibility: hidden;">
+                                                                        <span class="continue-card continueMissionButton" data-i18n="mystuff.missions.continueMission" style="backface-visibility: hidden;">continue mission</span>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="back" style="transform: rotateY(-180deg); height: 100%; width: 100%; backface-visibility: hidden; transform-style: preserve-3d; position: absolute; z-index: 0; transition: all 0.5s ease-out;">
+                                                <div class="card-header" style="backface-visibility: hidden;">
+                                                    <div style="backface-visibility: hidden;">PowerUp Rewards<!--My Guest--><img class="flip-icon" src="./assets/img/icons/flip-arrow-reversed.png" style="backface-visibility: hidden;"></div>
+                                                </div>
+                                                <div class="container-fluid" style="backface-visibility: hidden;">
+                                                    <div class="row" style="backface-visibility: hidden;">
+                                                        <div class="missionCardDescription" style="backface-visibility: hidden;">
+                                                            <div class="truncate" style="backface-visibility: hidden;">PowerUp Rewards is GameStop's loyalty program. Learn all about it in this Mission.</div>
+                                                            <div class="missionCardMoreInfoLink" data-i18n="mystuff.missions.moreinfo" data-itemid="160" style="backface-visibility: hidden;">more info&nbsp;&nbsp;<i class="fa fa-1x fa-chevron-circle-right" style="backface-visibility: hidden;"></i></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="backface-visibility: hidden;">
+                                                        <div class="col-xs-6" style="backface-visibility: hidden;">
+                                                            <span class="card-chart chart mid loaded" data-percent="4" style="backface-visibility: hidden;">
+                                                                <span class="card-chart-label position pull-left" style="backface-visibility: hidden;">
+                                                                    <span class="percent" style="backface-visibility: hidden;">4</span>
+                                                                </span>
+                                                                <span class="chart-complete" data-i18n="mystuff.missions.completed" style="backface-visibility: hidden;">COMPLETED</span>
+                                                            <canvas height="162" width="162" style="height: 130px; width: 130px; backface-visibility: hidden;"></canvas></span>
+                                                        </div>
+                                                        <div class="col-xs-6 text-center" style="margin-top: 40px; backface-visibility: hidden;">
+                                                            <span id="card-mission-xp" style="backface-visibility: hidden;">
+                                                                <span style="font-size: 25px; backface-visibility: hidden;">765</span> <br style="backface-visibility: hidden;">
+                                                                <span data-i18n="mystuff.missions.totalxp" style="backface-visibility: hidden;">TOTAL XP</span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="backface-visibility: hidden;">
+                                                        <div class="container-fluid" style="backface-visibility: hidden;">
+                                                            <div class="row recommended-pos text-center" style="backface-visibility: hidden;">
+                                                                <div class="col-xs-6" style="backface-visibility: hidden;"><div class="pull-right recommended-pos-sub" data-i18n="mystuff.missions.recommend" style="backface-visibility: hidden;">Recommend</div></div>
+                                                                <div class="col-xs-6" style="backface-visibility: hidden;">
+                                                                    <div class="onoffswitch pull-left" style="backface-visibility: hidden;">
+                                                                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox recommendMissionCheckbox" data-selectedgoalid="160" id="recommendMissionSwitch160" style="backface-visibility: hidden;">
+                                                                        <label class="onoffswitch-label" for="recommendMissionSwitch160" style="backface-visibility: hidden;"></label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+                        </div>
+
+                        <div class="row viewmore-container categoryMissions" style="display: block;">
+                            <div class="ViewAllMissionsLink">
+                                <label class="" id="ViewMoreMissions"><span class="circle-view" data-i18n="mystuff.missionselection.more">more</span></label>
+                            </div>
+                        </div>
+
+                        <div class="row viewmore-container categoryNoMissions">
+                            <p>It's all good. You don't have any missions to view here. Visit your My Training page to view all your missions and training history.</p>
+                            <div id="noMissions_NavMyTraining" data-i18n="mystuff.missionselection.nomissionsNavMyTeam">Go To My Training</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+</div>
