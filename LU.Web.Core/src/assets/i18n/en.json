@@ -9,6 +9,10 @@
     "all-missions":"all missions",
     "position":"position",
     "top-categories":"top categories",
-    "level":"level"
+    "level":"level",
+    "certified":"CERTIFIED",
+    "not-certified":"NOT CERTIFIED",
+    "store-leader":"Store Leader",
+    "last-trained-on":"Last Trained on"
 
 }

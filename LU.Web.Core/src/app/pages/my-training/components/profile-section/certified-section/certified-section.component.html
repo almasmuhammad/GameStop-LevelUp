@@ -1,3 +1,5 @@
-<p>
-  certified-section works!
-</p>
+<div class="certifiedsection">
+<span *ngIf="certified">{{'certified' | translate}} <img src="../assets/img/icons/checkmark-leaderboard-white.png"></span>
+<span *ngIf="!certified"> {{'not-certified' | translate}}</span>
+
+</div>

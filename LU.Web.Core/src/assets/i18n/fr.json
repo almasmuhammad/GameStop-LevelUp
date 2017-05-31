@@ -10,6 +10,10 @@
     "all-missions":"toutes les missions",
     "position":"position",
     "top-categories":"principales catégories",
-    "level":"niveau"
+    "level":"niveau",
+    "certified":"agréé",
+    "not-certified":"NON CERTIFIÉ",
+    "store-leader":"Leader du magasin",
+    "last-trained-on":"Dernière formation sur"
 
 }

@@ -5,6 +5,7 @@ import { Http, HttpModule } from '@angular/http';
 import { Router } from '@angular/router';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 
+// Internationalization (i18n) related Modules/Service/Pipe
 import {
   TranslateModule,
   TranslateLoader,
@@ -57,6 +58,7 @@ export function HttpLoaderFactory(http: Http) {
     UserProfileService,
     UserContextService,
     ProfileGuard ],
+  
   declarations: [
     AppComponent,
     ModuleLoadingIndicatorComponent

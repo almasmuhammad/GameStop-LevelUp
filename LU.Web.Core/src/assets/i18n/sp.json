@@ -9,5 +9,9 @@
     "all-missions":"todas las misiones",
     "position":"posición",
     "top-categories":"categorías principales",
-    "level":"nivel"
+    "level":"nivel",
+    "certified":"CERTIFICADO",
+    "not-certified":"NO CERTIFICADO",
+    "store-leader":"Líder de la tienda",
+    "last-trained-on":"Último entrenado en"
 }
