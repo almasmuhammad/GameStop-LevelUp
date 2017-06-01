@@ -3,6 +3,7 @@ import { Http, Response, RequestOptions, Headers } from '@angular/http';
 
 import { Observable } from 'rxjs/Observable';
 import { Subject } from 'rxjs/Subject';
+import { ErrorObservable } from 'rxjs/observable/ErrorObservable';
 
 import { CookieService } from 'ngx-cookie';
 
@@ -28,10 +29,6 @@ export class AppService {
     private _logger: LoggerService
   ) { }
 
-  public loadAppSettings(): void {
-
-  }
-
   public buildApiActionURL(actionUrl: string): string {
     return this.appSettings.apiURL + actionUrl;
   }
@@ -42,6 +39,29 @@ export class AppService {
     const options = new RequestOptions({ headers: headers });
 
     return options;
+  }
+
+  public canLoadProfile(): boolean {
+    const token = this._cookies.get('accessToken');
+    return (token || '').length > 0;
+  }
+
+  public handleServiceError(error: Response | any): ErrorObservable {
+    if (!error) {
+      return;
+    }
+    if (error.status === 401) {
+      this.loggedOutSubject.next(null);
+    }
+    if (error.status !== 401) {
+      this.serviceErrorSubject.next(error.status);
+    }
+
+    return Observable.throw(error);
+  }
+
+  public loadAppSettings(): void {
+
   }
 
 }

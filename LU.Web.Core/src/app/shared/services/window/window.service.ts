@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
 
-import { environment } from '../../../../environments/environment';
+import { AppService } from '../appService';
 
 @Injectable()
 export class WindowService {
 
-  constructor() { }
+  constructor(private _appService: AppService) { }
 
   redirectToSSO() {
-    window.location.href = environment.loginURL;
+    window.location.href = this._appService.appSettings.ssoURL;
   }
 }
