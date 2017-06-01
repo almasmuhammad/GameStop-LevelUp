@@ -15,11 +15,12 @@ import { AppSettingsModel } from './../../models';
 @Injectable()
 export class AppService {
 
-  private loggedOutSubject: Subject<string>;
-  private serviceErrorSubject: Subject<number>;
+  private loggedOutSubject = new Subject<string>();
+  private serviceErrorSubject = new Subject<number>();
+  // private appSettingLoadSubject = new Subject<boolean>();
+  // public appSettingLoadComplete = this.appSettingLoadSubject.asObservable();
 
   public loggedOutEvent = this.loggedOutSubject.asObservable();
-
   public serviceErrorEvent = this.serviceErrorSubject.asObservable();
 
   public appSettings: AppSettingsModel;
@@ -36,7 +37,9 @@ export class AppService {
 
   public buildRequestOptions(): RequestOptions {
 
-    const headers = new Headers({ 'Content-Type': 'application/json' });
+    const accessToken = this._cookies.get('accessToken');
+    const bearer = 'Bearer ' + accessToken;
+    const headers = new Headers({ 'Content-Type': 'application/json','Authorization': bearer });
     const options = new RequestOptions({ headers: headers });
 
     return options;
@@ -44,6 +47,7 @@ export class AppService {
 
   public canLoadProfile(): boolean {
     const token = this._cookies.get('accessToken');
+    this._logger.logInfo('accessToken: ' + token);
     return (token || '').length > 0;
   }
 
@@ -61,15 +65,16 @@ export class AppService {
     return Observable.throw(error);
   }
 
-  public loadAppSettings(): void {
-    this._http.get('assets/appSettings.json')
+  public loadAppSettings(): Observable<Response> {
+   return this._http.get('assets/appSettings.json')
     .map((response: Response) => {
+      const _appSettings = <AppSettingsModel>response.json();
+
       this.appSettings = new AppSettingsModel();
-      const appSettings = <AppSettingsModel>response.json();
-      this.appSettings.apiURL = appSettings.apiURL;
-      this.appSettings.ssoURL = appSettings.ssoURL;
+      this.appSettings.apiURL = _appSettings.apiURL;
+      this.appSettings.ssoURL = _appSettings.ssoURL;
     })
     .catch(this.handleServiceError);
-  }
 
+  }
 }

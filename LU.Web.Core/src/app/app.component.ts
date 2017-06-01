@@ -8,7 +8,8 @@ import { UserContextService } from './shared/services/userContext';
 import { UserProfileService } from './shared/services/userProfile';
 import { LoggerService } from './shared/services/logs';
 import { WindowService } from './shared/services/window';
-import { environment } from '../environments/environment';
+// import { environment } from '../environments/environment';
+import { AppService } from './shared/services/appService';
 
 /*
  * Top Level Component
@@ -23,6 +24,8 @@ export class AppComponent implements OnInit {
 
   constructor(
     private _router: Router,
+    private _appService: AppService,
+    private _windowService: WindowService,
     public _userContextService: UserContextService,
     private _logger: LoggerService,
     private _translate: TranslateService) { }
@@ -31,21 +34,30 @@ export class AppComponent implements OnInit {
 
     this._translate.addLangs(['en', 'fr', 'sp']);
     this._translate.setDefaultLang('en');
-
-    this.loadingProfile = true;
+    this._userContextService.initialUrlRequest = this._router.url;
 
     // load config URLs
+    this._appService.loadAppSettings()
+    .subscribe((response) => {
 
-    // log environment variables
-    this._logger.logInfo('Envrionment: ' + JSON.stringify(environment));
+      if (this._appService.canLoadProfile()) {
 
-    // listen for the profile load complete observation
-      this._userContextService.profileLoadComplete.subscribe((url) => {
-        this._router.navigate([url]);
+        this.loadingProfile = true;
+
+        // listen for the profile load complete observation
+        this._userContextService.profileLoadComplete.subscribe((url) => {
+          this._router.navigate([url]);
+        });
+
+        // load user profile or be routed to SSO
+        this._userContextService.getProfile();
+
+      } else {
+        this._windowService.redirectToSSO();
+      }
+
+
       });
-
-    // load user profile or be routed to SSO
-    this._userContextService.getProfile();
   }
 }
 
