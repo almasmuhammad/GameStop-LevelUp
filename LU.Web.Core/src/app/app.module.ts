@@ -13,7 +13,10 @@ import {
   TranslatePipe } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
+// Cookies used with authentication from API server and possible local storage
 import { CookieModule, CookieService } from 'ngx-cookie';
+
+// Replaces old jQuery behavior
 import { AlertModule } from 'ngx-bootstrap';
 
 // Logger,Window and User Services
@@ -23,6 +26,7 @@ import { LoggerService } from './shared/services/logs/logger-service';
 import { WindowService } from './shared/services/window/window.service';
 import { AppService } from './shared/services/appService';
 
+// Prevents routing
 import { ProfileGuard } from './shared/guards';
 
 // App is our top level component

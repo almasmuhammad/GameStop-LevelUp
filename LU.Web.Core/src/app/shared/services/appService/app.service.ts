@@ -25,6 +25,7 @@ export class AppService {
   public appSettings: AppSettingsModel;
 
   constructor(
+    private _http: Http,
     private _cookies: CookieService,
     private _logger: LoggerService
   ) { }
@@ -56,12 +57,19 @@ export class AppService {
     if (error.status !== 401) {
       this.serviceErrorSubject.next(error.status);
     }
-
+    this._logger.logError('service call error\n' + error);
     return Observable.throw(error);
   }
 
   public loadAppSettings(): void {
-
+    this._http.get('assets/appSettings.json')
+    .map((response: Response) => {
+      this.appSettings = new AppSettingsModel();
+      const appSettings = <AppSettingsModel>response.json();
+      this.appSettings.apiURL = appSettings.apiURL;
+      this.appSettings.ssoURL = appSettings.ssoURL;
+    })
+    .catch(this.handleServiceError);
   }
 
 }
