@@ -51,7 +51,7 @@ export class AppService {
     return (token || '').length > 0;
   }
 
-  public handleServiceError(error: Response | any): ErrorObservable {
+  public handleServiceError(error: Response | any): ErrorObservable<string> {
     if (!error) {
       return;
     }

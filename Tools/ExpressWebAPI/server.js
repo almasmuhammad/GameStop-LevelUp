@@ -54,6 +54,11 @@ app.get('/users/:id', function (req, res) {
   }
 });
 
+app.post('/api/login', function(req, res){
+  res.cookie('accessToken','x');
+  res.redirect('http://localhost:4200');
+});
+
 app.get('/api/Application/Profile', function (req,res){
   var applicationProfileViewModel = JSON.parse('{"roles":["CreatorRead"],"languages":["en-us"]}');
 
