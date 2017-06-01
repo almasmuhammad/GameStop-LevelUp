@@ -19,7 +19,7 @@ import { environment } from '../environments/environment';
 })
 export class AppComponent implements OnInit {
 
-  public loadingProfile: boolean = false;
+  public loadingProfile = false;
 
   constructor(
     private _router: Router,
