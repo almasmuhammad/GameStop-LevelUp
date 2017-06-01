@@ -13,11 +13,15 @@ import {
   TranslatePipe } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
+import { CookieModule, CookieService } from 'ngx-cookie';
+import { AlertModule } from 'ngx-bootstrap';
+
 // Logger,Window and User Services
 import { UserContextService } from './shared/services/userContext/user-context.service';
 import { UserProfileService } from './shared/services/userProfile/user-profile.service';
 import { LoggerService } from './shared/services/logs/logger-service';
 import { WindowService } from './shared/services/window/window.service';
+import { AppService } from './shared/services/appService';
 
 import { ProfileGuard } from './shared/guards';
 
@@ -48,17 +52,21 @@ export function HttpLoaderFactory(http: Http) {
             }
         }),
     HttpModule,
+    CookieModule.forRoot(),
+    AlertModule.forRoot(),
     PagesModule,
     AppRoutingModule
   ],
   providers: [
     TranslateService,
+    CookieService,
     LoggerService,
     WindowService,
+    AppService,
     UserProfileService,
     UserContextService,
     ProfileGuard ],
-  
+
   declarations: [
     AppComponent,
     ModuleLoadingIndicatorComponent
@@ -70,6 +78,8 @@ export class AppModule {
   constructor(
     private _userContextService: UserContextService,
     private _router: Router) {
+
+      // capture current URL for use after authentication
      this._userContextService.initialUrlRequest = this._router.url;
   }
  }

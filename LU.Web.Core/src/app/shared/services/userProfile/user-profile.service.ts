@@ -14,7 +14,9 @@ import 'rxjs/add/operator/delay';
 import { environment } from '../../../../environments/environment';
 import { ApplicationProfileViewModel } from '../../models/application-profile-view-model';
 import { UserProfileModel } from '../../models/user-profile-model';
+import { LoggerService } from '../../services/logs';
 import { WindowService } from '../window/window.service';
+import { AppService } from '../appService';
 
 @Injectable()
 export class UserProfileService {
