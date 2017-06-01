@@ -6,8 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-rank.component.css']
 })
 export class UserRankComponent implements OnInit {
-userrank:string = "epic";
-month:number=5;
+userrank:string = "Noob";
+month:string="April";
 year:number=2015;
   constructor() { }
 
