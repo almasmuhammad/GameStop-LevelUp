@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { UserInformationViewModel } from '../../models';
 
 @Component({
   selector: 'app-user-mission-percentage',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-mission-percentage.component.css']
 })
 export class UserMissionPercentageComponent implements OnInit {
-positionProgressPct:number=0.94;
+  @Input() model: UserInformationViewModel;
   constructor() { }
 
   ngOnInit() {

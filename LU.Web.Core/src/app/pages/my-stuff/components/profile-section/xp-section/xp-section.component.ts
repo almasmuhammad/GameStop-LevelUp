@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { UserInformationViewModel } from '../models';
 
 @Component({
   selector: 'app-xp-section',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class XpSectionComponent implements OnInit {
 
+@Input() userModel: UserInformationViewModel;
   constructor() { }
 
   ngOnInit() {

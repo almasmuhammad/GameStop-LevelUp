@@ -47,7 +47,6 @@ export class AppService {
 
   public canLoadProfile(): boolean {
     const token = this._cookies.get('accessToken');
-    this._logger.logInfo('accessToken: ' + token);
     return (token || '').length > 0;
   }
 
@@ -56,9 +55,11 @@ export class AppService {
       return;
     }
     if (error.status === 401) {
+      this._logger.logInfo('Unauthenticated');
       this.loggedOutSubject.next(null);
     }
     if (error.status !== 401) {
+      this._logger.logError('error: ' + error);
       this.serviceErrorSubject.next(error.status);
     }
     this._logger.logError('service call error\n' + error);

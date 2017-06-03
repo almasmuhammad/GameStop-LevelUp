@@ -1,24 +1,22 @@
 <div class="col-lg-4 col-md-4 col-sm-3" id="infoSection">
 
-<!--User Name Section of User Info Section-->
-<app-user-name></app-user-name>
+    <!--User Name Section of User Info Section-->
+     <div class="username">{{model.firstName | uppercase}} {{model.lastName | uppercase}}</div>
 
-<!--User Rank Section of User Info Section-->
-<app-user-rank></app-user-rank>
-<div class="row certs">
+    <div class="userrank masterTooltip" title="Your RANK is determined by your length of service. Rank Up!">{{model.rank | uppercase}}</div>
 
-<div class="col-xs-2 col-xs-2 col-xs-5 nopad leaderboard-col-star masterTooltip" style="top: -3px; cursor:help;" title="This shows how many SERVICE AWARDS you have received.">
-    <div id="serviceHolder">
-        <div class="service-ranking-2">
-            <br>
+    <div class="row certs">
+        <div class="col-xs-2 col-xs-2 col-xs-5 nopad leaderboard-col-star masterTooltip"
+        style="top: -3px; cursor:help;">
+            <div id="serviceHolder">
+                <div class="service-ranking-2">
+                    <br>
+                </div>
+            </div>
         </div>
     </div>
-</div>
-
-
-</div>
-<br/>
-<!--User Mission Percentage Section of User Info Section-->
-<app-user-mission-percentage></app-user-mission-percentage>
+    <br/>
+    <!--User Mission Percentage Section of User Info Section-->
+    <app-user-mission-percentage [model]=model></app-user-mission-percentage>
 
 </div>

@@ -1,5 +1,8 @@
+<section *ngIf="!model">
+<h4 class="loader">Loading...</h4>
+</section>
 
-<section id="profilesectionid" class="profile-container editorBackground"
+<section *ngIf="model" id="profilesectionid" class="profile-container editorBackground"
 style="background-image: url('./assets/img/backgrounds/Special_BG_Autism_Speaks.jpg');">
 <div class="container" style="margin-bottom:25px;padding-bottom:25px;margin-top:75px">
     <div class="row" style="vertical-align:baseline !important;">
@@ -8,10 +11,10 @@ style="background-image: url('./assets/img/backgrounds/Special_BG_Autism_Speaks.
         <app-avatar-section></app-avatar-section>
 
         <!--USER INFO SECTION OF MY-STUFF PROFILE SECTION-->
-        <app-user-info-section></app-user-info-section>
+        <app-user-info-section [model]="model"></app-user-info-section>
 
         <!--XP SECTION OF MY-STUFF PROFILE SECTION -->
-        <app-xp-section></app-xp-section>
+        <app-xp-section [userModel]="model"></app-xp-section>
     </div>
 </div>
 </section>

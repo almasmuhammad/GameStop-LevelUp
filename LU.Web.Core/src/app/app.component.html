@@ -1,5 +1,5 @@
 <router-outlet>
-  <div class="loading" *ngIf="!(_userContextService) || (_userContextService && _userContextService.profileModel == null)">
+  <div class="loading" *ngIf="!loadComplete">
     <img src="../assets/img/levelUpLogo.png" alt="">
     <div id="circleG">
       <div id="circleG_1" class="circleG"></div>

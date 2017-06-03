@@ -13,8 +13,8 @@ export class NavbarComponent implements OnInit {
 
 
   constructor(
-    public _userContextService: UserContextService,private translate: TranslateService ) { }
-    
+    public _userContextService: UserContextService,
+    private translate: TranslateService ) { }
 
   ngOnInit() {
   }

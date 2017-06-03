@@ -28,30 +28,23 @@
               <li><a class=""><i class="fa fa-2x fa-comment-o"></i></a></li>
               <li><a class=""><i class="fa fa-2x fa-cog"></i></a></li>
 
-                        <!--language section-->
-          
-              <li>
-                <a href="javascript:void(0)">
-                    <i class="fa fa-language"></i> {{ 'language' | translate }} <b class="caret"></b>
-                </a>
-                    <a class="dropdown-item" href="javascript:void(0)" (click)="changeLang('en')">English</a>
-                    <a class="dropdown-item" href="javascript:void(0)" (click)="changeLang('fr')">French</a>
-                    <a class="dropdown-item" href="javascript:void(0)" (click)="changeLang('sp')">Spanish</a>
-            </li>
 
-              <li class="dropdown">
-                  <a role="button" aria-expanded="false">
+              <li class="dropdown" dropdown>
+                  <a role="button" aria-expanded="false" dropdownToggle>
                     <i class="fa fa-2x fa-power-off"></i>
                       <img class="carets" src="../../assets/img/navcaret.png" />
                   </a>
-                  <ul id="navd" class="dropdown-menu" role="menu">
-                    <a class="dropdown-toggle navdbsp" data-toggle="dropdown" role="button" aria-expanded="false">
-                      <i class="fa fa-2x fa-power-off"></i>
-                      <img class="carets" src="./../../assets/img/navcaret.png" />
-                    </a>
-                      <li><a class="navSelectLanguage">English</a></li>
-                      <li><a class="navSelectLanguage">French</a></li>
-                      <li class="tenantNavigation"><a id="navTenantAdmin" data-i18n="nav.tenantadmin">Tenant Admin</a></li>
+                  <ul *dropdownMenu id="navd" class="dropdown-menu" role="menu" >
+                    <li>
+                      <a class="dropdown-toggle navdbsp" data-toggle="dropdown" role="button" aria-expanded="false">
+                        <i class="fa fa-2x fa-power-off"></i>
+                        <img class="carets" src="./../../assets/img/navcaret.png" />
+                      </a>
+                    </li>
+                    <li role="menuitem"><a class="dropdown-item" href="javascript:void(0)" (click)="changeLang('en')">English</a></li>
+                    <li role="menuitem"><a class="dropdown-item" href="javascript:void(0)" (click)="changeLang('fr')">French</a></li>
+                    <li role="menuitem"><a class="dropdown-item" href="javascript:void(0)" (click)="changeLang('sp')">Spanish</a></li>
+                    <li class="tenantNavigation"><a id="navTenantAdmin" data-i18n="nav.tenantadmin">Tenant Admin</a></li>
                   </ul>
               </li>
           </ul>

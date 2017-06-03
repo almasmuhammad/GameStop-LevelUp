@@ -5,17 +5,15 @@ import { TranslateModule } from '@ngx-translate/core';
 
 import { MyStuffRoutingModule } from './my-stuff-routing.module';
 import { MyStuffComponent } from './my-stuff.component';
+import { UserInfoService } from './components/profile-section/services';
 
 import {
   ProfileSectionComponent,
   AvatarSectionComponent,
   UserInfoSectionComponent,
   XpSectionComponent,
-  MyProfileAvatarComponent,
   UnlockIconComponent,
   UserMissionPercentageComponent,
-  UserNameComponent,
-  UserRankComponent,
   XpCaptainsLogComponent,
   XpCategoriesComponent,
   XpLevelComponent,
@@ -43,17 +41,15 @@ import {
     AvatarSectionComponent,
     UserInfoSectionComponent,
     XpSectionComponent,
-    MyProfileAvatarComponent,
     UnlockIconComponent,
     UserMissionPercentageComponent,
-    UserNameComponent,
-    UserRankComponent,
     XpCaptainsLogComponent,
     XpCategoriesComponent,
     XpLevelComponent,
     XpProgressbarComponent,
     MissionSectionComponent,
     TrackingSectionComponent
-    ]
+    ],
+    providers: [UserInfoService]
 })
 export class MyStuffModule { }

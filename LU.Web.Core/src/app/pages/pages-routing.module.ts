@@ -14,7 +14,8 @@ export const routes: Routes = [
         { path: 'my-team',      loadChildren: 'app/pages/my-team/my-team.module#MyTeamModule', canActivate: [ ProfileGuard ] },
         { path: 'my-training',  loadChildren: 'app/pages/my-training/my-training.module#MyTrainingModule', canActivate: [ ProfileGuard ] },
         { path: 'reports',      loadChildren: 'app/pages/reports/reports.module#ReportsModule', canActivate: [ ProfileGuard ] },
-        { path: 'creator',      loadChildren: 'app/pages/creator/creator.module#CreatorModule', canActivate: [ ProfileGuard ] }
+        { path: 'creator',      loadChildren: 'app/pages/creator/creator.module#CreatorModule', canActivate: [ ProfileGuard ] },
+        { path:  '**', redirectTo:  'my-stuff' }
       ]
   }
 ];

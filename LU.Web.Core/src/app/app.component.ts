@@ -21,6 +21,7 @@ import { AppService } from './shared/services/appService';
 export class AppComponent implements OnInit {
 
   public loadingProfile = false;
+  public loadComplete = false;
 
   constructor(
     private _router: Router,
@@ -46,6 +47,7 @@ export class AppComponent implements OnInit {
 
         // listen for the profile load complete observation
         this._userContextService.profileLoadComplete.subscribe((url) => {
+          this.loadComplete = true;
           this._router.navigate([url]);
         });
 

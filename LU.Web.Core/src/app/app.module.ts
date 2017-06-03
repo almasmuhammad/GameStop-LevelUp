@@ -16,8 +16,6 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 // Cookies used with authentication from API server and possible local storage
 import { CookieModule, CookieService } from 'ngx-cookie';
 
-// Replaces old jQuery behavior
-import { AlertModule } from 'ngx-bootstrap';
 
 // Logger,Window and User Services
 import { UserContextService } from './shared/services/userContext/user-context.service';
@@ -57,7 +55,6 @@ export function HttpLoaderFactory(http: Http) {
         }),
     HttpModule,
     CookieModule.forRoot(),
-    AlertModule.forRoot(),
     PagesModule,
     AppRoutingModule
   ],

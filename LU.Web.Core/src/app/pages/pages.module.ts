@@ -5,6 +5,9 @@ import { TranslateModule } from '@ngx-translate/core';
 
 import { PagesRoutingModule } from './pages-routing.module';
 
+// Replaces old jQuery behavior
+import { AlertModule, BsDropdownModule } from 'ngx-bootstrap';
+
 import { PagesComponent } from './pages.component';
 import { NavbarComponent } from '../shared/components/header/navbar/navbar.component';
 
@@ -12,7 +15,9 @@ import { NavbarComponent } from '../shared/components/header/navbar/navbar.compo
   imports: [
     CommonModule,
     PagesRoutingModule,
-    TranslateModule
+    TranslateModule,
+    AlertModule.forRoot(),
+    BsDropdownModule.forRoot(),
   ],
   exports: [
     PagesRoutingModule

@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { ProfileSectionService } from './profile-section.service';
+import { UserInfoService } from './services';
+import { UserInformationViewModel } from './models';
 
 @Component({
   selector: 'app-profile-section',
@@ -8,15 +9,17 @@ import { ProfileSectionService } from './profile-section.service';
   encapsulation: ViewEncapsulation.None
 })
 export class ProfileSectionComponent implements OnInit {
-    profile: any;
 
-  constructor(/*private profileSectionService:ProfileSectionService*/) { }
+  public model: UserInformationViewModel;
+  constructor(private _userInfoService: UserInfoService ) {  }
 
   ngOnInit() {
-/*   this.profileSectionService.fetchProfile()
-    .subscribe(data => {
-      this.profile = data;
-    })*/
-  }
+    this._userInfoService.getUserInfo().subscribe(
+      (model) => {
+        this.model = model;
+      },
+      (error) => {  }
+    );
+    }
 
 }

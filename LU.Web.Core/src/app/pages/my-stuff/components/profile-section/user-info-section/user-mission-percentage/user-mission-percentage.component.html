@@ -3,11 +3,11 @@
     class="card-chart chart mid masterTooltip" data-percent="60">
         <canvas height="75" width="75" style="border: 2px solid red;"></canvas>
         <span class="card-chart-label position pull-left">
-            <span>{{positionProgressPct | percent}}</span>
+            <span>{{model.percentageComplete | percent}}</span>
         </span>
         <span class="chart-complete sm-chart" style="font-size:16pt;" >{{'position' | translate|uppercase}}</span>
     </span>
 <br>
-<span class="findMissionButton">{{'my-missions' | translate}} <i class="fa fa-1x fa-chevron-circle-right"></i></span>
+<a href="#mymissions" target="_self"><span class="findMissionButton">{{'my-missions' | translate}} <i class="fa fa-1x fa-chevron-circle-right"></i></span></a>
 <canvas height="162" width="162" style="height: 130px; width: 130px;"></canvas>
 </div>

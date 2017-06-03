@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { UserInformationViewModel } from '../../models';
 
 @Component({
   selector: 'app-xp-level',
@@ -6,10 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./xp-level.component.css']
 })
 export class XpLevelComponent implements OnInit {
-
-levelNumber:number=17;
-currentXp:number=55238;
-levelupXp:number=60000;
+@Input() userModel: UserInformationViewModel;
 
   constructor() { }
 

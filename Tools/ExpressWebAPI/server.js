@@ -54,12 +54,45 @@ app.get('/users/:id', function (req, res) {
   }
 });
 
+app.get('/api/user/userinfo', function(req, res){
+
+var data = JSON.parse(`{"firstName": "Almas",
+        "lastName": "24K",
+        "level": 17,
+        "currentXp": 75,
+        "upperThreshold": 100,
+        "percentageComplete": "0.5",
+        "rank": "EPIC",
+        "hireDate": null}`);
+
+    var stop = new Date().getTime();
+    while(new Date().getTime() < stop + 5000) {
+        var k=1;
+    }
+
+  res.json(data);
+});
+
 app.post('/api/login', function(req, res){
   res.cookie('accessToken','x');
   res.redirect('http://localhost:4200');
 });
 
+app.get('/api/login', function(req, res){
+      var stop = new Date().getTime();
+    while(new Date().getTime() < stop + 5000) {
+        var k=1;
+    }
+  res.cookie('accessToken','x');
+  res.redirect('http://localhost:4200');
+});
+
 app.get('/api/Application/Profile', function (req,res){
+    var stop = new Date().getTime();
+    while(new Date().getTime() < stop + 5000) {
+        var k=1;
+    }
+
   var applicationProfileViewModel = JSON.parse('{"roles":["CreatorRead"],"languages":["en-us"]}');
 
   res.json(applicationProfileViewModel);

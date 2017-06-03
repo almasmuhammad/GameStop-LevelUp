@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AvatarSectionComponent implements OnInit {
 
+
+  mainAvatar = 'assets/img/avatars/full_high_Marvel_Persona_Deadpool.png';
   constructor() { }
 
   ngOnInit() {
