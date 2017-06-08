@@ -4,9 +4,5 @@
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
 export const environment = {
-  production: false,
-  loginURL: 'https://sso.gamestop.com',
-  apiURL: 'http://localhost:65495/api/'
-  // apiURL: 'http://localhost:8081/'
-  // apiURL: 'http://levelUpApi.gamestop.com/api/'
+  production: false
 };

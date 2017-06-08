@@ -1,0 +1,82 @@
+/*accordion.css*/
+app-accordion {
+    display: block
+}
+app-accordion-tab {
+    position: relative;
+    display: block;
+    outline: 0;
+    box-sizing: border-box
+}
+app-accordion-tab[hidden] {
+    display: none
+}
+.app-accordion-header {
+    position: relative;
+    display: block;
+    padding-right: 30px;
+    font-weight: 500;
+    line-height: 40px;
+    text-align: left;
+    color: rgba(255, 255, 255, .87);
+    cursor: pointer;
+    white-space: nowrap;
+    /*border-bottom: 1px solid rgba(0, 0, 0, .12);*/
+    border-radius: 0;
+    box-sizing: border-box;
+    user-select: none;
+
+      background-color: #3f403e;
+  width: 100%;
+  height: 50px;
+  padding: 5px;
+  border-bottom: solid 1px #ffffff;
+  cursor: pointer;
+  margin: 0;
+  outline: none;
+}
+app-accordion-tab.app-accordion-tab-active>.app-accordion-header {
+    border-color: #ffffff;
+    box-shadow: 0 1px 0 #106cc8
+}
+app-accordion-tab.app-accordion-tab-disabled>.app-accordion-header {
+    pointer-events: none;
+
+    background-image: linear-gradient(to right, rgba(0, 0, 0, .26) 0, rgba(0, 0, 0, .26) 33%, transparent 0);
+    background-size: 4px 1px;
+    background-repeat: repeat-x;
+    background-position: 0 bottom;
+    border-color: transparent;
+    box-shadow: none;
+    cursor: default
+}
+.app-accordion-header-icon {
+    position: absolute;
+    top: 12px;
+    right: 8px;
+    width: 8px;
+    height: 8px;
+    overflow: hidden;
+    display: inline-block;
+    border-width: 0 2px 2px 0;
+    border-style: solid;
+    border-color: currentColor;
+    opacity: .64;
+    transform: rotate(45deg);
+    transition: .3s ease-in-out
+}
+app-accordion-tab.app-accordion-tab-active>.app-accordion-header>.app-accordion-header-icon {
+    transform: rotate(225deg);
+    top: 16px
+}
+.app-accordion-tab-body {
+    position: relative;
+    overflow: hidden;
+    background: white;
+    color: #555;
+}
+.app-accordion-tab-content {
+    position: relative;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, .12)
+}

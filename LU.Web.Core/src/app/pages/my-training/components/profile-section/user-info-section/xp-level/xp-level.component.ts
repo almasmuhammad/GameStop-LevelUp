@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class XpLevelComponent implements OnInit {
 
-levelNumber:number=17;
-currentXp:number=55238;
+levelNumber = 17;
+currentXp = 55238;
 
   constructor() { }
 

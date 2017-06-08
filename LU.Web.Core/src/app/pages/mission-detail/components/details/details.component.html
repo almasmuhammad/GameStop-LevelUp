@@ -1,0 +1,58 @@
+<div class="row">
+    <div class="col-xs-6">
+        <p><span>{{'Name' | translate}}</span><i class="fa fa-asterisk"></i></p>
+        <input type="text" id="EditGoalTitle" maximum="50" name="EditGoalTitle" data-msg="Please provide a mission title" class="step-inputs form-control goalsRequired maxchar" required value="" data-i18p="missionwizard.missiondetails.placeholder.name" />
+        <div class="textarea-count"><span class="maxchardisplay"></span> / 50 </div>
+    </div>
+
+    <div class="col-xs-6 pull-right">
+        <p><span>{{'Mission Badge Image' | translate}}</span><i class="fa fa-asterisk"></i></p>
+        <input type="text" id="EditMissionBadge" name="EditMissionBadge" data-msg="Please upload an avatar"
+                class="step-inputs form-control uploadInput" required value="{{'url/'}}" data-i18p="missionwizard.missiondetails.placeholder.uploadmissionbadge" />
+        <button id="missionDetailsImageUpload" type="button" class="button-preview" data-i18n="common.browse">Browse</button>
+        <div id="uploadDialog" title="Mission Details Upload" class="fileupload">
+        </div>
+        <input type="file" style="opacity: 0; position:absolute;" id="missionDetailsImageUploader" />
+    </div>
+
+    <div class="col-xs-12 description-container">
+        <p><span data-i18n="missionwizard.missiondetails.name">Description</span><i class="fa fa-asterisk"></i></p>
+        <textarea id="EditGoalDescription" maximum="150" name="EditGoalDescription" data-i18p="missionwizard.missiondetails.placeholder.description"  data-msg="Please provide a description" class="step-inputs form-control goalsRequired maxchar" required></textarea>
+        <div class="textarea-count"><span class="maxchardisplay"></span> / 150 </div>
+    </div>
+</div>
+
+<hr />
+<div class="row missionDetailRow">
+    <div class="col-xs-3">
+        <div><label data-i18n="missionwizard.missiondetails.allowratings">Allow Ratings?</label><i class="fa fa-asterisk"></i></div>
+        <app-switch offText="off" onText="Yes" offText="No" isOn="true"></app-switch>
+    </div>
+    <div class="col-xs-3">
+        <div>
+            <label data-i18n="missionwizard.missiondetails.allowpoints">Allow Points?</label><i class="fa fa-asterisk"></i>
+        </div>
+
+    </div>
+    <div class="col-xs-3">
+        <div>
+            <label data-i18n="missionwizard.missiondetails.doublexp">Double The XP Value?</label><i class="fa fa-asterisk"></i>
+        </div>
+
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-3">
+        <div>
+            <label data-i18n="missionwizard.missiondetails.shownotificationsonrelease">Show notifications on release?</label><i class="fa fa-asterisk"></i>
+        </div>
+
+    </div>
+    <div class="col-xs-4">
+        <div>
+            <label data-i18n="missionwizard.missiondetails.shownotificationswhenupdated">Show notifications when updated?</label><i class="fa fa-asterisk"></i>
+        </div>
+
+    </div>
+</div>
+<br />

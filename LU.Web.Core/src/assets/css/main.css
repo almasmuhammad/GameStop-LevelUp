@@ -1,4 +1,5 @@
-﻿@media (min-width: 992px) {
+﻿/*main.css*/
+@media (min-width: 992px) {
     #content .container {
     overflow:hidden;
     }

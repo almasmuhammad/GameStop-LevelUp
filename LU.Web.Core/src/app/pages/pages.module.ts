@@ -17,7 +17,7 @@ import { NavbarComponent } from '../shared/components/header/navbar/navbar.compo
     PagesRoutingModule,
     TranslateModule,
     AlertModule.forRoot(),
-    BsDropdownModule.forRoot(),
+    BsDropdownModule.forRoot()
   ],
   exports: [
     PagesRoutingModule

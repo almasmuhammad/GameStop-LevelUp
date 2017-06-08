@@ -6,10 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./org-structure.component.css']
 })
 export class OrgStructureComponent implements OnInit {
-  region:string="West";
-  regionnumber:string="R10";
-  dnumber:string="D224";
-  storenumber:string="Store 1782"
+  region = 'West';
+  regionnumber = 'R10';
+  dnumber = 'D224';
+  storenumber = 'Store 1782';
 
   constructor() { }
 

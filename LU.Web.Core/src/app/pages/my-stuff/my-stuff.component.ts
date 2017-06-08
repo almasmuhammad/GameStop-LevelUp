@@ -8,9 +8,11 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 })
 export class MyStuffComponent implements OnInit {
 
+  public loading = true;
   constructor() { }
 
   ngOnInit() {
+    this.loading = false;
   }
 
 }

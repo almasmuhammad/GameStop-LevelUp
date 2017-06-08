@@ -6,6 +6,7 @@ Run npm install before running (npm start) from root of package.json
 var express = require('express');
 var cors = require('cors');
 var app = express();
+var timeoutDelay = 1000;
 
 app.use(cors());
 
@@ -66,7 +67,7 @@ var data = JSON.parse(`{"firstName": "Almas",
         "hireDate": null}`);
 
     var stop = new Date().getTime();
-    while(new Date().getTime() < stop + 5000) {
+    while(new Date().getTime() < stop + timeoutDelay) {
         var k=1;
     }
 
@@ -74,24 +75,19 @@ var data = JSON.parse(`{"firstName": "Almas",
 });
 
 app.post('/api/login', function(req, res){
+  sleep(timeoutDelay);
   res.cookie('accessToken','x');
   res.redirect('http://localhost:4200');
 });
 
 app.get('/api/login', function(req, res){
-      var stop = new Date().getTime();
-    while(new Date().getTime() < stop + 5000) {
-        var k=1;
-    }
+
   res.cookie('accessToken','x');
   res.redirect('http://localhost:4200');
 });
 
 app.get('/api/Application/Profile', function (req,res){
-    var stop = new Date().getTime();
-    while(new Date().getTime() < stop + 5000) {
-        var k=1;
-    }
+    sleep(timeoutDelay);
 
   var applicationProfileViewModel = JSON.parse('{"roles":["CreatorRead"],"languages":["en-us"]}');
 
@@ -107,3 +103,8 @@ var server = app.listen(65495, function () {
   var port = server.address().port;
   console.log("Web app listening on http://%s:%s", host, port);
 });
+
+function sleep(time){
+  if(!time) time = 3000;
+  var stop = new Date().getTime();  while(new Date().getTime() < stop + time) {var k=1;}
+}

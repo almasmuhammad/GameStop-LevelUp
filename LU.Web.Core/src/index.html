@@ -10,6 +10,14 @@
 <body role="document">
   <app-root>
     <div class="loading">
+        <div class="loading" *ngIf="!loadComplete">
+          <img src="../assets/img/levelUpLogo.png" alt="">
+          <div id="circleG">
+            <div id="circleG_1" class="circleG"></div>
+            <div id="circleG_2" class="circleG"></div>
+            <div id="circleG_3" class="circleG"><i class="fa fa-home center-block"></i></div>
+          </div>
+        </div>
     </div>
   </app-root>
 </body>

@@ -1,10 +1,10 @@
 <router-outlet>
-  <div class="loading" *ngIf="!loadComplete">
+  <div class="loading" *ngIf="loading">
     <img src="../assets/img/levelUpLogo.png" alt="">
     <div id="circleG">
       <div id="circleG_1" class="circleG"></div>
       <div id="circleG_2" class="circleG"></div>
-      <div id="circleG_3" class="circleG"><i class="fa fa-home" *ngIf="!loadingProfile"></i><i class="fa fa-user-o" *ngIf="loadingProfile"></i></div>
+      <div id="circleG_3" class="circleG"><i class="fa fa-home" *ngIf="!loadingProfile"><br/></i><i class="fa fa-user-o" *ngIf="loadingProfile"><br/></i></div>
     </div>
   </div>
 </router-outlet>

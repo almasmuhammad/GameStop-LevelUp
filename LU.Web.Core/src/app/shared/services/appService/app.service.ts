@@ -39,7 +39,7 @@ export class AppService {
 
     const accessToken = this._cookies.get('accessToken');
     const bearer = 'Bearer ' + accessToken;
-    const headers = new Headers({ 'Content-Type': 'application/json','Authorization': bearer });
+    const headers = new Headers({ 'Content-Type': 'application/json', 'Authorization': bearer });
     const options = new RequestOptions({ headers: headers });
 
     return options;

@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./certified-section.component.css']
 })
 export class CertifiedSectionComponent implements OnInit {
-certified=true;
+certified= true;
   constructor() { }
 
   ngOnInit() {

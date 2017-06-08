@@ -22,6 +22,7 @@ export class AppComponent implements OnInit {
 
   public loadingProfile = false;
   public loadComplete = false;
+  public loading = true;
 
   constructor(
     private _router: Router,
@@ -42,24 +43,22 @@ export class AppComponent implements OnInit {
     .subscribe((response) => {
 
       if (this._appService.canLoadProfile()) {
-
-        this.loadingProfile = true;
+        this.loadComplete = true;
 
         // listen for the profile load complete observation
         this._userContextService.profileLoadComplete.subscribe((url) => {
-          this.loadComplete = true;
+          this.loading = false;
           this._router.navigate([url]);
         });
 
+        this.loadingProfile = true;
         // load user profile or be routed to SSO
         this._userContextService.getProfile();
 
       } else {
         this._windowService.redirectToSSO();
       }
-
-
-      });
+    });
   }
 }
 

@@ -7,12 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class XpCategoriesComponent implements OnInit {
 
-Category1:string= "Onboarding";
-Category2:string= "Circle of Life";
-Category3:string= "Selling and Service";
-Category1Percentage:number=0.3;
-Category2Percentage:number=0.44;
-Category3Percentage:number=0.56;
+Category1 = 'Onboarding';
+Category2 = 'Circle of Life';
+Category3 = 'Selling and Service';
+Category1Percentage = 0.3;
+Category2Percentage = 0.44;
+Category3Percentage = 0.56;
   constructor() { }
 
   ngOnInit() {

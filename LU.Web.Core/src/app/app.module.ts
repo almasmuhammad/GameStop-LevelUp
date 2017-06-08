@@ -1,6 +1,7 @@
 // Angular Library Modules
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Http, HttpModule } from '@angular/http';
 import { Router } from '@angular/router';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
@@ -16,7 +17,6 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 // Cookies used with authentication from API server and possible local storage
 import { CookieModule, CookieService } from 'ngx-cookie';
 
-
 // Logger,Window and User Services
 import { UserContextService } from './shared/services/userContext/user-context.service';
 import { UserProfileService } from './shared/services/userProfile/user-profile.service';
@@ -25,7 +25,7 @@ import { WindowService } from './shared/services/window/window.service';
 import { AppService } from './shared/services/appService';
 
 // Prevents routing
-import { ProfileGuard } from './shared/guards';
+import { ProfileGuard } from './shared';
 
 // App is our top level component
 import { AppComponent } from './app.component';
@@ -35,7 +35,9 @@ import { AppRoutingModule } from './app-routing.module';
 
 // Top level Feature Module
 import { PagesModule } from './pages/pages.module';
-import { ModuleLoadingIndicatorComponent } from './shared/components/module-loading-indicator/module-loading-indicator.component';
+import {
+  ModuleLoadingIndicatorComponent
+} from './shared/components/module-loading-indicator/module-loading-indicator.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: Http) {
@@ -46,6 +48,7 @@ export function HttpLoaderFactory(http: Http) {
 @NgModule({
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     TranslateModule.forRoot({
             loader: {
               provide: TranslateLoader,

@@ -1,0 +1,2296 @@
+/*@font-face {
+  font-family: 'solido_book';
+  src: url('../../css/fonts/Solido-Book.otf');
+}
+@font-face {
+  font-family: 'solido_bold';
+  src: url('../../css/fonts/Solido-Bold.otf');
+}*/
+body.body-objectives .navSelectLanguage {
+  display: none !important;
+}
+body.body-missionwizard,
+body.body-objectives {
+  /* title bar in wizard */
+}
+body.body-missionwizard *:focus,
+body.body-objectives *:focus {
+  outline: 0;
+}
+body.body-missionwizard #wizardForm,
+body.body-objectives #wizardForm {
+  display: block !important;
+}
+body.body-missionwizard #wizardAccordion .accordion-content,
+body.body-objectives #wizardAccordion .accordion-content {
+  background: white;
+  color: #555;
+}
+body.body-missionwizard .navbar-default,
+body.body-objectives .navbar-default
+{
+    background-color: #1A1A1A !important;
+}
+
+body.body-missionwizard #wizardAccordion,
+body.body-objectives #wizardAccordion,
+body.body-missionwizard #wizardAccordion2,
+body.body-objectives #wizardAccordion2 {
+  margin-top: 15px;
+}
+body.body-missionwizard #wizardAccordion .attention,
+body.body-objectives #wizardAccordion .attention,
+body.body-missionwizard #wizardAccordion2 .attention,
+body.body-objectives #wizardAccordion2 .attention {
+  border: 1px solid #ef3124 !important;
+}
+body.body-missionwizard .accordion-content,
+body.body-objectives .accordion-content {
+  padding: 10px 0 0 0;
+  background-color: #e6e6e6;
+  position: relative;
+}
+body.body-missionwizard #MissionWizard .button-header-add,
+body.body-objectives #MissionWizard .button-header-add {
+  color: #ffffff;
+  background-color: #f7931e;
+  border: solid 1px #f7931e;
+  height: 36px;
+  width: 117px;
+  font-size: 1.7rem;
+  position: relative;
+  top: 2px;
+}
+body.body-missionwizard #MissionWizard .button-header-add:hover,
+body.body-objectives #MissionWizard .button-header-add:hover {
+  color: #ffffff;
+  background-color: #d6801c;
+  border: solid 1px #f7931e;
+  height: 36px;
+  width: 117px;
+  font-size: 1.7rem;
+  position: relative;
+  top: 2px;
+}
+body.body-missionwizard #MissionWizard .questionitem,
+body.body-objectives #MissionWizard .questionitem {
+  padding: 4px 4px 4px 10px;
+  width: 100%;
+  border-bottom: solid 1px #000000;
+}
+body.body-missionwizard #MissionWizard .save-button,
+body.body-objectives #MissionWizard .save-button {
+  color: #ffffff;
+  background-color: #f7931e;
+  border: solid 1px #f7931e;
+  height: 39px;
+  min-width: 113px;
+  margin: 0 7px 0 0;
+}
+body.body-missionwizard #MissionWizard .submit-button,
+body.body-objectives #MissionWizard .submit-button {
+  color: #ffffff;
+  background-color: #f7931e;
+  border: solid 1px #f7931e;
+  height: 39px;
+  min-width: 225px;
+}
+body.body-missionwizard #MissionWizard .save-button:hover,
+body.body-objectives #MissionWizard .save-button:hover {
+  color: #ffffff;
+  background-color: #d6801c;
+  border: solid 1px #f7931e;
+  height: 39px;
+  width: 113px;
+}
+body.body-missionwizard #MissionWizard .submit-button:hover,
+body.body-objectives #MissionWizard .submit-button:hover {
+  background-color: #d6801c;
+}
+body.body-missionwizard #MissionWizard .button-header-add:active,
+body.body-objectives #MissionWizard .button-header-add:active {
+  background-color: #de7a08;
+  line-height: 1px;
+}
+body.body-missionwizard #MissionWizard .btngroup,
+body.body-objectives #MissionWizard .btngroup {
+  margin: 0 auto 0;
+  padding-top: 10px;
+  text-align: center;
+}
+body.body-missionwizard #MissionWizard .subsave-button,
+body.body-objectives #MissionWizard .subsave-button,
+body.body-missionwizard #MissionWizard .cancel-button,
+body.body-objectives #MissionWizard .cancel-button {
+  min-width: 113px;
+  background-color: #ffffff;
+  color: #3f403e;
+  border: solid 1px #3f403e;
+  height: 39px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+body.body-missionwizard #MissionWizard .cancel-button:hover,
+body.body-objectives #MissionWizard .cancel-button:hover {
+  color: #ffffff;
+  background-color: #3f403e;
+}
+body.body-missionwizard #MissionWizard .subsave-button:hover,
+body.body-objectives #MissionWizard .subsave-button:hover {
+  color: #ffffff;
+  background-color: #3f403e;
+}
+body.body-missionwizard #MissionWizard .objective-item,
+body.body-objectives #MissionWizard .objective-item {
+  margin: 30px 0 30px 0;
+}
+body.body-missionwizard #MissionWizard .pretty-save-button,
+body.body-objectives #MissionWizard .pretty-save-button {
+  background-color: #fff;
+  border: 0;
+  color: #f7931e;
+  font-size: 1.7rem;
+}
+body.body-missionwizard #MissionWizard .pretty-save-button:hover,
+body.body-objectives #MissionWizard .pretty-save-button:hover {
+  background-color: #fff;
+  border: 0;
+  color: #d6801c;
+  font-size: 1.7rem;
+}
+body.body-missionwizard #MissionWizard .pretty-save-button i,
+body.body-objectives #MissionWizard .pretty-save-button i {
+  font-size: 1.6rem;
+}
+body.body-missionwizard #MissionWizard .radio-shrink,
+body.body-objectives #MissionWizard .radio-shrink {
+  width: 84px;
+}
+body.body-missionwizard #MissionWizard .radio-control,
+body.body-objectives #MissionWizard .radio-control {
+  margin-right: 4px;
+}
+body.body-missionwizard #MissionWizard .margin-top,
+body.body-objectives #MissionWizard .margin-top {
+  margin: 10px;
+}
+
+body.body-missionwizard #MissionWizard .subject-item,
+body.body-objectives #MissionWizard .subject-item {
+  height: 39px;
+  border-bottom: solid 1px #a5a5a5;
+  text-indent: 7px;
+  line-height: 38px;
+  cursor: pointer;
+}
+body.body-missionwizard #MissionWizard .subject-arrows,
+body.body-objectives #MissionWizard .subject-arrows {
+  position: relative;
+  top: 13px;
+  width: 14px;
+  color: #a5a5a5;
+}
+body.body-missionwizard #MissionWizard .subject-arrows-rotate,
+body.body-objectives #MissionWizard .subject-arrows-rotate {
+  transform: rotate(90deg);
+  /* Safari */
+  -webkit-transform: rotate(90deg);
+  /* Firefox */
+  -moz-transform: rotate(90deg);
+  /* IE */
+  -ms-transform: rotate(90deg);
+  /* Opera */
+  -o-transform: rotate(90deg);
+  position: relative;
+  top: 7px;
+  width: 14px;
+  left: 5px;
+  color: #a5a5a5;
+}
+body.body-missionwizard #MissionWizard .wizard-container,
+body.body-objectives #MissionWizard .wizard-container {
+  background-color: #e6e6e6;
+  padding: 20px;
+  margin-top: 80px;
+  color: #555;
+}
+body.body-missionwizard #wizardModal,
+body.body-objectives #wizardModal,
+body.body-missionwizard #wizardModal .modal-body,
+body.body-objectives #wizardModal .modal-body {
+  color: #555;
+}
+body.body-missionwizard #MissionWizard .wizard-content,
+body.body-objectives #MissionWizard .wizard-content {
+  background-color: #ffffff;
+  margin: 0 0 10px 0;
+}
+body.body-missionwizard #MissionWizard .quiz-buttons,
+body.body-objectives #MissionWizard .quiz-buttons {
+  margin-top: 15px;
+}
+body.body-missionwizard #MissionWizard .quiz-buttons button,
+body.body-objectives #MissionWizard .quiz-buttons button {
+  border: solid 1px #a5a5a5;
+  background-color: #ffffff;
+  margin-right: 10px;
+  min-width: 112px;
+}
+body.body-missionwizard #MissionWizard .quiz-buttons button:active,
+body.body-objectives #MissionWizard .quiz-buttons button:active {
+  background-color: #00ccff;
+  color: #ffffff;
+  font-weight: bold;
+}
+body.body-missionwizard #MissionWizard .quiz-buttons button:hover,
+body.body-objectives #MissionWizard .quiz-buttons button:hover {
+  border: solid 1px #00ccff;
+  font-weight: bold;
+}
+body.body-missionwizard #MissionWizard .add-quiz-button,
+body.body-objectives #MissionWizard .add-quiz-button {
+  color: #f7931e;
+  background-color: #ffffff;
+  border: 0;
+  padding: 0;
+  margin: 11px 0 0 0;
+}
+body.body-missionwizard #MissionWizard .add-quiz-button i,
+body.body-objectives #MissionWizard .add-quiz-button i {
+  font-size: .9rem;
+  position: relative;
+  top: -1px;
+}
+body.body-missionwizard #MissionWizard .isQuizTitle,
+body.body-objectives #MissionWizard .isQuizTitle {
+  width: 120px;
+  position: relative;
+  top: 3px;
+}
+body.body-missionwizard #MissionWizard .mission-summary,
+body.body-objectives #MissionWizard .mission-summary {
+  font-size: 2rem;
+}
+body.body-missionwizard .creator *:focus,
+body.body-objectives .creator *:focus {
+  outline: none;
+}
+body.body-missionwizard .creator .modal,
+body.body-objectives .creator .modal {
+  display: block;
+  width: 800px;
+}
+body.body-missionwizard .creator .modal-content,
+body.body-objectives .creator .modal-content {
+  border-radius: 0;
+  background-color: #e6e6e6;
+}
+body.body-missionwizard .creator .modal-body:before,
+body.body-objectives .creator .modal-body:before,
+body.body-missionwizard .creator .modal-body:after,
+body.body-objectives .creator .modal-body:after {
+  display: table;
+  content: " ";
+}
+body.body-missionwizard .creator .modal-header,
+body.body-objectives .creator .modal-header {
+  text-align: center !important;
+  font-size: 2rem;
+}
+body.body-missionwizard .creator .modal-header:before,
+body.body-objectives .creator .modal-header:before,
+body.body-missionwizard .creator .modal-header:after,
+body.body-objectives .creator .modal-header:after {
+  display: table;
+  content: " ";
+  margin: 0 auto 0;
+}
+body.body-missionwizard .creator .quiz-row-spacing,
+body.body-objectives .creator .quiz-row-spacing {
+  margin-top: 25px;
+}
+body.body-missionwizard .creator #modalTermsAgreement,
+body.body-objectives .creator #modalTermsAgreement {
+  visibility: hidden;
+}
+body.body-missionwizard .creator .ui-dialog-titlebar-close,
+body.body-objectives .creator .ui-dialog-titlebar-close {
+  visibility: hidden;
+}
+body.body-missionwizard .creator .modal-footer,
+body.body-objectives .creator .modal-footer {
+  text-align: center;
+}
+body.body-missionwizard .creator .modal-footer button,
+body.body-objectives .creator .modal-footer button {
+  height: 42px;
+  width: 134px;
+}
+body.body-missionwizard .creator .modal-footer .modal-save-button,
+body.body-objectives .creator .modal-footer .modal-save-button {
+  background-color: #00ccff;
+  color: #ffffff;
+  border: solid 1px #00ccff;
+}
+body.body-missionwizard .creator .modal-footer .modal-save-button:active,
+body.body-objectives .creator .modal-footer .modal-save-button:active {
+  background-color: #1b85d1;
+  border: solid 1px #1b85d1;
+}
+body.body-missionwizard .creator .modal-footer .modal-cancel-button,
+body.body-objectives .creator .modal-footer .modal-cancel-button {
+  background-color: #ffffff;
+  color: #333333;
+  border: solid 1px #333333;
+  cursor: pointer;
+  margin-right: 5px;
+}
+body.body-missionwizard .creator .modal-footer .modal-cancel-button:active,
+body.body-objectives .creator .modal-footer .modal-cancel-button:active {
+  background-color: #e6e6e6;
+  border: solid 1px #000000;
+  font-weight: bold;
+}
+body.body-missionwizard .creator .template-select,
+body.body-objectives .creator .template-select {
+  width: 100%;
+  display: inline-block;
+  background-color: #3f403e;
+  color: #ffffff;
+  font-size: 2rem;
+  height: 40px;
+  border: 0;
+  border-radius: 0;
+  text-indent: 47%;
+}
+body.body-missionwizard .creator label,
+body.body-objectives .creator label {
+  margin-top: 10px !important;
+}
+body.body-missionwizard .creator input,
+body.body-objectives .creator input,
+body.body-missionwizard .creator textarea,
+body.body-objectives .creator textarea {
+  border: solid 1px #a3a4a2 !important;
+  border-radius: 0 !important;
+}
+body.body-missionwizard .creator .btn-file,
+body.body-objectives .creator .btn-file {
+  position: relative;
+  overflow: hidden;
+}
+body.body-missionwizard .creator .btn-file input[type=file],
+body.body-objectives .creator .btn-file input[type=file] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  font-size: 100px;
+  text-align: right;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  outline: none;
+  background: white;
+  cursor: inherit;
+  display: block;
+}
+body.body-missionwizard .creator .upload-primary,
+body.body-objectives .creator .upload-primary {
+  height: 40px;
+  background-color: #ffffff !important;
+  padding: 7px 32px 15px 30px;
+  font-size: 1.7rem;
+  border-radius: 0;
+  cursor: pointer;
+  border: solid 1px #000;
+}
+body.body-missionwizard .creator .loading-indicator,
+body.body-objectives .creator .loading-indicator {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 20px;
+}
+body.body-missionwizard .wizard-section,
+body.body-objectives .wizard-section {
+  padding: 10px;
+  display: block;
+}
+body.body-missionwizard .multilist,
+body.body-objectives .multilist {
+    height: 150px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #ffffff;
+    overflow-x: scroll;
+    text-align: left;
+    border-top: none;
+}
+body.body-missionwizard .fileupload,
+body.body-objectives .fileupload {
+  display: none;
+  background-color: #ffffff;
+  border: solid 1px #a5a5a5;
+  outline: none;
+}
+body.body-missionwizard .ui-dialog,
+body.body-objectives .ui-dialog {
+  outline: none;
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  z-index: 210000;
+  /*all the way to the front*/
+}
+body.body-missionwizard .ui-dialog-titlebar,
+body.body-objectives .ui-dialog-titlebar {
+  background-color: #3f403e;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 10px;
+  font-size: 1.5rem;
+  outline: inherit;
+  cursor: move;
+}
+body.body-missionwizard .ui-button,
+body.body-objectives .ui-button {
+  position: relative;
+  top: -2px;
+  float: right;
+  color: #3f403e;
+  outline: inherit;
+}
+body.body-missionwizard .step-number,
+body.body-objectives .step-number {
+  float: left;
+  margin: 5px 0 0 5px;
+  display: none;
+}
+body.body-missionwizard #MissionWizard .mission-header,
+body.body-objectives #MissionWizard .mission-header {
+  background-color: #3f403e;
+  color: #ffffff;
+  width: 100%;
+  height: 50px;
+  padding: 5px;
+  border-bottom: solid 1px #ffffff;
+  cursor: pointer;
+  margin: 0;
+  outline: none;
+}
+body.body-missionwizard #MissionWizard .mission-header .head-title,
+body.body-objectives #MissionWizard .mission-header .head-title {
+  font-size: 2.5rem;
+  position: relative;
+  top: 2px;
+  left: 19px;
+  padding: 0;
+}
+body.body-missionwizard #MissionWizard .add-button,
+body.body-objectives #MissionWizard .add-button {
+  border: solid 2px #a5a5a5;
+  color: #3f403e;
+  padding: 10px;
+}
+body.body-missionwizard #MissionWizard .primary-select,
+body.body-objectives #MissionWizard .primary-select {
+  background-color: #f7931e;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 0;
+  width: 100%;
+  text-indent: 20rem;
+}
+body.body-missionwizard .nopadding,
+body.body-objectives .nopadding {
+  padding: 0;
+}
+body.body-missionwizard .vertical-spacing,
+body.body-objectives .vertical-spacing {
+  margin-bottom: 10px;
+}
+body.body-missionwizard #MissionWizard .wizard-commands,
+body.body-objectives #MissionWizard .wizard-commands {
+  margin: 10px 0 10px 0;
+}
+body.body-missionwizard #MissionWizard .mission-header .mission-header-arrow,
+body.body-objectives #MissionWizard .mission-header .mission-header-arrow {
+  position: relative;
+  float: right;
+  top: 12px;
+  right: 10px;
+  color: #ffffff;
+}
+body.body-missionwizard .mission-image,
+body.body-objectives .mission-image {
+  height: 310px;
+  float:left;
+  margin:25px 25px 25px 15px;
+}
+
+.mission-summary .sub-text-bold {
+    margin:10px 0 0 0;
+    font-size:15pt;
+}
+
+.mission-summary .sub-text-bold:first-child{
+    margin:25px 0 0 0;
+}
+
+.mission-summary .sub-text-small{
+    font-weight:normal;
+    font-size:15pt;
+}
+
+body.body-missionwizard #SaveWizardContentContainer,
+body.body-objectives #SaveWizardContentContainer {
+  display: none;
+}
+body.body-missionwizard .modal-footer,
+body.body-objectives .modal-footer {
+  border: 0;
+}
+body.body-missionwizard .button-preview,
+body.body-objectives .button-preview {
+  /*font-size: 21pt;
+        background-color: #808080;
+        color: #000;*/
+}
+body.body-missionwizard #MissionWizard textarea,
+body.body-objectives #MissionWizard textarea {
+  height: 90px;
+  border: solid 1px #a5a5a5;
+  -ms-border-radius: 0;
+  border-radius: 0;
+  outline: none;
+  font-size: 1.5rem !important;
+}
+body.body-missionwizard #MissionWizard input.upload,
+body.body-objectives #MissionWizard input.upload {
+  height: 38px;
+  font-size: 1.5rem !important;
+}
+body.body-missionwizard #MissionWizard .browse-button,
+body.body-objectives #MissionWizard .browse-button {
+  border-right: solid 1px #a5a5a5;
+  border-top: solid 1px #a5a5a5;
+  border-bottom: solid 1px #a5a5a5;
+  border-left: 0;
+  font-size: 2rem;
+  height: 38px;
+  border-radius: 0;
+  width: 113px;
+}
+body.body-missionwizard #MissionWizard .title-label,
+body.body-objectives #MissionWizard .title-label {
+  position: relative;
+  top: 5px;
+}
+body.body-missionwizard #MissionWizard input[type=radio],
+body.body-objectives #MissionWizard input[type=radio] {
+    display: inline-block;
+    top: 2px;
+}
+body.body-missionwizard #MissionWizard input,
+body.body-objectives #MissionWizard input {
+    border: solid 1px #ccc;
+    cursor: pointer;
+    -ms-border-radius: 0;
+    border-radius: 0;
+    outline: none;
+}
+body.body-missionwizard #MissionWizard .button-secondary-save,
+body.body-objectives #MissionWizard .button-secondary-save {
+  background-color: #333333;
+  color: #fff;
+  border-radius: 0;
+  border: solid 1px #333333;
+  width: 115px;
+  height: 37px;
+}
+body.body-missionwizard #MissionWizard .modal-content,
+body.body-objectives #MissionWizard .modal-content {
+  border-radius: 0;
+  background-color: #ffffff;
+  color: #000;
+}
+body.body-missionwizard #MissionWizard .button-save,
+body.body-objectives #MissionWizard .button-save {
+  margin-top: 10px;
+  width: 171px !important;
+}
+body.body-missionwizard #MissionWizard .checkbox,
+body.body-objectives #MissionWizard .checkbox {
+  display: block;
+}
+body.body-missionwizard #MissionWizard .step,
+body.body-objectives #MissionWizard .step {
+  margin-top: 0;
+}
+body.body-missionwizard .mediaRemove,
+body.body-objectives .mediaRemove {
+  margin: 20px 0 0 150px;
+  cursor: pointer;
+}
+body.body-missionwizard .mediaRemove img,
+body.body-objectives .mediaRemove img {
+  width: 60px;
+}
+body.body-missionwizard .mediaUri,
+body.body-objectives .mediaUri {
+  width: 100%;
+  margin-top: 20px;
+}
+body.body-missionwizard .questionDDType,
+body.body-objectives .questionDDType {
+  cursor: pointer;
+  display: block;
+}
+body.body-missionwizard .questionDDImage,
+body.body-objectives .questionDDImage {
+  height: 100px;
+  width: 100px;
+  float: left;
+  background-size: cover;
+}
+body.body-missionwizard .questionDDImageWrapper,
+body.body-objectives .questionDDImageWrapper {
+  border: 1px solid #aaa;
+  padding: 4px;
+}
+body.body-missionwizard .questionDDImageClear,
+body.body-objectives .questionDDImageClear {
+  cursor: pointer;
+  float: left;
+  margin: 35px 6px 0 51px;
+}
+body.body-missionwizard .circle,
+body.body-objectives .circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  font-size: 1.5rem;
+  color: #000000;
+  line-height: 30px;
+  text-align: center;
+  background: #ffffff;
+  border-color: #ef3124;
+}
+body.body-missionwizard .rotate,
+body.body-objectives .rotate {
+  transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  margin-top: -3px;
+}
+body.body-missionwizard .step-title,
+body.body-objectives .step-title {
+  font-size: 2.3rem;
+  margin-left: 9px;
+  width: 400px;
+  display: inline-block;
+  margin-top: 5px;
+}
+body.body-missionwizard .button-previous,
+body.body-objectives .button-previous {
+  display: block;
+  background-color: transparent;
+  color: #F7931E !important;
+  width: 120px;
+  border-radius: 0;
+  text-align: center;
+  border: 1px solid  #F7931E;
+  font-size: 15pt;
+  height: 45px;
+  font-weight: 100;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+body.body-missionwizard .button-previous:hover,
+body.body-objectives .button-previous:hover {
+  display: block;
+  background-color: #F7931E;
+  color: #fff !important;
+  width: 120px;
+  border-radius: 0;
+  text-align: center;
+  border: none;
+  font-size: 15pt;
+  height: 45px;
+  font-weight: 100;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+body.body-missionwizard .button-next,
+body.body-objectives .button-next {
+  display: block;
+  background-color: transparent;
+  color: #F7931E !important;
+  width: 120px;
+  border-radius: 0;
+  text-align: center;
+  border: 1px solid  #F7931E;
+  font-size: 15pt;
+  height: 45px;
+  font-weight: 100;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+body.body-missionwizard .button-next:hover,
+body.body-objectives .button-next:hover {
+  display: block;
+  background-color: #F7931E;
+  color: #fff !important;
+  width: 120px;
+  border-radius: 0;
+  text-align: center;
+  border: none;
+  font-size: 15pt;
+  height: 45px;
+  font-weight: 100;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+body.body-missionwizard .errorlist,
+body.body-objectives .errorlist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+body.body-missionwizard input[placeholder],
+body.body-objectives input[placeholder] {
+  font-size: 12px;
+}
+body.body-missionwizard .btn-light,
+body.body-objectives .btn-light {
+  margin: 15px;
+  min-width: 100px;
+  padding: 8px;
+  background: #ffffff;
+}
+body.body-missionwizard .btn-dark,
+body.body-objectives .btn-dark {
+  margin: 15px;
+  min-width: 100px;
+  padding: 8px;
+  background: #e6e6e6;
+}
+body.body-missionwizard .btn-attach-right,
+body.body-objectives .btn-attach-right {
+  float: left;
+  margin: 0;
+  border-radius: 0px;
+}
+body.body-missionwizard input.uploadInput,
+body.body-objectives input.uploadInput {
+  width: 80%;
+  float: left;
+}
+body.body-missionwizard .blocked,
+body.body-objectives .blocked {
+  display: block;
+}
+body.body-missionwizard .missionGroupSelectRow,
+body.body-objectives .missionGroupSelectRow,
+body.body-missionwizard .missionUserSelectRow,
+body.body-objectives .missionUserSelectRow {
+  margin: 4px;
+}
+body.body-missionwizard .missionGroupSelectRow:hover,
+body.body-objectives .missionGroupSelectRow:hover,
+body.body-missionwizard .missionUserSelectRow:hover,
+body.body-objectives .missionUserSelectRow:hover {
+  background-color: #e6e6e6;
+}
+/*
+body.body-missionwizard .selectedHolder,
+body.body-objectives .selectedHolder {
+  width: 100%;
+  height: 60px;
+  border: 1px solid #a5a5a5;
+  background-color: #ffffff;
+  margin-bottom: 2px;
+  padding: 4px;
+  overflow: auto;
+}
+*/
+body.body-missionwizard .searchNotFound,
+body.body-objectives .searchNotFound {
+  display: none;
+}
+body.body-missionwizard .audienceRowSelected,
+body.body-objectives .audienceRowSelected,
+body.body-missionwizard .prerequisitesRowSelected,
+body.body-objectives .prerequisitesRowSelected,
+body.body-missionwizard .categoryRowSelected,
+body.body-objectives .categoryRowSelected {
+  background-color: #e6e6e6;
+}
+body.body-missionwizard .btn-centered,
+body.body-objectives .btn-centered {
+  background-color: #ffffff;
+  color: black!important;
+  width: 160px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  border: 1px solid #e6e6e6;
+}
+body.body-missionwizard .objective-titles,
+body.body-objectives .objective-titles {
+  color: black !important;
+  font-size: 22pt !important;
+}
+body.body-missionwizard .button-grey-med,
+body.body-objectives .button-grey-med {
+  background-color: #e6e6e6;
+  padding: 4px;
+  width: 120px;
+}
+body.body-missionwizard #missionsObjectiveSaveNewTemplateText,
+body.body-objectives #missionsObjectiveSaveNewTemplateText {
+  width: 40%;
+}
+body.body-missionwizard .margined-div,
+body.body-objectives .margined-div {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+body.body-missionwizard .questionHolder,
+body.body-objectives .questionHolder {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #ffffff;
+}
+body.body-missionwizard .questionHolder span,
+body.body-objectives .questionHolder span {
+  margin-right: 30px;
+}
+body.body-missionwizard #missionsObjectiveQuizView,
+body.body-objectives #missionsObjectiveQuizView {
+  height: 100%;
+}
+body.body-missionwizard .newlyAddedSingleQuestion,
+body.body-objectives .newlyAddedSingleQuestion {
+  background-color: #ffffff;
+  padding: 6px;
+  border-radius: 4px;
+  margin-bottom: 2px;
+}
+body.body-missionwizard #questionsSortable,
+body.body-objectives #questionsSortable,
+body.body-missionwizard #qAnswers,
+body.body-objectives #qAnswers,
+body.body-missionwizard #qDragAnswers,
+body.body-objectives #qDragAnswers {
+  list-style-type: none;
+  margin: 0 0 10px 0;
+  padding: 0;
+}
+body.body-missionwizard #questionsSortable li,
+body.body-objectives #questionsSortable li,
+body.body-missionwizard #qAnswers li.isAnswer1,
+body.body-objectives #qAnswers li.isAnswer1,
+body.body-missionwizard #qDragAnswers li,
+body.body-objectives #qDragAnswers li {
+  background-color: #f7931e;
+  color: #000;
+  margin: 2px;
+  padding: 2px 2px 2px 10px;
+}
+body.body-missionwizard #questionsSortable li:hover,
+body.body-objectives #questionsSortable li:hover,
+body.body-missionwizard #qAnswers li:hover,
+body.body-objectives #qAnswers li:hover,
+body.body-missionwizard #qDragAnswers li:hover,
+body.body-objectives #qDragAnswers li:hover {
+  border: solid 1px #ef3124;
+  cursor: pointer;
+}
+body.body-missionwizard .missionAddedSubjectQuiz,
+body.body-objectives .missionAddedSubjectQuiz,
+body.body-missionwizard .missionAddedSubjectContent,
+body.body-objectives .missionAddedSubjectContent {
+  border: 1px solid grey;
+  padding: 4px;
+  border-radius: 5px;
+}
+body.body-missionwizard .removeObjectiveSign,
+body.body-objectives .removeObjectiveSign {
+  margin-top: -20px;
+}
+body.body-missionwizard .one-hundred-percent,
+body.body-objectives .one-hundred-percent {
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+body.body-missionwizard .text-24.black,
+body.body-objectives .text-24.black {
+  color: #000000;
+}
+body.body-missionwizard #IsTrueCB,
+body.body-objectives #IsTrueCB {
+  /*padding-top: 30px;
+        padding-bottom: 20px;*/
+}
+body.body-missionwizard #radioEssayOptions,
+body.body-objectives #radioEssayOptions {
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+body.body-missionwizard .margin-right-20,
+body.body-objectives .margin-right-20 {
+  margin-right: 20px;
+}
+@media (max-width: 992px) {
+  body.body-missionwizard .accordion-content,
+  body.body-objectives .accordion-content {
+    height: 645px !important;
+  }
+}
+body.body-missionwizard #wizardForm .loading-indicator,
+body.body-objectives #wizardForm .loading-indicator {
+  position: absolute;
+  text-align: center;
+  top: 300px;
+  width: 100%;
+}
+body.body-missionwizard #mainContent,
+body.body-objectives #mainContent {
+  display: none;
+}
+body.body-missionwizard [ng\:cloak],
+body.body-objectives [ng\:cloak],
+body.body-missionwizard [ng-cloak],
+body.body-objectives [ng-cloak],
+body.body-missionwizard .ng-cloak,
+body.body-objectives .ng-cloak {
+  display: none;
+}
+body.body-missionwizard .margintop2rem,
+body.body-objectives .margintop2rem {
+  margin-top: 2rem;
+}
+body.body-missionwizard input[type="date"]::-webkit-inner-spin-button,
+body.body-objectives input[type="date"]::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0;
+}
+body.body-missionwizard .questionOptions,
+body.body-objectives .questionOptions {
+  display: none;
+}
+body.body-missionwizard .response,
+body.body-objectives .response {
+  margin: 1rem 0;
+}
+body.body-missionwizard .right,
+body.body-objectives .right {
+  float: right;
+}
+body.body-missionwizard .clear,
+body.body-objectives .clear {
+  clear: both;
+}
+/*body.body-missionwizard .missionDetailRow,
+body.body-objectives .missionDetailRow {
+  padding-bottom: 25px;
+  padding-top: 25px;
+}*/
+body.body-missionwizard #ui-datepicker-div,
+body.body-objectives #ui-datepicker-div {
+  width: 17em;
+  padding: .2em .2em 0;
+  display: none;
+  background: white;
+}
+body.body-missionwizard #ui-datepicker-div .ui-helper-hidden,
+body.body-objectives #ui-datepicker-div .ui-helper-hidden {
+  display: none;
+}
+body.body-missionwizard #ui-datepicker-div .ui-helper-hidden-accessible,
+body.body-objectives #ui-datepicker-div .ui-helper-hidden-accessible {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-helper-reset,
+body.body-objectives #ui-datepicker-div .ui-helper-reset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  line-height: 1.3;
+  text-decoration: none;
+  font-size: 100%;
+  list-style: none;
+}
+body.body-missionwizard #ui-datepicker-div .ui-helper-clearfix:before,
+body.body-objectives #ui-datepicker-div .ui-helper-clearfix:before,
+body.body-missionwizard #ui-datepicker-div .ui-helper-clearfix:after,
+body.body-objectives #ui-datepicker-div .ui-helper-clearfix:after {
+  content: "";
+  display: table;
+  border-collapse: collapse;
+}
+body.body-missionwizard #ui-datepicker-div .ui-helper-clearfix:after,
+body.body-objectives #ui-datepicker-div .ui-helper-clearfix:after {
+  clear: both;
+}
+body.body-missionwizard #ui-datepicker-div .ui-helper-clearfix,
+body.body-objectives #ui-datepicker-div .ui-helper-clearfix {
+  min-height: 0;
+}
+body.body-missionwizard #ui-datepicker-div .ui-helper-zfix,
+body.body-objectives #ui-datepicker-div .ui-helper-zfix {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+body.body-missionwizard #ui-datepicker-div .ui-front,
+body.body-objectives #ui-datepicker-div .ui-front {
+  z-index: 100;
+}
+body.body-missionwizard #ui-datepicker-div .ui-state-disabled,
+body.body-objectives #ui-datepicker-div .ui-state-disabled {
+  cursor: default !important;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon,
+body.body-objectives #ui-datepicker-div .ui-icon {
+  display: block;
+  text-indent: -99999px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+}
+body.body-missionwizard #ui-datepicker-div .ui-widget-overlay,
+body.body-objectives #ui-datepicker-div .ui-widget-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+body.body-missionwizard #ui-datepicker-div .ui-datepicker-header,
+body.body-objectives #ui-datepicker-div .ui-datepicker-header {
+  position: relative;
+  padding: .2em 0;
+}
+body.body-missionwizard #ui-datepicker-div .ui-datepicker-prev,
+body.body-objectives #ui-datepicker-div .ui-datepicker-prev,
+body.body-missionwizard #ui-datepicker-div .ui-datepicker-next,
+body.body-objectives #ui-datepicker-div .ui-datepicker-next {
+  position: absolute;
+  top: 2px;
+  width: 1.8em;
+  height: 1.8em;
+}
+body.body-missionwizard #ui-datepicker-div .ui-datepicker-prev-hover,
+body.body-objectives #ui-datepicker-div .ui-datepicker-prev-hover,
+body.body-missionwizard #ui-datepicker-div .ui-datepicker-next-hover,
+body.body-objectives #ui-datepicker-div .ui-datepicker-next-hover {
+  top: 1px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-datepicker-prev,
+body.body-objectives #ui-datepicker-div .ui-datepicker-prev {
+  left: 2px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-datepicker-next,
+body.body-objectives #ui-datepicker-div .ui-datepicker-next {
+  right: 2px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-datepicker-prev-hover,
+body.body-objectives #ui-datepicker-div .ui-datepicker-prev-hover {
+  left: 2px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-datepicker-next-hover,
+body.body-objectives #ui-datepicker-div .ui-datepicker-next-hover {
+  right: 2px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-datepicker-prev span,
+body.body-objectives #ui-datepicker-div .ui-datepicker-prev span,
+body.body-missionwizard #ui-datepicker-div .ui-datepicker-next span,
+body.body-objectives #ui-datepicker-div .ui-datepicker-next span {
+  display: block;
+  position: absolute;
+  left: 50%;
+  margin-left: -8px;
+  top: 50%;
+  margin-top: -8px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-datepicker-title,
+body.body-objectives #ui-datepicker-div .ui-datepicker-title {
+  margin: 0 2.3em;
+  line-height: 1.8em;
+  text-align: center;
+}
+body.body-missionwizard #ui-datepicker-div .ui-datepicker-title select,
+body.body-objectives #ui-datepicker-div .ui-datepicker-title select {
+  font-size: 1em;
+  margin: 1px 0;
+}
+body.body-missionwizard #ui-datepicker-div select.ui-datepicker-month,
+body.body-objectives #ui-datepicker-div select.ui-datepicker-month,
+body.body-missionwizard #ui-datepicker-div select.ui-datepicker-year,
+body.body-objectives #ui-datepicker-div select.ui-datepicker-year {
+  width: 45%;
+}
+body.body-missionwizard #ui-datepicker-div table,
+body.body-objectives #ui-datepicker-div table {
+  width: 100%;
+  font-size: .9em;
+  border-collapse: collapse;
+  margin: 0 0 .4em;
+}
+body.body-missionwizard #ui-datepicker-div th,
+body.body-objectives #ui-datepicker-div th {
+  padding: .7em .3em;
+  text-align: center;
+  font-weight: bold;
+  border: 0;
+}
+body.body-missionwizard #ui-datepicker-div td,
+body.body-objectives #ui-datepicker-div td {
+  border: 0;
+  padding: 1px;
+}
+body.body-missionwizard #ui-datepicker-div td span,
+body.body-objectives #ui-datepicker-div td span,
+body.body-missionwizard #ui-datepicker-div td a,
+body.body-objectives #ui-datepicker-div td a {
+  display: block;
+  padding: .2em;
+  text-align: right;
+  text-decoration: none;
+}
+body.body-missionwizard #ui-datepicker-div .ui-datepicker-buttonpane,
+body.body-objectives #ui-datepicker-div .ui-datepicker-buttonpane {
+  background-image: none;
+  margin: .7em 0 0 0;
+  padding: 0 .2em;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0;
+}
+body.body-missionwizard #ui-datepicker-div .ui-datepicker-buttonpane button,
+body.body-objectives #ui-datepicker-div .ui-datepicker-buttonpane button {
+  float: right;
+  margin: .5em .2em .4em;
+  cursor: pointer;
+  padding: .2em .6em .3em .6em;
+  width: auto;
+  overflow: visible;
+}
+body.body-missionwizard #ui-datepicker-div .ui-datepicker-buttonpane button.ui-datepicker-current,
+body.body-objectives #ui-datepicker-div .ui-datepicker-buttonpane button.ui-datepicker-current {
+  float: left;
+}
+body.body-missionwizard #ui-datepicker-div .ui-datepicker.ui-datepicker-multi,
+body.body-objectives #ui-datepicker-div .ui-datepicker.ui-datepicker-multi {
+  width: auto;
+}
+body.body-missionwizard #ui-datepicker-div .ui-datepicker-multi .ui-datepicker-group,
+body.body-objectives #ui-datepicker-div .ui-datepicker-multi .ui-datepicker-group {
+  float: left;
+}
+body.body-missionwizard #ui-datepicker-div .ui-datepicker-multi .ui-datepicker-group table,
+body.body-objectives #ui-datepicker-div .ui-datepicker-multi .ui-datepicker-group table {
+  width: 95%;
+  margin: 0 auto .4em;
+}
+body.body-missionwizard #ui-datepicker-div .ui-datepicker-multi-2 .ui-datepicker-group,
+body.body-objectives #ui-datepicker-div .ui-datepicker-multi-2 .ui-datepicker-group {
+  width: 50%;
+}
+body.body-missionwizard #ui-datepicker-div .ui-datepicker-multi-3 .ui-datepicker-group,
+body.body-objectives #ui-datepicker-div .ui-datepicker-multi-3 .ui-datepicker-group {
+  width: 33.3%;
+}
+body.body-missionwizard #ui-datepicker-div .ui-datepicker-multi-4 .ui-datepicker-group,
+body.body-objectives #ui-datepicker-div .ui-datepicker-multi-4 .ui-datepicker-group {
+  width: 25%;
+}
+body.body-missionwizard #ui-datepicker-div .ui-datepicker-multi .ui-datepicker-group-last .ui-datepicker-header,
+body.body-objectives #ui-datepicker-div .ui-datepicker-multi .ui-datepicker-group-last .ui-datepicker-header,
+body.body-missionwizard #ui-datepicker-div .ui-datepicker-multi .ui-datepicker-group-middle .ui-datepicker-header,
+body.body-objectives #ui-datepicker-div .ui-datepicker-multi .ui-datepicker-group-middle .ui-datepicker-header {
+  border-left-width: 0;
+}
+body.body-missionwizard #ui-datepicker-div .ui-datepicker-multi .ui-datepicker-buttonpane,
+body.body-objectives #ui-datepicker-div .ui-datepicker-multi .ui-datepicker-buttonpane {
+  clear: left;
+}
+body.body-missionwizard #ui-datepicker-div .ui-datepicker-row-break,
+body.body-objectives #ui-datepicker-div .ui-datepicker-row-break {
+  clear: both;
+  width: 100%;
+  font-size: 0;
+}
+body.body-missionwizard #ui-datepicker-div .ui-datepicker-rtl,
+body.body-objectives #ui-datepicker-div .ui-datepicker-rtl {
+  direction: rtl;
+}
+body.body-missionwizard #ui-datepicker-div .ui-datepicker-rtl .ui-datepicker-prev,
+body.body-objectives #ui-datepicker-div .ui-datepicker-rtl .ui-datepicker-prev {
+  right: 2px;
+  left: auto;
+}
+body.body-missionwizard #ui-datepicker-div .ui-datepicker-rtl .ui-datepicker-next,
+body.body-objectives #ui-datepicker-div .ui-datepicker-rtl .ui-datepicker-next {
+  left: 2px;
+  right: auto;
+}
+body.body-missionwizard #ui-datepicker-div .ui-datepicker-rtl .ui-datepicker-prev:hover,
+body.body-objectives #ui-datepicker-div .ui-datepicker-rtl .ui-datepicker-prev:hover {
+  right: 1px;
+  left: auto;
+}
+body.body-missionwizard #ui-datepicker-div .ui-datepicker-rtl .ui-datepicker-next:hover,
+body.body-objectives #ui-datepicker-div .ui-datepicker-rtl .ui-datepicker-next:hover {
+  left: 1px;
+  right: auto;
+}
+body.body-missionwizard #ui-datepicker-div .ui-datepicker-rtl .ui-datepicker-buttonpane,
+body.body-objectives #ui-datepicker-div .ui-datepicker-rtl .ui-datepicker-buttonpane {
+  clear: right;
+}
+body.body-missionwizard #ui-datepicker-div .ui-datepicker-rtl .ui-datepicker-buttonpane button,
+body.body-objectives #ui-datepicker-div .ui-datepicker-rtl .ui-datepicker-buttonpane button {
+  float: left;
+}
+body.body-missionwizard #ui-datepicker-div .ui-datepicker-rtl .ui-datepicker-buttonpane button.ui-datepicker-current,
+body.body-objectives #ui-datepicker-div .ui-datepicker-rtl .ui-datepicker-buttonpane button.ui-datepicker-current,
+body.body-missionwizard #ui-datepicker-div .ui-datepicker-rtl .ui-datepicker-group,
+body.body-objectives #ui-datepicker-div .ui-datepicker-rtl .ui-datepicker-group {
+  float: right;
+}
+body.body-missionwizard #ui-datepicker-div .ui-datepicker-rtl .ui-datepicker-group-last .ui-datepicker-header,
+body.body-objectives #ui-datepicker-div .ui-datepicker-rtl .ui-datepicker-group-last .ui-datepicker-header,
+body.body-missionwizard #ui-datepicker-div .ui-datepicker-rtl .ui-datepicker-group-middle .ui-datepicker-header,
+body.body-objectives #ui-datepicker-div .ui-datepicker-rtl .ui-datepicker-group-middle .ui-datepicker-header {
+  border-right-width: 0;
+  border-left-width: 1px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-widget,
+body.body-objectives #ui-datepicker-div .ui-widget {
+  font-family: Trebuchet MS, Tahoma, Verdana, Arial, sans-serif;
+  font-size: 1.1em;
+}
+body.body-missionwizard #ui-datepicker-div .ui-widget .ui-widget,
+body.body-objectives #ui-datepicker-div .ui-widget .ui-widget {
+  font-size: 1em;
+}
+body.body-missionwizard #ui-datepicker-div .ui-widget input,
+body.body-objectives #ui-datepicker-div .ui-widget input,
+body.body-missionwizard #ui-datepicker-div .ui-widget select,
+body.body-objectives #ui-datepicker-div .ui-widget select,
+body.body-missionwizard #ui-datepicker-div .ui-widget textarea,
+body.body-objectives #ui-datepicker-div .ui-widget textarea,
+body.body-missionwizard #ui-datepicker-div .ui-widget button,
+body.body-objectives #ui-datepicker-div .ui-widget button {
+  font-family: Trebuchet MS, Tahoma, Verdana, Arial, sans-serif;
+  font-size: 1em;
+}
+body.body-missionwizard #ui-datepicker-div .ui-widget-content,
+body.body-objectives #ui-datepicker-div .ui-widget-content {
+  border: 1px solid #dddddd;
+  background: #eeeeee url("./../../../assets/img/objectives/img/ui-bg_highlight-soft_100_eeeeee_1x100.png") 50% top repeat-x;
+  color: #333333;
+}
+body.body-missionwizard #ui-datepicker-div .ui-widget-content a,
+body.body-objectives #ui-datepicker-div .ui-widget-content a {
+  color: #333333;
+}
+body.body-missionwizard #ui-datepicker-div .ui-widget-header,
+body.body-objectives #ui-datepicker-div .ui-widget-header {
+  border: 1px solid #e78f08;
+  background: #f6a828 url("./../../../assets/img/objectives/img/ui-bg_gloss-wave_35_f6a828_500x100.png") 50% 50% repeat-x;
+  color: #ffffff;
+  font-weight: bold;
+}
+body.body-missionwizard #ui-datepicker-div .ui-widget-header a,
+body.body-objectives #ui-datepicker-div .ui-widget-header a {
+  color: #ffffff;
+}
+body.body-missionwizard #ui-datepicker-div .ui-state-default,
+body.body-objectives #ui-datepicker-div .ui-state-default,
+body.body-missionwizard #ui-datepicker-div .ui-widget-content .ui-state-default,
+body.body-objectives #ui-datepicker-div .ui-widget-content .ui-state-default,
+body.body-missionwizard #ui-datepicker-div .ui-widget-header .ui-state-default,
+body.body-objectives #ui-datepicker-div .ui-widget-header .ui-state-default {
+  border: 1px solid #cccccc;
+  background: #f6f6f6 url("./../../../assets/img/objectives/img/ui-bg_glass_100_f6f6f6_1x400.png") 50% 50% repeat-x;
+  font-weight: bold;
+  color: #1c94c4;
+}
+body.body-missionwizard #ui-datepicker-div .ui-state-default a,
+body.body-objectives #ui-datepicker-div .ui-state-default a,
+body.body-missionwizard #ui-datepicker-div .ui-state-default a:link,
+body.body-objectives #ui-datepicker-div .ui-state-default a:link,
+body.body-missionwizard #ui-datepicker-div .ui-state-default a:visited,
+body.body-objectives #ui-datepicker-div .ui-state-default a:visited {
+  color: #1c94c4;
+  text-decoration: none;
+}
+body.body-missionwizard #ui-datepicker-div .ui-state-hover,
+body.body-objectives #ui-datepicker-div .ui-state-hover,
+body.body-missionwizard #ui-datepicker-div .ui-widget-content .ui-state-hover,
+body.body-objectives #ui-datepicker-div .ui-widget-content .ui-state-hover,
+body.body-missionwizard #ui-datepicker-div .ui-widget-header .ui-state-hover,
+body.body-objectives #ui-datepicker-div .ui-widget-header .ui-state-hover,
+body.body-missionwizard #ui-datepicker-div .ui-state-focus,
+body.body-objectives #ui-datepicker-div .ui-state-focus,
+body.body-missionwizard #ui-datepicker-div .ui-widget-content .ui-state-focus,
+body.body-objectives #ui-datepicker-div .ui-widget-content .ui-state-focus,
+body.body-missionwizard #ui-datepicker-div .ui-widget-header .ui-state-focus,
+body.body-objectives #ui-datepicker-div .ui-widget-header .ui-state-focus {
+  border: 1px solid #fbcb09;
+  background: #fdf5ce url("./../../../assets/img/objectives/img/ui-bg_glass_100_fdf5ce_1x400.png") 50% 50% repeat-x;
+  font-weight: bold;
+  color: #c77405;
+}
+body.body-missionwizard #ui-datepicker-div .ui-state-hover a,
+body.body-objectives #ui-datepicker-div .ui-state-hover a,
+body.body-missionwizard #ui-datepicker-div .ui-state-hover a:hover,
+body.body-objectives #ui-datepicker-div .ui-state-hover a:hover,
+body.body-missionwizard #ui-datepicker-div .ui-state-hover a:link,
+body.body-objectives #ui-datepicker-div .ui-state-hover a:link,
+body.body-missionwizard #ui-datepicker-div .ui-state-hover a:visited,
+body.body-objectives #ui-datepicker-div .ui-state-hover a:visited,
+body.body-missionwizard #ui-datepicker-div .ui-state-focus a,
+body.body-objectives #ui-datepicker-div .ui-state-focus a,
+body.body-missionwizard #ui-datepicker-div .ui-state-focus a:hover,
+body.body-objectives #ui-datepicker-div .ui-state-focus a:hover,
+body.body-missionwizard #ui-datepicker-div .ui-state-focus a:link,
+body.body-objectives #ui-datepicker-div .ui-state-focus a:link,
+body.body-missionwizard #ui-datepicker-div .ui-state-focus a:visited,
+body.body-objectives #ui-datepicker-div .ui-state-focus a:visited {
+  color: #c77405;
+  text-decoration: none;
+}
+body.body-missionwizard #ui-datepicker-div .ui-state-active,
+body.body-objectives #ui-datepicker-div .ui-state-active,
+body.body-missionwizard #ui-datepicker-div .ui-widget-content .ui-state-active,
+body.body-objectives #ui-datepicker-div .ui-widget-content .ui-state-active,
+body.body-missionwizard #ui-datepicker-div .ui-widget-header .ui-state-active,
+body.body-objectives #ui-datepicker-div .ui-widget-header .ui-state-active {
+  border: 1px solid #fbd850;
+  background: #ffffff url("./../../../assets/img/objectives/img/ui-bg_glass_65_ffffff_1x400.png") 50% 50% repeat-x;
+  font-weight: bold;
+  color: #eb8f00;
+}
+body.body-missionwizard #ui-datepicker-div .ui-state-active a,
+body.body-objectives #ui-datepicker-div .ui-state-active a,
+body.body-missionwizard #ui-datepicker-div .ui-state-active a:link,
+body.body-objectives #ui-datepicker-div .ui-state-active a:link,
+body.body-missionwizard #ui-datepicker-div .ui-state-active a:visited,
+body.body-objectives #ui-datepicker-div .ui-state-active a:visited {
+  color: #eb8f00;
+  text-decoration: none;
+}
+body.body-missionwizard #ui-datepicker-div .ui-state-highlight,
+body.body-objectives #ui-datepicker-div .ui-state-highlight,
+body.body-missionwizard #ui-datepicker-div .ui-widget-content .ui-state-highlight,
+body.body-objectives #ui-datepicker-div .ui-widget-content .ui-state-highlight,
+body.body-missionwizard #ui-datepicker-div .ui-widget-header .ui-state-highlight,
+body.body-objectives #ui-datepicker-div .ui-widget-header .ui-state-highlight {
+  border: 1px solid #fed22f;
+  background: #ffe45c url("./../../../assets/img/objectives/img/ui-bg_highlight-soft_75_ffe45c_1x100.png") 50% top repeat-x;
+  color: #363636;
+}
+body.body-missionwizard #ui-datepicker-div .ui-state-highlight a,
+body.body-objectives #ui-datepicker-div .ui-state-highlight a,
+body.body-missionwizard #ui-datepicker-div .ui-widget-content .ui-state-highlight a,
+body.body-objectives #ui-datepicker-div .ui-widget-content .ui-state-highlight a,
+body.body-missionwizard #ui-datepicker-div .ui-widget-header .ui-state-highlight a,
+body.body-objectives #ui-datepicker-div .ui-widget-header .ui-state-highlight a {
+  color: #363636;
+}
+body.body-missionwizard #ui-datepicker-div .ui-state-error,
+body.body-objectives #ui-datepicker-div .ui-state-error,
+body.body-missionwizard #ui-datepicker-div .ui-widget-content .ui-state-error,
+body.body-objectives #ui-datepicker-div .ui-widget-content .ui-state-error,
+body.body-missionwizard #ui-datepicker-div .ui-widget-header .ui-state-error,
+body.body-objectives #ui-datepicker-div .ui-widget-header .ui-state-error {
+  border: 1px solid #cd0a0a;
+  background: #b81900 url("./../../../assets/img/objectives/img/ui-bg_diagonals-thick_18_b81900_40x40.png") 50% 50% repeat;
+  color: #ffffff;
+}
+body.body-missionwizard #ui-datepicker-div .ui-state-error a,
+body.body-objectives #ui-datepicker-div .ui-state-error a,
+body.body-missionwizard #ui-datepicker-div .ui-widget-content .ui-state-error a,
+body.body-objectives #ui-datepicker-div .ui-widget-content .ui-state-error a,
+body.body-missionwizard #ui-datepicker-div .ui-widget-header .ui-state-error a,
+body.body-objectives #ui-datepicker-div .ui-widget-header .ui-state-error a {
+  color: #ffffff;
+}
+body.body-missionwizard #ui-datepicker-div .ui-state-error-text,
+body.body-objectives #ui-datepicker-div .ui-state-error-text,
+body.body-missionwizard #ui-datepicker-div .ui-widget-content .ui-state-error-text,
+body.body-objectives #ui-datepicker-div .ui-widget-content .ui-state-error-text,
+body.body-missionwizard #ui-datepicker-div .ui-widget-header .ui-state-error-text,
+body.body-objectives #ui-datepicker-div .ui-widget-header .ui-state-error-text {
+  color: #ffffff;
+}
+body.body-missionwizard #ui-datepicker-div .ui-priority-primary,
+body.body-objectives #ui-datepicker-div .ui-priority-primary,
+body.body-missionwizard #ui-datepicker-div .ui-widget-content .ui-priority-primary,
+body.body-objectives #ui-datepicker-div .ui-widget-content .ui-priority-primary,
+body.body-missionwizard #ui-datepicker-div .ui-widget-header .ui-priority-primary,
+body.body-objectives #ui-datepicker-div .ui-widget-header .ui-priority-primary {
+  font-weight: bold;
+}
+body.body-missionwizard #ui-datepicker-div .ui-priority-secondary,
+body.body-objectives #ui-datepicker-div .ui-priority-secondary,
+body.body-missionwizard #ui-datepicker-div .ui-widget-content .ui-priority-secondary,
+body.body-objectives #ui-datepicker-div .ui-widget-content .ui-priority-secondary,
+body.body-missionwizard #ui-datepicker-div .ui-widget-header .ui-priority-secondary,
+body.body-objectives #ui-datepicker-div .ui-widget-header .ui-priority-secondary {
+  opacity: .7;
+  filter: alpha(opacity=70);
+  font-weight: normal;
+}
+body.body-missionwizard #ui-datepicker-div .ui-state-disabled,
+body.body-objectives #ui-datepicker-div .ui-state-disabled,
+body.body-missionwizard #ui-datepicker-div .ui-widget-content .ui-state-disabled,
+body.body-objectives #ui-datepicker-div .ui-widget-content .ui-state-disabled,
+body.body-missionwizard #ui-datepicker-div .ui-widget-header .ui-state-disabled,
+body.body-objectives #ui-datepicker-div .ui-widget-header .ui-state-disabled {
+  opacity: .35;
+  filter: alpha(opacity=35);
+  background-image: none;
+}
+body.body-missionwizard #ui-datepicker-div .ui-state-disabled .ui-icon,
+body.body-objectives #ui-datepicker-div .ui-state-disabled .ui-icon {
+  filter: alpha(opacity=35);
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon,
+body.body-objectives #ui-datepicker-div .ui-icon {
+  width: 16px;
+  height: 16px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon,
+body.body-objectives #ui-datepicker-div .ui-icon,
+body.body-missionwizard #ui-datepicker-div .ui-widget-content .ui-icon,
+body.body-objectives #ui-datepicker-div .ui-widget-content .ui-icon {
+  background-image: url("./../../../assets/img/objectives/img/ui-icons_222222_256x240.png");
+}
+body.body-missionwizard #ui-datepicker-div .ui-widget-header .ui-icon,
+body.body-objectives #ui-datepicker-div .ui-widget-header .ui-icon {
+  background-image: url("./../../../assets/img/objectives/img/ui-icons_ffffff_256x240.png");
+}
+body.body-missionwizard #ui-datepicker-div .ui-state-default .ui-icon,
+body.body-objectives #ui-datepicker-div .ui-state-default .ui-icon {
+  background-image: url("./../../../assets/img/objectives/img/ui-icons_ef8c08_256x240.png");
+}
+body.body-missionwizard #ui-datepicker-div .ui-state-hover .ui-icon,
+body.body-objectives #ui-datepicker-div .ui-state-hover .ui-icon,
+body.body-missionwizard #ui-datepicker-div .ui-state-focus .ui-icon,
+body.body-objectives #ui-datepicker-div .ui-state-focus .ui-icon {
+  background-image: url("./../../../assets/img/objectives/img/ui-icons_ef8c08_256x240.png");
+}
+body.body-missionwizard #ui-datepicker-div .ui-state-active .ui-icon,
+body.body-objectives #ui-datepicker-div .ui-state-active .ui-icon {
+  background-image: url("./../../../assets/img/objectives/img/ui-icons_ef8c08_256x240.png");
+}
+body.body-missionwizard #ui-datepicker-div .ui-state-highlight .ui-icon,
+body.body-objectives #ui-datepicker-div .ui-state-highlight .ui-icon {
+  background-image: url("./../../../assets/img/objectives/img/ui-icons_228ef1_256x240.png");
+}
+body.body-missionwizard #ui-datepicker-div .ui-state-error .ui-icon,
+body.body-objectives #ui-datepicker-div .ui-state-error .ui-icon,
+body.body-missionwizard #ui-datepicker-div .ui-state-error-text .ui-icon,
+body.body-objectives #ui-datepicker-div .ui-state-error-text .ui-icon {
+  background-image: url("./../../../assets/img/objectives/img/ui-icons_ffd27a_256x240.png");
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-blank,
+body.body-objectives #ui-datepicker-div .ui-icon-blank {
+  background-position: 16px 16px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-carat-1-n,
+body.body-objectives #ui-datepicker-div .ui-icon-carat-1-n {
+  background-position: 0 0;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-carat-1-ne,
+body.body-objectives #ui-datepicker-div .ui-icon-carat-1-ne {
+  background-position: -16px 0;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-carat-1-e,
+body.body-objectives #ui-datepicker-div .ui-icon-carat-1-e {
+  background-position: -32px 0;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-carat-1-se,
+body.body-objectives #ui-datepicker-div .ui-icon-carat-1-se {
+  background-position: -48px 0;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-carat-1-s,
+body.body-objectives #ui-datepicker-div .ui-icon-carat-1-s {
+  background-position: -64px 0;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-carat-1-sw,
+body.body-objectives #ui-datepicker-div .ui-icon-carat-1-sw {
+  background-position: -80px 0;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-carat-1-w,
+body.body-objectives #ui-datepicker-div .ui-icon-carat-1-w {
+  background-position: -96px 0;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-carat-1-nw,
+body.body-objectives #ui-datepicker-div .ui-icon-carat-1-nw {
+  background-position: -112px 0;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-carat-2-n-s,
+body.body-objectives #ui-datepicker-div .ui-icon-carat-2-n-s {
+  background-position: -128px 0;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-carat-2-e-w,
+body.body-objectives #ui-datepicker-div .ui-icon-carat-2-e-w {
+  background-position: -144px 0;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-triangle-1-n,
+body.body-objectives #ui-datepicker-div .ui-icon-triangle-1-n {
+  background-position: 0 -16px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-triangle-1-ne,
+body.body-objectives #ui-datepicker-div .ui-icon-triangle-1-ne {
+  background-position: -16px -16px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-triangle-1-e,
+body.body-objectives #ui-datepicker-div .ui-icon-triangle-1-e {
+  background-position: -32px -16px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-triangle-1-se,
+body.body-objectives #ui-datepicker-div .ui-icon-triangle-1-se {
+  background-position: -48px -16px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-triangle-1-s,
+body.body-objectives #ui-datepicker-div .ui-icon-triangle-1-s {
+  background-position: -64px -16px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-triangle-1-sw,
+body.body-objectives #ui-datepicker-div .ui-icon-triangle-1-sw {
+  background-position: -80px -16px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-triangle-1-w,
+body.body-objectives #ui-datepicker-div .ui-icon-triangle-1-w {
+  background-position: -96px -16px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-triangle-1-nw,
+body.body-objectives #ui-datepicker-div .ui-icon-triangle-1-nw {
+  background-position: -112px -16px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-triangle-2-n-s,
+body.body-objectives #ui-datepicker-div .ui-icon-triangle-2-n-s {
+  background-position: -128px -16px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-triangle-2-e-w,
+body.body-objectives #ui-datepicker-div .ui-icon-triangle-2-e-w {
+  background-position: -144px -16px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-arrow-1-n,
+body.body-objectives #ui-datepicker-div .ui-icon-arrow-1-n {
+  background-position: 0 -32px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-arrow-1-ne,
+body.body-objectives #ui-datepicker-div .ui-icon-arrow-1-ne {
+  background-position: -16px -32px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-arrow-1-e,
+body.body-objectives #ui-datepicker-div .ui-icon-arrow-1-e {
+  background-position: -32px -32px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-arrow-1-se,
+body.body-objectives #ui-datepicker-div .ui-icon-arrow-1-se {
+  background-position: -48px -32px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-arrow-1-s,
+body.body-objectives #ui-datepicker-div .ui-icon-arrow-1-s {
+  background-position: -64px -32px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-arrow-1-sw,
+body.body-objectives #ui-datepicker-div .ui-icon-arrow-1-sw {
+  background-position: -80px -32px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-arrow-1-w,
+body.body-objectives #ui-datepicker-div .ui-icon-arrow-1-w {
+  background-position: -96px -32px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-arrow-1-nw,
+body.body-objectives #ui-datepicker-div .ui-icon-arrow-1-nw {
+  background-position: -112px -32px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-arrow-2-n-s,
+body.body-objectives #ui-datepicker-div .ui-icon-arrow-2-n-s {
+  background-position: -128px -32px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-arrow-2-ne-sw,
+body.body-objectives #ui-datepicker-div .ui-icon-arrow-2-ne-sw {
+  background-position: -144px -32px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-arrow-2-e-w,
+body.body-objectives #ui-datepicker-div .ui-icon-arrow-2-e-w {
+  background-position: -160px -32px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-arrow-2-se-nw,
+body.body-objectives #ui-datepicker-div .ui-icon-arrow-2-se-nw {
+  background-position: -176px -32px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-arrowstop-1-n,
+body.body-objectives #ui-datepicker-div .ui-icon-arrowstop-1-n {
+  background-position: -192px -32px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-arrowstop-1-e,
+body.body-objectives #ui-datepicker-div .ui-icon-arrowstop-1-e {
+  background-position: -208px -32px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-arrowstop-1-s,
+body.body-objectives #ui-datepicker-div .ui-icon-arrowstop-1-s {
+  background-position: -224px -32px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-arrowstop-1-w,
+body.body-objectives #ui-datepicker-div .ui-icon-arrowstop-1-w {
+  background-position: -240px -32px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-arrowthick-1-n,
+body.body-objectives #ui-datepicker-div .ui-icon-arrowthick-1-n {
+  background-position: 0 -48px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-arrowthick-1-ne,
+body.body-objectives #ui-datepicker-div .ui-icon-arrowthick-1-ne {
+  background-position: -16px -48px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-arrowthick-1-e,
+body.body-objectives #ui-datepicker-div .ui-icon-arrowthick-1-e {
+  background-position: -32px -48px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-arrowthick-1-se,
+body.body-objectives #ui-datepicker-div .ui-icon-arrowthick-1-se {
+  background-position: -48px -48px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-arrowthick-1-s,
+body.body-objectives #ui-datepicker-div .ui-icon-arrowthick-1-s {
+  background-position: -64px -48px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-arrowthick-1-sw,
+body.body-objectives #ui-datepicker-div .ui-icon-arrowthick-1-sw {
+  background-position: -80px -48px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-arrowthick-1-w,
+body.body-objectives #ui-datepicker-div .ui-icon-arrowthick-1-w {
+  background-position: -96px -48px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-arrowthick-1-nw,
+body.body-objectives #ui-datepicker-div .ui-icon-arrowthick-1-nw {
+  background-position: -112px -48px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-arrowthick-2-n-s,
+body.body-objectives #ui-datepicker-div .ui-icon-arrowthick-2-n-s {
+  background-position: -128px -48px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-arrowthick-2-ne-sw,
+body.body-objectives #ui-datepicker-div .ui-icon-arrowthick-2-ne-sw {
+  background-position: -144px -48px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-arrowthick-2-e-w,
+body.body-objectives #ui-datepicker-div .ui-icon-arrowthick-2-e-w {
+  background-position: -160px -48px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-arrowthick-2-se-nw,
+body.body-objectives #ui-datepicker-div .ui-icon-arrowthick-2-se-nw {
+  background-position: -176px -48px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-arrowthickstop-1-n,
+body.body-objectives #ui-datepicker-div .ui-icon-arrowthickstop-1-n {
+  background-position: -192px -48px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-arrowthickstop-1-e,
+body.body-objectives #ui-datepicker-div .ui-icon-arrowthickstop-1-e {
+  background-position: -208px -48px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-arrowthickstop-1-s,
+body.body-objectives #ui-datepicker-div .ui-icon-arrowthickstop-1-s {
+  background-position: -224px -48px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-arrowthickstop-1-w,
+body.body-objectives #ui-datepicker-div .ui-icon-arrowthickstop-1-w {
+  background-position: -240px -48px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-arrowreturnthick-1-w,
+body.body-objectives #ui-datepicker-div .ui-icon-arrowreturnthick-1-w {
+  background-position: 0 -64px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-arrowreturnthick-1-n,
+body.body-objectives #ui-datepicker-div .ui-icon-arrowreturnthick-1-n {
+  background-position: -16px -64px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-arrowreturnthick-1-e,
+body.body-objectives #ui-datepicker-div .ui-icon-arrowreturnthick-1-e {
+  background-position: -32px -64px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-arrowreturnthick-1-s,
+body.body-objectives #ui-datepicker-div .ui-icon-arrowreturnthick-1-s {
+  background-position: -48px -64px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-arrowreturn-1-w,
+body.body-objectives #ui-datepicker-div .ui-icon-arrowreturn-1-w {
+  background-position: -64px -64px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-arrowreturn-1-n,
+body.body-objectives #ui-datepicker-div .ui-icon-arrowreturn-1-n {
+  background-position: -80px -64px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-arrowreturn-1-e,
+body.body-objectives #ui-datepicker-div .ui-icon-arrowreturn-1-e {
+  background-position: -96px -64px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-arrowreturn-1-s,
+body.body-objectives #ui-datepicker-div .ui-icon-arrowreturn-1-s {
+  background-position: -112px -64px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-arrowrefresh-1-w,
+body.body-objectives #ui-datepicker-div .ui-icon-arrowrefresh-1-w {
+  background-position: -128px -64px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-arrowrefresh-1-n,
+body.body-objectives #ui-datepicker-div .ui-icon-arrowrefresh-1-n {
+  background-position: -144px -64px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-arrowrefresh-1-e,
+body.body-objectives #ui-datepicker-div .ui-icon-arrowrefresh-1-e {
+  background-position: -160px -64px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-arrowrefresh-1-s,
+body.body-objectives #ui-datepicker-div .ui-icon-arrowrefresh-1-s {
+  background-position: -176px -64px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-arrow-4,
+body.body-objectives #ui-datepicker-div .ui-icon-arrow-4 {
+  background-position: 0 -80px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-arrow-4-diag,
+body.body-objectives #ui-datepicker-div .ui-icon-arrow-4-diag {
+  background-position: -16px -80px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-extlink,
+body.body-objectives #ui-datepicker-div .ui-icon-extlink {
+  background-position: -32px -80px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-newwin,
+body.body-objectives #ui-datepicker-div .ui-icon-newwin {
+  background-position: -48px -80px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-refresh,
+body.body-objectives #ui-datepicker-div .ui-icon-refresh {
+  background-position: -64px -80px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-shuffle,
+body.body-objectives #ui-datepicker-div .ui-icon-shuffle {
+  background-position: -80px -80px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-transfer-e-w,
+body.body-objectives #ui-datepicker-div .ui-icon-transfer-e-w {
+  background-position: -96px -80px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-transferthick-e-w,
+body.body-objectives #ui-datepicker-div .ui-icon-transferthick-e-w {
+  background-position: -112px -80px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-folder-collapsed,
+body.body-objectives #ui-datepicker-div .ui-icon-folder-collapsed {
+  background-position: 0 -96px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-folder-open,
+body.body-objectives #ui-datepicker-div .ui-icon-folder-open {
+  background-position: -16px -96px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-document,
+body.body-objectives #ui-datepicker-div .ui-icon-document {
+  background-position: -32px -96px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-document-b,
+body.body-objectives #ui-datepicker-div .ui-icon-document-b {
+  background-position: -48px -96px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-note,
+body.body-objectives #ui-datepicker-div .ui-icon-note {
+  background-position: -64px -96px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-mail-closed,
+body.body-objectives #ui-datepicker-div .ui-icon-mail-closed {
+  background-position: -80px -96px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-mail-open,
+body.body-objectives #ui-datepicker-div .ui-icon-mail-open {
+  background-position: -96px -96px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-suitcase,
+body.body-objectives #ui-datepicker-div .ui-icon-suitcase {
+  background-position: -112px -96px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-comment,
+body.body-objectives #ui-datepicker-div .ui-icon-comment {
+  background-position: -128px -96px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-person,
+body.body-objectives #ui-datepicker-div .ui-icon-person {
+  background-position: -144px -96px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-print,
+body.body-objectives #ui-datepicker-div .ui-icon-print {
+  background-position: -160px -96px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-trash,
+body.body-objectives #ui-datepicker-div .ui-icon-trash {
+  background-position: -176px -96px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-locked,
+body.body-objectives #ui-datepicker-div .ui-icon-locked {
+  background-position: -192px -96px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-unlocked,
+body.body-objectives #ui-datepicker-div .ui-icon-unlocked {
+  background-position: -208px -96px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-bookmark,
+body.body-objectives #ui-datepicker-div .ui-icon-bookmark {
+  background-position: -224px -96px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-tag,
+body.body-objectives #ui-datepicker-div .ui-icon-tag {
+  background-position: -240px -96px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-home,
+body.body-objectives #ui-datepicker-div .ui-icon-home {
+  background-position: 0 -112px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-flag,
+body.body-objectives #ui-datepicker-div .ui-icon-flag {
+  background-position: -16px -112px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-calendar,
+body.body-objectives #ui-datepicker-div .ui-icon-calendar {
+  background-position: -32px -112px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-cart,
+body.body-objectives #ui-datepicker-div .ui-icon-cart {
+  background-position: -48px -112px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-pencil,
+body.body-objectives #ui-datepicker-div .ui-icon-pencil {
+  background-position: -64px -112px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-clock,
+body.body-objectives #ui-datepicker-div .ui-icon-clock {
+  background-position: -80px -112px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-disk,
+body.body-objectives #ui-datepicker-div .ui-icon-disk {
+  background-position: -96px -112px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-calculator,
+body.body-objectives #ui-datepicker-div .ui-icon-calculator {
+  background-position: -112px -112px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-zoomin,
+body.body-objectives #ui-datepicker-div .ui-icon-zoomin {
+  background-position: -128px -112px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-zoomout,
+body.body-objectives #ui-datepicker-div .ui-icon-zoomout {
+  background-position: -144px -112px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-search,
+body.body-objectives #ui-datepicker-div .ui-icon-search {
+  background-position: -160px -112px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-wrench,
+body.body-objectives #ui-datepicker-div .ui-icon-wrench {
+  background-position: -176px -112px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-gear,
+body.body-objectives #ui-datepicker-div .ui-icon-gear {
+  background-position: -192px -112px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-heart,
+body.body-objectives #ui-datepicker-div .ui-icon-heart {
+  background-position: -208px -112px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-star,
+body.body-objectives #ui-datepicker-div .ui-icon-star {
+  background-position: -224px -112px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-link,
+body.body-objectives #ui-datepicker-div .ui-icon-link {
+  background-position: -240px -112px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-cancel,
+body.body-objectives #ui-datepicker-div .ui-icon-cancel {
+  background-position: 0 -128px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-plus,
+body.body-objectives #ui-datepicker-div .ui-icon-plus {
+  background-position: -16px -128px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-plusthick,
+body.body-objectives #ui-datepicker-div .ui-icon-plusthick {
+  background-position: -32px -128px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-minus,
+body.body-objectives #ui-datepicker-div .ui-icon-minus {
+  background-position: -48px -128px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-minusthick,
+body.body-objectives #ui-datepicker-div .ui-icon-minusthick {
+  background-position: -64px -128px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-close,
+body.body-objectives #ui-datepicker-div .ui-icon-close {
+  background-position: -80px -128px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-closethick,
+body.body-objectives #ui-datepicker-div .ui-icon-closethick {
+  background-position: -96px -128px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-key,
+body.body-objectives #ui-datepicker-div .ui-icon-key {
+  background-position: -112px -128px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-lightbulb,
+body.body-objectives #ui-datepicker-div .ui-icon-lightbulb {
+  background-position: -128px -128px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-scissors,
+body.body-objectives #ui-datepicker-div .ui-icon-scissors {
+  background-position: -144px -128px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-clipboard,
+body.body-objectives #ui-datepicker-div .ui-icon-clipboard {
+  background-position: -160px -128px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-copy,
+body.body-objectives #ui-datepicker-div .ui-icon-copy {
+  background-position: -176px -128px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-contact,
+body.body-objectives #ui-datepicker-div .ui-icon-contact {
+  background-position: -192px -128px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-image,
+body.body-objectives #ui-datepicker-div .ui-icon-image {
+  background-position: -208px -128px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-video,
+body.body-objectives #ui-datepicker-div .ui-icon-video {
+  background-position: -224px -128px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-script,
+body.body-objectives #ui-datepicker-div .ui-icon-script {
+  background-position: -240px -128px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-alert,
+body.body-objectives #ui-datepicker-div .ui-icon-alert {
+  background-position: 0 -144px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-info,
+body.body-objectives #ui-datepicker-div .ui-icon-info {
+  background-position: -16px -144px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-notice,
+body.body-objectives #ui-datepicker-div .ui-icon-notice {
+  background-position: -32px -144px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-help,
+body.body-objectives #ui-datepicker-div .ui-icon-help {
+  background-position: -48px -144px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-check,
+body.body-objectives #ui-datepicker-div .ui-icon-check {
+  background-position: -64px -144px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-bullet,
+body.body-objectives #ui-datepicker-div .ui-icon-bullet {
+  background-position: -80px -144px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-radio-on,
+body.body-objectives #ui-datepicker-div .ui-icon-radio-on {
+  background-position: -96px -144px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-radio-off,
+body.body-objectives #ui-datepicker-div .ui-icon-radio-off {
+  background-position: -112px -144px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-pin-w,
+body.body-objectives #ui-datepicker-div .ui-icon-pin-w {
+  background-position: -128px -144px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-pin-s,
+body.body-objectives #ui-datepicker-div .ui-icon-pin-s {
+  background-position: -144px -144px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-play,
+body.body-objectives #ui-datepicker-div .ui-icon-play {
+  background-position: 0 -160px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-pause,
+body.body-objectives #ui-datepicker-div .ui-icon-pause {
+  background-position: -16px -160px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-seek-next,
+body.body-objectives #ui-datepicker-div .ui-icon-seek-next {
+  background-position: -32px -160px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-seek-prev,
+body.body-objectives #ui-datepicker-div .ui-icon-seek-prev {
+  background-position: -48px -160px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-seek-end,
+body.body-objectives #ui-datepicker-div .ui-icon-seek-end {
+  background-position: -64px -160px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-seek-start,
+body.body-objectives #ui-datepicker-div .ui-icon-seek-start {
+  background-position: -80px -160px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-seek-first,
+body.body-objectives #ui-datepicker-div .ui-icon-seek-first {
+  background-position: -80px -160px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-stop,
+body.body-objectives #ui-datepicker-div .ui-icon-stop {
+  background-position: -96px -160px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-eject,
+body.body-objectives #ui-datepicker-div .ui-icon-eject {
+  background-position: -112px -160px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-volume-off,
+body.body-objectives #ui-datepicker-div .ui-icon-volume-off {
+  background-position: -128px -160px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-volume-on,
+body.body-objectives #ui-datepicker-div .ui-icon-volume-on {
+  background-position: -144px -160px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-power,
+body.body-objectives #ui-datepicker-div .ui-icon-power {
+  background-position: 0 -176px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-signal-diag,
+body.body-objectives #ui-datepicker-div .ui-icon-signal-diag {
+  background-position: -16px -176px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-signal,
+body.body-objectives #ui-datepicker-div .ui-icon-signal {
+  background-position: -32px -176px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-battery-0,
+body.body-objectives #ui-datepicker-div .ui-icon-battery-0 {
+  background-position: -48px -176px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-battery-1,
+body.body-objectives #ui-datepicker-div .ui-icon-battery-1 {
+  background-position: -64px -176px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-battery-2,
+body.body-objectives #ui-datepicker-div .ui-icon-battery-2 {
+  background-position: -80px -176px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-battery-3,
+body.body-objectives #ui-datepicker-div .ui-icon-battery-3 {
+  background-position: -96px -176px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-circle-plus,
+body.body-objectives #ui-datepicker-div .ui-icon-circle-plus {
+  background-position: 0 -192px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-circle-minus,
+body.body-objectives #ui-datepicker-div .ui-icon-circle-minus {
+  background-position: -16px -192px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-circle-close,
+body.body-objectives #ui-datepicker-div .ui-icon-circle-close {
+  background-position: -32px -192px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-circle-triangle-e,
+body.body-objectives #ui-datepicker-div .ui-icon-circle-triangle-e {
+  background-position: -48px -192px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-circle-triangle-s,
+body.body-objectives #ui-datepicker-div .ui-icon-circle-triangle-s {
+  background-position: -64px -192px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-circle-triangle-w,
+body.body-objectives #ui-datepicker-div .ui-icon-circle-triangle-w {
+  background-position: -80px -192px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-circle-triangle-n,
+body.body-objectives #ui-datepicker-div .ui-icon-circle-triangle-n {
+  background-position: -96px -192px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-circle-arrow-e,
+body.body-objectives #ui-datepicker-div .ui-icon-circle-arrow-e {
+  background-position: -112px -192px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-circle-arrow-s,
+body.body-objectives #ui-datepicker-div .ui-icon-circle-arrow-s {
+  background-position: -128px -192px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-circle-arrow-w,
+body.body-objectives #ui-datepicker-div .ui-icon-circle-arrow-w {
+  background-position: -144px -192px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-circle-arrow-n,
+body.body-objectives #ui-datepicker-div .ui-icon-circle-arrow-n {
+  background-position: -160px -192px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-circle-zoomin,
+body.body-objectives #ui-datepicker-div .ui-icon-circle-zoomin {
+  background-position: -176px -192px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-circle-zoomout,
+body.body-objectives #ui-datepicker-div .ui-icon-circle-zoomout {
+  background-position: -192px -192px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-circle-check,
+body.body-objectives #ui-datepicker-div .ui-icon-circle-check {
+  background-position: -208px -192px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-circlesmall-plus,
+body.body-objectives #ui-datepicker-div .ui-icon-circlesmall-plus {
+  background-position: 0 -208px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-circlesmall-minus,
+body.body-objectives #ui-datepicker-div .ui-icon-circlesmall-minus {
+  background-position: -16px -208px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-circlesmall-close,
+body.body-objectives #ui-datepicker-div .ui-icon-circlesmall-close {
+  background-position: -32px -208px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-squaresmall-plus,
+body.body-objectives #ui-datepicker-div .ui-icon-squaresmall-plus {
+  background-position: -48px -208px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-squaresmall-minus,
+body.body-objectives #ui-datepicker-div .ui-icon-squaresmall-minus {
+  background-position: -64px -208px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-squaresmall-close,
+body.body-objectives #ui-datepicker-div .ui-icon-squaresmall-close {
+  background-position: -80px -208px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-grip-dotted-vertical,
+body.body-objectives #ui-datepicker-div .ui-icon-grip-dotted-vertical {
+  background-position: 0 -224px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-grip-dotted-horizontal,
+body.body-objectives #ui-datepicker-div .ui-icon-grip-dotted-horizontal {
+  background-position: -16px -224px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-grip-solid-vertical,
+body.body-objectives #ui-datepicker-div .ui-icon-grip-solid-vertical {
+  background-position: -32px -224px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-grip-solid-horizontal,
+body.body-objectives #ui-datepicker-div .ui-icon-grip-solid-horizontal {
+  background-position: -48px -224px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-gripsmall-diagonal-se,
+body.body-objectives #ui-datepicker-div .ui-icon-gripsmall-diagonal-se {
+  background-position: -64px -224px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-icon-grip-diagonal-se,
+body.body-objectives #ui-datepicker-div .ui-icon-grip-diagonal-se {
+  background-position: -80px -224px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-corner-all,
+body.body-objectives #ui-datepicker-div .ui-corner-all,
+body.body-missionwizard #ui-datepicker-div .ui-corner-top,
+body.body-objectives #ui-datepicker-div .ui-corner-top,
+body.body-missionwizard #ui-datepicker-div .ui-corner-left,
+body.body-objectives #ui-datepicker-div .ui-corner-left,
+body.body-missionwizard #ui-datepicker-div .ui-corner-tl,
+body.body-objectives #ui-datepicker-div .ui-corner-tl {
+  border-top-left-radius: 4px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-corner-all,
+body.body-objectives #ui-datepicker-div .ui-corner-all,
+body.body-missionwizard #ui-datepicker-div .ui-corner-top,
+body.body-objectives #ui-datepicker-div .ui-corner-top,
+body.body-missionwizard #ui-datepicker-div .ui-corner-right,
+body.body-objectives #ui-datepicker-div .ui-corner-right,
+body.body-missionwizard #ui-datepicker-div .ui-corner-tr,
+body.body-objectives #ui-datepicker-div .ui-corner-tr {
+  border-top-right-radius: 4px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-corner-all,
+body.body-objectives #ui-datepicker-div .ui-corner-all,
+body.body-missionwizard #ui-datepicker-div .ui-corner-bottom,
+body.body-objectives #ui-datepicker-div .ui-corner-bottom,
+body.body-missionwizard #ui-datepicker-div .ui-corner-left,
+body.body-objectives #ui-datepicker-div .ui-corner-left,
+body.body-missionwizard #ui-datepicker-div .ui-corner-bl,
+body.body-objectives #ui-datepicker-div .ui-corner-bl {
+  border-bottom-left-radius: 4px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-corner-all,
+body.body-objectives #ui-datepicker-div .ui-corner-all,
+body.body-missionwizard #ui-datepicker-div .ui-corner-bottom,
+body.body-objectives #ui-datepicker-div .ui-corner-bottom,
+body.body-missionwizard #ui-datepicker-div .ui-corner-right,
+body.body-objectives #ui-datepicker-div .ui-corner-right,
+body.body-missionwizard #ui-datepicker-div .ui-corner-br,
+body.body-objectives #ui-datepicker-div .ui-corner-br {
+  border-bottom-right-radius: 4px;
+}
+body.body-missionwizard #ui-datepicker-div .ui-widget-overlay,
+body.body-objectives #ui-datepicker-div .ui-widget-overlay {
+  background: #666666 url("./../../../assets/img/objectives/img/ui-bg_diagonals-thick_20_666666_40x40.png") 50% 50% repeat;
+  opacity: .5;
+  filter: alpha(opacity=50);
+}
+body.body-missionwizard #ui-datepicker-div .ui-widget-shadow,
+body.body-objectives #ui-datepicker-div .ui-widget-shadow {
+  margin: -5px 0 0 -5px;
+  padding: 5px;
+  background: #000000 url("./../../../assets/img/objectives/img/ui-bg_flat_10_000000_40x100.png") 50% 50% repeat-x;
+  opacity: .2;
+  filter: alpha(opacity=20);
+  border-radius: 5px;
+}
+body.body-missionwizard #MissionWizard input[type="checkbox"],
+body.body-objectives #MissionWizard input[type="checkbox"] {
+  display: inline;
+  margin:0 10px 0 0;
+}
+body.body-missionwizard #objectivesAngularTemplate,
+body.body-objectives #objectivesAngularTemplate {
+  display: none;
+}
+
+#MissionWizard .required-empty, #MissionWizard [required].ng-invalid, #wizardModal [required].ng-invalid {
+    outline: none;
+    border-color: #ed9e9e;
+}
+
+#MissionWizard i.fa-asterisk, #wizardModal i.fa-asterisk {
+    color: #EF3124;
+    font-size: 0.5em;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+/*# sourceMappingURL=missionWizard.css.map */

@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class JobProfileComponent implements OnInit {
 
-  jobtitle:string="Store Leader";
-  shift:string="Hourly";
+  jobtitle = 'Store Leader';
+  shift = 'Hourly';
 
   constructor() { }
 

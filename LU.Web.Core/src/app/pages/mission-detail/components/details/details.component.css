@@ -1,0 +1,10 @@
+.missionDetailRow {
+  padding-bottom: 25px;
+  padding-top: 25px;
+}
+.fa-asterisk {
+    color: #EF3124;
+    font-size: 0.5em;
+    vertical-align: middle;
+    margin-left: 5px;
+}

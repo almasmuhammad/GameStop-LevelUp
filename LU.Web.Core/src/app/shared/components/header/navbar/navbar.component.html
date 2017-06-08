@@ -23,12 +23,8 @@
               <li><a id="notif-toggle" class=""><i class="fa fa-2x fa-envelope-o">
                 <span id="notification-counter" class=""></span></i></a>
               </li>
-
-
               <li><a class=""><i class="fa fa-2x fa-comment-o"></i></a></li>
               <li><a class=""><i class="fa fa-2x fa-cog"></i></a></li>
-
-
               <li class="dropdown" dropdown>
                   <a role="button" aria-expanded="false" dropdownToggle>
                     <i class="fa fa-2x fa-power-off"></i>
@@ -38,12 +34,11 @@
                     <li>
                       <a class="dropdown-toggle navdbsp" data-toggle="dropdown" role="button" aria-expanded="false">
                         <i class="fa fa-2x fa-power-off"></i>
-                        <img class="carets" src="./../../assets/img/navcaret.png" />
                       </a>
                     </li>
-                    <li role="menuitem"><a class="dropdown-item" href="javascript:void(0)" (click)="changeLang('en')">English</a></li>
-                    <li role="menuitem"><a class="dropdown-item" href="javascript:void(0)" (click)="changeLang('fr')">French</a></li>
-                    <li role="menuitem"><a class="dropdown-item" href="javascript:void(0)" (click)="changeLang('sp')">Spanish</a></li>
+                    <li role="menuitem"><a class="dropdown-item" href="javascript:void(0)" (click)="changeLang('en')">{{'English' | translate}}</a></li>
+                    <li role="menuitem"><a class="dropdown-item" href="javascript:void(0)" (click)="changeLang('fr')">{{'French'  | translate}}</a></li>
+                    <li role="menuitem"><a class="dropdown-item" href="javascript:void(0)" (click)="changeLang('sp')">{{'Spanish' | translate}}</a></li>
                     <li class="tenantNavigation"><a id="navTenantAdmin" data-i18n="nav.tenantadmin">Tenant Admin</a></li>
                   </ul>
               </li>

@@ -6,10 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./last-trained-section.component.css']
 })
 export class LastTrainedSectionComponent implements OnInit {
-  
-month:number=5;
-date:number=27;
-year:number=2017;
+
+month = 5;
+date = 27;
+year = 2017;
   constructor() { }
 
   ngOnInit() {
