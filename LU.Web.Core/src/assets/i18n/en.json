@@ -13,6 +13,18 @@
     "certified":"CERTIFIED",
     "not-certified":"NOT CERTIFIED",
     "store-leader":"Store Leader",
-    "last-trained-on":"Last Trained on"
+    "last-trained-on":"Last Trained on",
+    "mission-central":"Mission Central",
+    "create-new-mission":"Create New Mission",
+    "edit":"Edit",
+    "return":"Return",
+    "delete":"Delete",
+    "name":"Name",
+    "description":"Description",
+    "created-date": "Created Date",
+    "created-by":"Created By",
+    "date-published":"Date Published",
+    "expiration-date":"Expiration Date",
+    "status":"Status"
 
 }

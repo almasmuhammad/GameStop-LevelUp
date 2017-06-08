@@ -14,6 +14,19 @@
     "certified":"agréé",
     "not-certified":"NON CERTIFIÉ",
     "store-leader":"Leader du magasin",
-    "last-trained-on":"Dernière formation sur"
+    "last-trained-on":"Dernière formation sur",
+    "mission-central":"Mission central",
+    "create-new-mission":"Créer une nouvelle mission",
+    "edit":"modifier",
+    "return":"Revenir",
+    "delete":"Effacer",
+    "name":"Prénom",
+    "description":"La Description",
+    "created-date": "Date Créée",
+    "created-by":"Créé Par",
+    "date-published":"Date Publiée",
+    "expiration-date":"Date d'expiration",
+    "status":"Statut"
+
 
 }
