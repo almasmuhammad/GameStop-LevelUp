@@ -25,5 +25,9 @@
     "created-by":"Created By",
     "date-published":"Date Published",
     "expiration-date":"Expiration Date",
-    "status":"Status"
+    "status":"Status",
+    "english":"English",
+    "french":"French",
+    "spanish":"Spanish",
+    "Mission Badge Image":"Mission Badge Image"
 }

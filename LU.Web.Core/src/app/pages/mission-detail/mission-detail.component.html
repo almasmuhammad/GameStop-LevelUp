@@ -3,7 +3,7 @@
         <div  id="wizardAccordion">
         <app-accordion>
             <app-accordion-tab active="true" header="Mission Details">
-                <app-mission-detail-details></app-mission-detail-details>
+                <app-mission-detail-details [model]="model"></app-mission-detail-details>
             </app-accordion-tab>
             <app-accordion-tab header="Audience">
                 <app-mission-detail-audience></app-mission-detail-audience>
@@ -20,4 +20,24 @@
         </app-accordion>
         </div>
     </div>
+    <div class="modal fade" bsModal #canNavModal="bs-modal" [config]="{backdrop: 'static'}"
+    tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title pull-left">Leaving Mission Details</h4>
+            <button type="button" class="close pull-right" aria-label="Close" (click)="canNavAway(true);">
+            <span aria-hidden="true"><i class="fa fa-close"></i></span>
+            </button>
+        </div>
+        <div class="modal-body">
+            Are you sure you would like to leave Mission Details?
+        </div>
+        <div class="modal-footer">
+            <button class="btn pull-left" (click)="canNavAway(true)">Ok</button>
+            <button class="btn pull-right" (click)="canNavAway(false)">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
 </section>

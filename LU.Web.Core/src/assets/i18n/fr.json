@@ -26,7 +26,10 @@
     "created-by":"Créé Par",
     "date-published":"Date Publiée",
     "expiration-date":"Date d'expiration",
-    "status":"Statut"
-
+    "status":"Statut",
+    "english":"Anglais",
+    "french":"Français",
+    "spanish":"Espanol",
+    "Mission Badge Image":"Image d'insigne de mission"
 
 }

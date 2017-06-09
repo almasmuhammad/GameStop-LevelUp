@@ -5,10 +5,17 @@ Run npm install before running (npm start) from root of package.json
 
 var express = require('express');
 var cors = require('cors');
+var fs = require('fs'); 
+var multer = require('multer');
 var app = express();
 var timeoutDelay = 1000;
 
+var DIR = './uploads/';
+ 
+var upload = multer({dest: DIR});
+
 app.use(cors());
+
 
 var users = JSON.parse(`{
 "user1" : {
@@ -32,6 +39,15 @@ var users = JSON.parse(`{
 }`);
 
 // -------  Routes for API  -----------
+app.post('/api', function (req, res) {
+  upload(req, res, function (err) {
+    if (err) {
+      return res.end(err.toString());
+    }
+ 
+    res.end('File is uploaded');
+  });
+});
 
 app.get('/', function(req, res){
   res.send('<html><body>api help<br/>' +

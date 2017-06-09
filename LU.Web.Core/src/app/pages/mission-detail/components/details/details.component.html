@@ -1,58 +1,70 @@
 <div class="row">
-    <div class="col-xs-6">
-        <p><span>{{'Name' | translate}}</span><i class="fa fa-asterisk"></i></p>
-        <input type="text" id="EditGoalTitle" maximum="50" name="EditGoalTitle" data-msg="Please provide a mission title" class="step-inputs form-control goalsRequired maxchar" required value="" data-i18p="missionwizard.missiondetails.placeholder.name" />
-        <div class="textarea-count"><span class="maxchardisplay"></span> / 50 </div>
+    <form novalidate (ngSubmit)="onSubmit()" #detailForm="ngForm">
+    <div class="col-xs-12 col-md-6">
+        <span class="text-nowrap">{{'name' | translate}}</span><i class="fa fa-asterisk"></i>
+        <input type="text"
+        [(ngModel)]="model.name"
+        name="name"
+        id="name"
+        required
+        maxlength="50"
+        title="{{'Please provide a mission title'|translate}}"
+        class="step-inputs form-control goalsRequired maxchar" />
+        <div class="textarea-count"><span class="maxchardisplay">{{model.name.length}}</span> / 50 </div>
     </div>
-
-    <div class="col-xs-6 pull-right">
-        <p><span>{{'Mission Badge Image' | translate}}</span><i class="fa fa-asterisk"></i></p>
-        <input type="text" id="EditMissionBadge" name="EditMissionBadge" data-msg="Please upload an avatar"
-                class="step-inputs form-control uploadInput" required value="{{'url/'}}" data-i18p="missionwizard.missiondetails.placeholder.uploadmissionbadge" />
-        <button id="missionDetailsImageUpload" type="button" class="button-preview" data-i18n="common.browse">Browse</button>
-        <div id="uploadDialog" title="Mission Details Upload" class="fileupload">
-        </div>
-        <input type="file" style="opacity: 0; position:absolute;" id="missionDetailsImageUploader" />
+    <div class="col-xs-12 col-md-6 pull-right">
+        <span class="text-nowrap">{{'Mission Badge Image' | translate}}</span><i class="fa fa-asterisk"></i>
+        <input type="file"
+        name="fileName"
+        id="fileName"
+        required
+        ng2FileSelect
+        ng2FileDrop
+        [uploader]="uploader"
+        (fileOver)="fileOverBase($event)" />
     </div>
-
     <div class="col-xs-12 description-container">
-        <p><span data-i18n="missionwizard.missiondetails.name">Description</span><i class="fa fa-asterisk"></i></p>
-        <textarea id="EditGoalDescription" maximum="150" name="EditGoalDescription" data-i18p="missionwizard.missiondetails.placeholder.description"  data-msg="Please provide a description" class="step-inputs form-control goalsRequired maxchar" required></textarea>
-        <div class="textarea-count"><span class="maxchardisplay"></span> / 150 </div>
+        <span class="text-nowrap">{{'Description'|translate}}</span><i class="fa fa-asterisk"></i>
+        <textarea
+        [(ngModel)]="model.description"
+        name="description"
+        id="description"
+        required
+        maxlength="150"
+        name="EditGoalDescription"
+        title="Please provide a description"
+        class="step-inputs form-control goalsRequired maxchar" required></textarea>
+        <div class="textarea-count"><span class="maxchardisplay">{{model.description.length}}</span> / 150 </div>
     </div>
+    </form>
 </div>
-
 <hr />
-<div class="row missionDetailRow">
-    <div class="col-xs-3">
-        <div><label data-i18n="missionwizard.missiondetails.allowratings">Allow Ratings?</label><i class="fa fa-asterisk"></i></div>
+<div class="row xmissionDetailRow">
+    <div class="col-xs-12 col-md-4 text-nowrap">
+        <label>Allow Ratings?</label><i class="fa fa-asterisk"></i>
         <app-switch offText="off" onText="Yes" offText="No" isOn="true"></app-switch>
     </div>
-    <div class="col-xs-3">
-        <div>
-            <label data-i18n="missionwizard.missiondetails.allowpoints">Allow Points?</label><i class="fa fa-asterisk"></i>
-        </div>
-
+    <div class="col-xs-12 col-md-4 text-nowrap">
+        <label>Allow Points?</label><i class="fa fa-asterisk"></i>
+        <app-switch offText="off" onText="Yes" offText="No" isOn="true"></app-switch>
     </div>
-    <div class="col-xs-3">
-        <div>
-            <label data-i18n="missionwizard.missiondetails.doublexp">Double The XP Value?</label><i class="fa fa-asterisk"></i>
-        </div>
-
+    <div class="col-xs-12 col-md-4 text-nowrap">
+        <label>Double The XP Value?</label><i class="fa fa-asterisk"></i>
+        <app-switch offText="off" onText="Yes" offText="No" isOn="true"></app-switch>
     </div>
 </div>
 <div class="row">
-    <div class="col-xs-3">
-        <div>
-            <label data-i18n="missionwizard.missiondetails.shownotificationsonrelease">Show notifications on release?</label><i class="fa fa-asterisk"></i>
-        </div>
-
+    <div class="col-xs-12 col-md-4 text-nowrap">
+        <label>Show notifications on release?</label><i class="fa fa-asterisk"></i>
+        <app-switch offText="off" onText="Yes" offText="No" isOn="true"></app-switch>
     </div>
-    <div class="col-xs-4">
-        <div>
-            <label data-i18n="missionwizard.missiondetails.shownotificationswhenupdated">Show notifications when updated?</label><i class="fa fa-asterisk"></i>
-        </div>
-
+    <div class="col-xs-12 col-md-8 text-nowrap">
+        <label>Show notifications when updated?</label><i class="fa fa-asterisk"></i>
+        <app-switch offText="off" onText="Yes" offText="No" isOn="true"></app-switch>
     </div>
 </div>
-<br />
+<div class="row">
+<div class="col-xs-12">
+    <button type="button" data-next-step="1" class="btn button-next pull-right">Continue</button>
+</div>
+</div>

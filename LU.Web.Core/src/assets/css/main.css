@@ -1780,14 +1780,8 @@ table.main {
     margin-top: 15px;
 }
 
-    #wizardAccordion hr {
-        border-color: #928986;
-    }
-
-.accordion-content {
-    padding: 10px 0 0 0;
-    background-color: #E9EAE9;
-    position: relative;
+#wizardAccordion hr {
+    border-color: #928986;
 }
 
 .step-number {
@@ -1871,12 +1865,6 @@ table.main {
     list-style: none;
     margin: 0;
     padding: 0;
-}
-
-@media (max-width: 992px) {
-    .accordion-content {
-        height: 645px !important;
-    }
 }
 
 input[placeholder] {

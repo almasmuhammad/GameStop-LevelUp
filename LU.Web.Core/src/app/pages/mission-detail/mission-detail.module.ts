@@ -1,15 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-// import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
- import { MissionDetailRoutingModule } from './mission-detail-routing.module';
-
-import { SwitchComponent } from '../../shared';
-import {
-  AccordionComponent,
-  AccordionTabComponent,
-  AccordionHeaderDirective } from '../../shared';
+import { FormsModule } from '@angular/forms';
 
 import { TranslateModule } from '@ngx-translate/core';
+import { FileUploadModule } from 'ng2-file-upload';
+import { MissionDetailRoutingModule } from './mission-detail-routing.module';
+
+import { ModalModule } from 'ngx-bootstrap/modal';
+
+import {
+  SwitchComponent,
+  AccordionComponent,
+  AccordionTabComponent,
+  AccordionHeaderDirective,
+  CanDeactivateGuardService } from '../../shared';
+
 import { MissionDetailComponent } from './mission-detail.component';
 import { DetailsComponent } from './components/details/details.component';
 import { AudienceComponent } from './components/audience/audience.component';
@@ -20,7 +25,10 @@ import { PublicationComponent } from './components/publication/publication.compo
 @NgModule({
   imports: [
     CommonModule
+    , FormsModule
     , TranslateModule
+    , FileUploadModule
+    , ModalModule.forRoot()
     , MissionDetailRoutingModule
   ],
   declarations: [
@@ -34,6 +42,9 @@ import { PublicationComponent } from './components/publication/publication.compo
     , AccordionComponent
     , AccordionTabComponent
     , AccordionHeaderDirective
-    ]
+    ],
+  providers: [
+    CanDeactivateGuardService
+  ]
 })
 export class MissionDetailModule { }

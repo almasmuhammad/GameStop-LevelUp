@@ -25,15 +25,14 @@ app-accordion-tab[hidden] {
     border-radius: 0;
     box-sizing: border-box;
     user-select: none;
-
-      background-color: #3f403e;
-  width: 100%;
-  height: 50px;
-  padding: 5px;
-  border-bottom: solid 1px #ffffff;
-  cursor: pointer;
-  margin: 0;
-  outline: none;
+    background-color: #3f403e;
+    width: 100%;
+    height: 50px;
+    padding: 5px;
+    border-bottom: solid 1px #ffffff;
+    cursor: pointer;
+    margin: 0;
+    outline: none;
 }
 app-accordion-tab.app-accordion-tab-active>.app-accordion-header {
     border-color: #ffffff;
@@ -74,9 +73,11 @@ app-accordion-tab.app-accordion-tab-active>.app-accordion-header>.app-accordion-
     overflow: hidden;
     background: white;
     color: #555;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 .app-accordion-tab-content {
     position: relative;
-    padding: 20px 0;
+    padding: 10px;
     border-bottom: 1px solid rgba(0, 0, 0, .12)
 }

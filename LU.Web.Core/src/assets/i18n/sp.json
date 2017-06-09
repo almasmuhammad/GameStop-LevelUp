@@ -25,5 +25,9 @@
     "created-by":"Creado por",
     "date-published":"Fecha de publicación",
     "expiration-date":"Fecha de caducidad",
-    "status":"Estado"
+    "status":"Estado",
+    "english":"Inglés",
+    "french":"Francés",
+    "spanish":"Español",
+    "Mission Badge Image":"Imagen de la insignia de la misión"
 }

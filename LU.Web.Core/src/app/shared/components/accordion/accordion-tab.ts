@@ -104,7 +104,7 @@ export class AccordionTabComponent {
    */
   _handleClick(event: Event) {
     if (this.disabled
-    || this.active) { // remove this line if you want to close the active allowing for all tabs to be closed
+    || this.active) { // remove this line if you want to close the active tab allowing for all tabs to be closed
       return;
     }
 
