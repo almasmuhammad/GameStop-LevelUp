@@ -27,6 +27,14 @@ body.body-objectives #wizardAccordion .accordion-content {
   color: #555;
 }
 body.body-missionwizard .navbar-default,
+
+.fa-asterisk {
+    color: #EF3124;
+    font-size: 0.5em;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
 body.body-objectives .navbar-default
 {
     background-color: #1A1A1A !important;

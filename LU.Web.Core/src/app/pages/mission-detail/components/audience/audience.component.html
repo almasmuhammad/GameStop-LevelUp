@@ -1,5 +1,44 @@
 <div>
+<div class="row">
+        <div class="col-xs-12">
+            <p>
+                <span data-i18n="missionwizard.audience.onlyselected">
+                    ONLY the selected audience will have visibility to this mission.
+                    If your Audience is small, please choose</span>&nbsp;<i data-i18n="missionwizard.audience.donotallowpoints">'DO NOT ALLOW POINTS'</i>&nbsp;<span data-i18n="missionwizard.audience.frommissiondetails">from the Mission Details above.</span>
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <!--<label for="MissionsAudienceTenantSearch" data-i18n="missions.audience.currenttenant" class="subtext">Current Tenant: </label>
+            <span id="missionsAudienceCurrentTenantLabel"></span>-->
+        </div>
+        <div class="col-xs-6">
+            <label for="MissionsAudienceGroupSearch" class="sub-text" data-i18n="missionwizard.audience.groups">Groups</label><i class="fa fa-asterisk"></i>
+            <input type="text" id="MissionsAudienceGroupSearch" class="step-inputs form-control" placeholder="Search Groups" data-i18p="missionwizard.audience.placeholder.searchgroups" />
+        </div>
+        <div class="col-xs-6">
+            <label for="MissionsAudienceUserSearch" class="sub-text" data-i18n="missionwizard.audience.users">Users</label><i class="fa fa-asterisk"></i>
+            <input type="text" id="MissionsAudienceUserSearch" class="step-inputs form-control" placeholder="Search Users" data-i18p="missionwizard.audience.placeholder.searchusers" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-6">
+            <div id="MissionsAudienceGroupChosen" class="selectedHolder">
 
+            </div>
+            <div id="missionsAudienceGroupAvailable" style="height:150px; border:1px solid #ccc; border-top:none; padding:8px 5px; background-color: white; overflow-x:scroll; text-align:left;">
+            </div>
+
+        </div>
+        <div class="col-xs-6">
+            <div id="MissionsAudienceUserChosen" class="selectedHolder">
+            </div>
+
+            <div id="missionsAudienceUserAvailable" style="height:150px; border:1px solid #ccc; border-top:none; padding:8px 5px; background-color: white; overflow-x:scroll; text-align:left;" data-i18n="missionwizard.audience.searchforusers"></div>
+
+        </div>
+    </div>
 
   <div class="row">
       <div class="col-xs-6">

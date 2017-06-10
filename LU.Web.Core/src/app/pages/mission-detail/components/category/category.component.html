@@ -1,5 +1,34 @@
 <div>
-
+<div class="row">
+        <div class="col-xs-12">
+            <p data-i18n="missionwizard.category.description">
+                You can select multiple categories for the mission to show under.
+                This is helpful when the mission pertains to multiple categories.
+            </p>
+            <p>
+                <i data-i18n="missionwizard.category.example">Example: Holiday Training may be a category that contains missions from other categories.</i>
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-6">
+            <label for="MissionCategories" class="sub-text" data-i18n="missionwizard.category.categories">Categories</label><i class="fa fa-asterisk"></i>
+            <div>
+                <input type="text" id="MissionsCategoryCatSearch" class="step-inputs form-control" placeholder="Search Categories" data-i18p="missionwizard.category.placeholder.searchcategories" />
+            </div>
+            <div id="missionCategoriesChosen" class="selectedHolder"></div>
+            <div id="missionCategoriesAvailable" class="multilist"></div>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+            <label for="createCategory" class="sub-text" data-i18n="missionwizard.category.createcategory">Create a new Category</label>
+            <div class="input-group input-padding">
+                <input type="text" class="form-control step-inputs" id="createCategory" />
+                <span class="input-group-btn">
+                    <button type="button" class="button-preview" id="AddMissionType" data-i18n="common.save">Save</button>\
+                </span>
+            </div>
+        </div>
+    </div>
 
   <div class="row">
       <div class="col-xs-6">

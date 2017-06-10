@@ -1,5 +1,32 @@
 <div>
-
+<div class="row">
+        <div class="col-xs-12">
+            <p data-i18n="missionwizard.prerequisites.description">
+                You must select any Mission or Category that needs to be completed PRIOR to the associate taking the Mission you are creating.
+                If you don’t need any prerequisites, leave this section blank.
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-6">
+            <label for="MissionsPrerequisitesCategorySearch" class="sub-text" data-i18n="missionwizard.prerequisites.categories">Categories</label>
+            <input type="text" id="MissionsPrerequisitesCategorySearch" class="step-inputs form-control" placeholder="Search Categories" data-i18p="missionwizard.prerequisites.placeholder.searchcategories" />
+        </div>
+        <div class="col-xs-6">
+            <label for="MissionsPrerequisitesMissionsSearch" class="sub-text" data-i18n="missionwizard.prerequisites.missions">Missions</label>
+            <input type="text" id="MissionsPrerequisitesMissionsSearch" class="step-inputs form-control" placeholder="Search Missions" data-i18p="missionwizard.prerequisites.placeholder.searchmissions" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-6">
+            <div id="MissionsPrerequisitesCategoriesChosen" class="selectedHolder"><div>
+            <div id="missionsPrerequisitesCategoriesAvailable" style="height:150px; border:1px solid #ccc; border-top:none; padding:8px 5px; background-color: white; overflow-x:scroll; text-align:left;" ></div>
+        </div>
+        <div class="col-xs-6">
+            <div id="MissionsPrerequisitesMissionsChosen" class="selectedHolder" ></div>
+            <div id="missionsPrerequisitesMissionsAvailable" style="height:150px; border:1px solid #ccc; border-top:none; padding:8px 5px; background-color: white; overflow-x:scroll; text-align:left;" ></div>
+        </div>
+    </div>
 
   <div class="row">
       <div class="col-xs-6">
