@@ -1,13 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { MissionModel } from 'app/pages/mission-detail/models';
+import { TabComponent } from '../../models';
 
 @Component({
   selector: 'app-mission-detail-publication',
   templateUrl: './publication.component.html',
   styleUrls: ['./publication.component.css']
 })
-export class PublicationComponent implements OnInit {
+export class PublicationComponent extends TabComponent implements OnInit {
+  @Input() model: MissionModel;
 
-  constructor() { }
+  constructor() { super(); }
 
   ngOnInit() {
   }

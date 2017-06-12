@@ -12,5 +12,4 @@ export class CanDeactivateGuardService implements CanDeactivate<CanComponentDeac
   canDeactivate(component: CanComponentDeactivate) {
     return component.canDeactivateHandler ? component.canDeactivateHandler() : true;
   }
-
 }

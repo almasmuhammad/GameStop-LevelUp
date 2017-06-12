@@ -1,70 +1,73 @@
-<div class="row">
-    <form novalidate (ngSubmit)="onSubmit()" #detailForm="ngForm">
-    <div class="col-xs-12 col-md-6">
-        <span class="text-nowrap">{{'name' | translate}}</span><i class="fa fa-asterisk"></i>
-        <input type="text"
-        [(ngModel)]="model.name"
-        name="name"
-        id="name"
-        required
-        maxlength="50"
-        title="{{'Please provide a mission title'|translate}}"
-        class="step-inputs form-control goalsRequired maxchar" />
-        <div class="textarea-count"><span class="maxchardisplay">{{model.name.length}}</span> / 50 </div>
+<form novalidate #detailForm="ngForm">
+    <div class="row">
+        <div class="col-xs-12 col-md-6">
+            <span class="text-nowrap">{{'name' | translate}}</span><i class="fa fa-asterisk"></i>
+            <input type="text"
+            [(ngModel)]="model.name"
+            name="name"
+            id="name"
+            required
+            maxlength="50"
+            title="{{'Please provide a mission title'|translate}}"
+            class="step-inputs form-control goalsRequired maxchar" />
+            <div class="textarea-count"><span class="maxchardisplay">{{model.name.length}}</span> / 50 </div>
+        </div>
+        <div class="col-xs-12 col-md-6 pull-right">
+            <span class="text-nowrap">{{'Mission Badge Image' | translate}}</span><i class="fa fa-asterisk"></i>
+            <input type="file"
+            name="fileName"
+            id="fileName"
+            required
+            ng2FileSelect
+            ng2FileDrop
+            [uploader]="uploader"
+            (fileOver)="fileOverBase($event)" />
+            <div style="font-size:smaller; margin-top:7px">
+                {{model.fileName}}
+            </div>
+        </div>
+        <div class="col-xs-12 description-container">
+            <span class="text-nowrap">{{'Description'|translate}}</span><i class="fa fa-asterisk"></i>
+            <textarea
+            [(ngModel)]="model.description"
+            name="description"
+            id="description"
+            required
+            maxlength="150"
+            name="EditGoalDescription"
+            title="Please provide a description"
+            class="step-inputs form-control goalsRequired maxchar" required></textarea>
+            <div class="textarea-count"><span class="maxchardisplay">{{model.description.length}}</span> / 150 </div>
+        </div>
     </div>
-    <div class="col-xs-12 col-md-6 pull-right">
-        <span class="text-nowrap">{{'Mission Badge Image' | translate}}</span><i class="fa fa-asterisk"></i>
-        <input type="file"
-        name="fileName"
-        id="fileName"
-        required
-        ng2FileSelect
-        ng2FileDrop
-        [uploader]="uploader"
-        (fileOver)="fileOverBase($event)" />
+    <hr />
+    <div class="row xmissionDetailRow">
+        <div class="col-xs-12 col-md-4 text-nowrap">
+            <label>Allow Ratings?</label><i class="fa fa-asterisk"></i>
+            <app-switch size="small" onText="Yes" offText="No" [(status)]="model.allowRatings"></app-switch>
+        </div>
+        <div class="col-xs-12 col-md-4 text-nowrap">
+            <label>Allow Points?</label><i class="fa fa-asterisk"></i>
+            <app-switch size="small" onText="Yes" offText="No" [(status)]="model.allowPoints"></app-switch>
+        </div>
+        <div class="col-xs-12 col-md-4 text-nowrap">
+            <label>Double The XP Value?</label><i class="fa fa-asterisk"></i>
+            <app-switch size="small" onText="Yes" offText="No" checked="true" [(status)]="model.canDoubleXP"></app-switch>
+        </div>
     </div>
-    <div class="col-xs-12 description-container">
-        <span class="text-nowrap">{{'Description'|translate}}</span><i class="fa fa-asterisk"></i>
-        <textarea
-        [(ngModel)]="model.description"
-        name="description"
-        id="description"
-        required
-        maxlength="150"
-        name="EditGoalDescription"
-        title="Please provide a description"
-        class="step-inputs form-control goalsRequired maxchar" required></textarea>
-        <div class="textarea-count"><span class="maxchardisplay">{{model.description.length}}</span> / 150 </div>
+    <div class="row">
+        <div class="col-xs-12 col-md-4 text-nowrap">
+            <label>Show notifications on release?</label><i class="fa fa-asterisk"></i>
+            <app-switch size="small" onText="Yes" offText="No" checked="true" [(status)]="model.showNotificationsOnRelease"></app-switch>
+        </div>
+        <div class="col-xs-12 col-md-8 text-nowrap">
+            <label>Show notifications when updated?</label><i class="fa fa-asterisk"></i>
+            <app-switch size="small" onText="Yes" offText="No" checked="true" [(status)]="model.showNotificationsOnUpdate"></app-switch>
+        </div>
     </div>
-    </form>
-</div>
-<hr />
-<div class="row xmissionDetailRow">
-    <div class="col-xs-12 col-md-4 text-nowrap">
-        <label>Allow Ratings?</label><i class="fa fa-asterisk"></i>
-        <app-switch offText="off" onText="Yes" offText="No" isOn="true"></app-switch>
+    <div class="row">
+        <div class="col-xs-12">
+            <button type="button" data-next-step="1" class="btn button-next pull-right" (click)="onContinue()">Continue</button>
+        </div>
     </div>
-    <div class="col-xs-12 col-md-4 text-nowrap">
-        <label>Allow Points?</label><i class="fa fa-asterisk"></i>
-        <app-switch offText="off" onText="Yes" offText="No" isOn="true"></app-switch>
-    </div>
-    <div class="col-xs-12 col-md-4 text-nowrap">
-        <label>Double The XP Value?</label><i class="fa fa-asterisk"></i>
-        <app-switch offText="off" onText="Yes" offText="No" isOn="true"></app-switch>
-    </div>
-</div>
-<div class="row">
-    <div class="col-xs-12 col-md-4 text-nowrap">
-        <label>Show notifications on release?</label><i class="fa fa-asterisk"></i>
-        <app-switch offText="off" onText="Yes" offText="No" isOn="true"></app-switch>
-    </div>
-    <div class="col-xs-12 col-md-8 text-nowrap">
-        <label>Show notifications when updated?</label><i class="fa fa-asterisk"></i>
-        <app-switch offText="off" onText="Yes" offText="No" isOn="true"></app-switch>
-    </div>
-</div>
-<div class="row">
-<div class="col-xs-12">
-    <button type="button" data-next-step="1" class="btn button-next pull-right">Continue</button>
-</div>
-</div>
+</form>

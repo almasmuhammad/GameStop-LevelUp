@@ -1,6 +1,8 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { FileUploader } from 'ng2-file-upload';
-import { MissionModel } from '../../models';
+import { TabComponent } from '../../models';
+
+import { MissionModel } from 'app/pages/mission-detail/models';
 
 @Component({
   selector: 'app-mission-detail-details',
@@ -8,16 +10,14 @@ import { MissionModel } from '../../models';
   styleUrls: ['./details.component.css']
 })
 
-export class DetailsComponent implements OnInit {
+export class DetailsComponent extends TabComponent implements OnInit {
   @Input() model: MissionModel;
 
   public uploader: FileUploader;
   public hasBaseDropZoneOver = false;
   public hasAnotherDropZoneOver = false;
 
-  public name = 'test';
-
-  constructor() { }
+  constructor() { super(); }
 
   public fileOverBase(e: any): void {
     this.hasBaseDropZoneOver = e;
@@ -25,9 +25,5 @@ export class DetailsComponent implements OnInit {
 
   ngOnInit() {
     this.uploader = new FileUploader({url: this.model.fileName});
-  }
-
-  onSubmit() {
-
   }
 }

@@ -154,13 +154,13 @@
   .switch.switch-text.switch-lg {
     width: 56px;
     height: 28px; }
-    .switch.switch-text.switch-lg .switch-label {
-      font-size: 12px; }
-    .switch.switch-text.switch-lg .switch-handle {
-      width: 24px;
-      height: 24px; }
-    .switch.switch-text.switch-lg .switch-input:checked ~ .switch-handle {
-      left: 30px; }
+  .switch.switch-text.switch-lg .switch-label {
+    font-size: 12px; }
+  .switch.switch-text.switch-lg .switch-handle {
+    width: 24px;
+    height: 24px; }
+  .switch.switch-text.switch-lg .switch-input:checked ~ .switch-handle {
+    left: 30px; }
   .switch.switch-text.switch-sm {
     width: 40px;
     height: 20px; }
@@ -257,13 +257,13 @@
   .switch.switch-icon.switch-lg {
     width: 56px;
     height: 28px; }
-    .switch.switch-icon.switch-lg .switch-label {
-      font-size: 12px; }
-    .switch.switch-icon.switch-lg .switch-handle {
-      width: 24px;
-      height: 24px; }
-    .switch.switch-icon.switch-lg .switch-input:checked ~ .switch-handle {
-      left: 30px; }
+  .switch.switch-icon.switch-lg .switch-label {
+    font-size: 12px; }
+  .switch.switch-icon.switch-lg .switch-handle {
+    width: 24px;
+    height: 24px; }
+  .switch.switch-icon.switch-lg .switch-input:checked ~ .switch-handle {
+    left: 30px; }
   .switch.switch-icon.switch-sm {
     width: 40px;
     height: 20px; }

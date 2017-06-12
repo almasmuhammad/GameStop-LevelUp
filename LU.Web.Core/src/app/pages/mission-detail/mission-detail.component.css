@@ -1,18 +1,18 @@
-/*@font-face {
-  font-family: 'solido_book';
-  src: url('../../css/fonts/Solido-Book.otf');
+.button-orange {
+  font-size: 14px !important;
 }
-@font-face {
-  font-family: 'solido_bold';
-  src: url('../../css/fonts/Solido-Bold.otf');
-}*/
+#main-content {
+  margin-bottom: 20px;
+}
+.modal-footer > button {
+  color: black;
+}
+
 body.body-objectives .navSelectLanguage {
   display: none !important;
 }
-body.body-missionwizard,
-body.body-objectives {
-  /* title bar in wizard */
-}
+
+
 body.body-missionwizard *:focus,
 body.body-objectives *:focus {
   outline: 0;
