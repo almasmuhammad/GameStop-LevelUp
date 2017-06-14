@@ -1,57 +1,81 @@
 <section class="container" style="padding-top:90px">
-    <div id="mainContent">
+    <div class="text-center" *ngIf="isBusy"><i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i></div>
+    <div id="mainContent" *ngIf="!isBusy">
         <div  id="wizardAccordion">
         <app-accordion>
             <app-accordion-tab active="true" header="Mission Details" #detailTab>
-                <app-mission-detail-details [model]="model"
-                (onNextStep)="changeLinkedTab(audienceTab)"></app-mission-detail-details>
+                <app-mission-detail-details [model]="model" [busyState]="missionState" #detailStep
+                (onNextStep)="changeLinkedTab(audienceTab, saveDetails, this)"></app-mission-detail-details>
             </app-accordion-tab>
-            <app-accordion-tab header="Audience" #audienceTab>
-                <app-mission-detail-audience [model]="model"
-                (onNextStep)="changeLinkedTab(categoryTab)"
-                (onPreviousStep)="changeLinkedTab(detailTab)"></app-mission-detail-audience>
+            <app-accordion-tab header="Audience" #audienceTab [disabled]="model.id === 0">
+                <app-mission-detail-audience [model]="model" #audienceStep
+                    (onNextStep)="changeLinkedTab(categoryTab, saveAudience, this)"
+                    (onPreviousStep)="changeLinkedTab(detailTab, saveAudience, this)">
+                </app-mission-detail-audience>
             </app-accordion-tab>
-            <app-accordion-tab header="Category" #categoryTab>
-                <app-mission-detail-category [model]="model"
-                (onNextStep)="changeLinkedTab(prereqTab)"
-                (onPreviousStep)="changeLinkedTab(audienceTab)"></app-mission-detail-category>
+            <app-accordion-tab header="Category Selection" #categoryTab [disabled]="model.id === 0">
+                <app-mission-detail-category [model]="model" #categoryStep
+                    (onNextStep)="changeLinkedTab(prereqTab, saveCategory, this)"
+                    (onPreviousStep)="changeLinkedTab(audienceTab, saveCategory, this)">
+                </app-mission-detail-category>
             </app-accordion-tab>
-            <app-accordion-tab header="Prerequisites" #prereqTab>
-                <app-mission-detail-prereq [model]="model"
-                (onNextStep)="changeLinkedTab(pubTab)"
-                (onPreviousStep)="changeLinkedTab(categoryTab)"></app-mission-detail-prereq>
+            <app-accordion-tab header="Prerequisites" #prereqTab [disabled]="model.id ===0">
+                <app-mission-detail-prereq [model]="model" #prereqStep
+                    (onNextStep)="changeLinkedTab(pubTab, savePrereq, this)"
+                    (onPreviousStep)="changeLinkedTab(categoryTab, savePrereq, this)">
+                </app-mission-detail-prereq>
             </app-accordion-tab>
-            <app-accordion-tab header="Publication Dates" #pubTab>
+            <app-accordion-tab header="Publication Dates" #pubTab [disabled]="model.id === 0">
                 <app-mission-detail-publication [model]="model"></app-mission-detail-publication>
             </app-accordion-tab>
         </app-accordion>
         </div>
         <div class="row">
             <div class="col-xs-12">
-                <button type="button" id="NextWizard" name="NextWizard"
+                <button type="button" id="NextWizard" name="NextWizard" [disabled]="model.id === 0"
                 (click)="saveAndAddContent()"
                 class="button-orange center-block">{{'Save and Begin Adding Content'|translate}}</button>
             </div>
         </div>
     </div>
     <div class="modal fade" bsModal #canNavModal="bs-modal" [config]="{backdrop: 'static'}"
-    tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-        <div class="modal-header">
-            <h4 class="modal-title pull-left">Leaving Mission Details</h4>
-            <button type="button" class="close pull-right" aria-label="Close" (click)="canNavAway(true);">
-            <span aria-hidden="true" (click)="canNavAway(false)">X</span>
-            </button>
-        </div>
-        <div class="modal-body">
-            Are you sure you would like to leave Mission Details?
-        </div>
-        <div class="modal-footer">
-            <button class="btn pull-left" (click)="canNavAway(true)">Ok</button>
-            <button class="btn pull-left" (click)="canNavAway(false)">Cancel</button>
+        tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title pull-left">Leaving Mission Details</h4>
+                <button type="button" class="close pull-right" aria-label="Close" (click)="canNavAway(true);">
+                <span aria-hidden="true" (click)="canNavAway(false)">X</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Are you sure you would like to leave Mission Details?
+            </div>
+            <div class="modal-footer">
+                <button class="btn pull-left" (click)="canNavAway(true)">Ok</button>
+                <button class="btn pull-left" (click)="canNavAway(false)">Cancel</button>
+                </div>
             </div>
         </div>
     </div>
-</div>
+    <div class="modal fade" bsModal #validationModal="bs-modal" [config]="{backdrop: 'static'}"
+        tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title pull-left">Validation Errors</h4>
+                <button type="button" class="close pull-right" aria-label="Close" (click)="validationModal.hide();">
+                <span aria-hidden="true">X</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div *ngFor="let error of validationErrors">{{error}}</div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn pull-left" (click)="validationModal.hide();">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </section>

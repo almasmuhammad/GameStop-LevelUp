@@ -1,18 +1,23 @@
-import { MissionAudienceModel } from './mission-audience-model';
+import { NameIdModel } from '.';
 
 export class MissionModel {
 
   constructor(
-    public id = 0,
-    public name = '',
+    public missionId = 0,
+    public missionName = '',
     public description = '',
-    public fileName = '',
-    public allowRatings = true,
+    public badgeImagePath = '',
+    public allowRating = true,
     public allowPoints = true,
-    public canDoubleXP = true,
-    public showNotificationsOnRelease = true,
-    public showNotificationsOnUpdate = true,
-    public missionAudiences: MissionAudienceModel[] = []) {
-
-    }
+    public allowDoubleXP = true,
+    public allowReleaseNotifications = true,
+    public allowUpdatedNotifications = true,
+    public publicationDate: Date = null,
+    public expirationDate: Date = null,
+    public audienceGroups: NameIdModel[] = [],
+    public audienceUsers: NameIdModel[] = [],
+    public categories: NameIdModel[] = [],
+    public prereqCategories: NameIdModel[] = [],
+    public prereqMissions: NameIdModel[] = []
+    ) { }
 }

@@ -38,6 +38,9 @@ app-accordion-tab.app-accordion-tab-active>.app-accordion-header {
     border-color: #ffffff;
     box-shadow: 0 1px 0 #106cc8
 }
+app-accordion-tab.app-accordion-tab-disabled {
+    cursor: no-drop;
+}
 app-accordion-tab.app-accordion-tab-disabled>.app-accordion-header {
     pointer-events: none;
 

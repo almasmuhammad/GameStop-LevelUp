@@ -28,7 +28,7 @@ export const routes: Routes = [
         { path: 'mission-detail',
           loadChildren: 'app/pages/mission-detail/mission-detail.module#MissionDetailModule',
           canActivate: [ ProfileGuard ] },
-        { path: 'mission-detail/:1d',
+        { path: 'mission-detail/:id',
           loadChildren: 'app/pages/mission-detail/mission-detail.module#MissionDetailModule',
           canActivate: [ ProfileGuard ] },
         { path:  '**', redirectTo:  'my-stuff' }

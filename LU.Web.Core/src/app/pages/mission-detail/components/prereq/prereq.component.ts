@@ -8,7 +8,6 @@ import { TabComponent } from '../../models';
   styleUrls: ['./prereq.component.css']
 })
 export class PrereqComponent extends TabComponent implements OnInit {
-  @Input() model: MissionModel;
 
   constructor() { super(); }
 

@@ -7,14 +7,24 @@ var express = require('express');
 var cors = require('cors');
 var fs = require('fs'); 
 var multer = require('multer');
+var bodyParser = require('body-parser');
 var app = express();
-var timeoutDelay = 1000;
+var timeoutDelay = 2000;
 
 var DIR = './uploads/';
- 
 var upload = multer({dest: DIR});
 
+//app.use(bodyParser.json({ type: 'application/json' }))
 app.use(cors());
+//app.use(express.bodyParser());
+var jsonParser = bodyParser.json()
+var urlencodedParser = bodyParser.urlencoded({ extended: false })
+
+var missions = [];
+missions.push(
+  JSON.parse(`{"missionId":1, "missionName":"XBOX 462", "badgeImagePath":"https://www.fillmurray.com/200/300","description":"descript mission stuff","allowRating":true, "allowPoints":false,"allowDoubleXP":false,"allowReleaseNotifications":true,"allowUpdateNotifications":false}`));
+missions.push(
+  JSON.parse(`{"missionId":2, "missionName":"PLAYSTATION 242", "badgeImagePath":"https://www.fillmurray.com/200/300","description":"descript mission stuff","allowRating":false, "allowPoints":true,"allowDoubleXP":false,"allowReleaseNotifications":true,"allowUpdateNotifications":false}`));
 
 
 var users = JSON.parse(`{
@@ -58,6 +68,7 @@ app.get('/users/',function(req,res){
   console.log('route request - users');
         res.json(users);
 });
+
 app.get('/users/:id', function (req, res) {
   console.log('route request - users/id');
   if(req.params.id) {
@@ -72,8 +83,7 @@ app.get('/users/:id', function (req, res) {
 });
 
 app.get('/api/user/userinfo', function(req, res){
-
-var data = JSON.parse(`{"firstName": "Almas",
+  var data = JSON.parse(`{"firstName": "Almas",
         "lastName": "24K",
         "level": 17,
         "currentXp": 75,
@@ -88,6 +98,40 @@ var data = JSON.parse(`{"firstName": "Almas",
     }
 
   res.json(data);
+});
+
+app.get('/api/missioncreation', function(req,res) {
+  sleep(timeoutDelay);
+  res.json(missions);
+});
+
+app.get('/api/missioncreation/:id', function(req,res) {
+  sleep(timeoutDelay);
+  if(req.params.id) {
+    var mission = missions.filter(function(m){return m.missionId === +req.params.id});
+    if (mission) res.json(mission)
+    else res.status(404).end();
+  }
+});
+
+app.put('/api/missioncreation', jsonParser, function(req, res) {
+  var body = req.body;
+  var id = null;
+  if (body.missionId === null) {
+    id = maxMissionId() + 1;
+    console.log(id);
+    body.missionId = id;
+    missions.push(body);
+  } else {
+    // update
+    var editMission = missions.filter(function(m){return m.missionId === +body.missionId});
+    if (editMission.length === 0) {
+      res.status(404).end();
+    }
+    editMission = body;
+  }
+
+  res.json(id);
 });
 
 app.post('/api/login', function(req, res){
@@ -112,7 +156,8 @@ app.get('/api/Application/Profile', function (req,res){
 
 app.get('/unauth',function (req, res){
   console.log('route request - unauth');
-  res.status(401).end();});
+  res.status(401).end();
+});
 
 var server = app.listen(65495, function () {
   var host = server.address().address;
@@ -123,4 +168,8 @@ var server = app.listen(65495, function () {
 function sleep(time){
   if(!time) time = 3000;
   var stop = new Date().getTime();  while(new Date().getTime() < stop + time) {var k=1;}
+}
+
+function maxMissionId() {
+  return Math.max.apply(Math, missions.map(function(m){return m.missionId}));
 }

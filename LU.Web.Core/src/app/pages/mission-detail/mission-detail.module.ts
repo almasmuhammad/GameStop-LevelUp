@@ -4,9 +4,11 @@ import { FormsModule } from '@angular/forms';
 
 import { TranslateModule } from '@ngx-translate/core';
 import { FileUploadModule } from 'ng2-file-upload';
+import { ModalModule } from 'ngx-bootstrap/modal';
+
 import { MissionDetailRoutingModule } from './mission-detail-routing.module';
 
-import { ModalModule } from 'ngx-bootstrap/modal';
+import { MissionDetailService } from './services';
 
 import {
   SwitchComponent,
@@ -44,7 +46,8 @@ import { PublicationComponent } from './components/publication/publication.compo
     , AccordionHeaderDirective
     ],
   providers: [
-    CanDeactivateGuardService
+    CanDeactivateGuardService,
+    MissionDetailService
   ]
 })
 export class MissionDetailModule { }

@@ -8,7 +8,6 @@ import { TabComponent } from '../../models';
   styleUrls: ['./publication.component.css']
 })
 export class PublicationComponent extends TabComponent implements OnInit {
-  @Input() model: MissionModel;
 
   constructor() { super(); }
 

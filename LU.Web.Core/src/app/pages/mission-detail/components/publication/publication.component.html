@@ -1,12 +1,12 @@
 <div>
     <div class="row">
         <div class="col-xs-12 col-sm-6">
-            <label id="GoalsPublishDateLabel" for="GoalsPublishDate" data-i18n="missionwizard.publicationdates.publishdate">Publish Date (MM/DD/YYYY)</label><i class="fa fa-asterisk"></i>
-            <input id="GoalsPublishDate" class="step-inputs form-control goalsRequired" required value="" />
+            <label id="GoalsPublishDateLabel" for="GoalsPublishDate">Publish Date (MM/DD/YYYY)</label><i class="fa fa-asterisk"></i>
+            <input id="GoalsPublishDate" class="step-inputs form-control goalsRequired" required [(ngModel)]="model.publicationDate" />
         </div>
         <div class="col-xs-12 col-sm-6">
-            <label id="GoalsExpirationDateLabel" for="GoalsExpirationDate" data-i18n="missionwizard.publicationdates.expirationdate">Expiration Date (MM/DD/YYYY)</label><i class="fa fa-asterisk"></i>
-            <input id="GoalsExpirationDate" class="step-inputs form-control goalsRequired" required value="" />
+            <label id="GoalsExpirationDateLabel" for="GoalsExpirationDate">Expiration Date (MM/DD/YYYY)</label><i class="fa fa-asterisk"></i>
+            <input id="GoalsExpirationDate" class="step-inputs form-control goalsRequired" [(ngModel)]="model.expirationDate" />
         </div>
     </div>
 

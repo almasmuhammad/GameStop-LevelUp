@@ -7,6 +7,13 @@
 .modal-footer > button {
   color: black;
 }
+#NextWizard[disabled] {
+  cursor: no-drop;
+}
+
+
+
+
 
 body.body-objectives .navSelectLanguage {
   display: none !important;
