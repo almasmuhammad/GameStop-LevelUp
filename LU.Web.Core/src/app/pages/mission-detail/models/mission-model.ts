@@ -1,4 +1,4 @@
-import { NameIdModel } from '.';
+import { NameIdModel, UserModel, GroupModel } from '.';
 
 export class MissionModel {
 
@@ -14,8 +14,8 @@ export class MissionModel {
     public allowUpdatedNotifications = true,
     public publicationDate: Date = null,
     public expirationDate: Date = null,
-    public audienceGroups: NameIdModel[] = [],
-    public audienceUsers: NameIdModel[] = [],
+    public audienceGroups: GroupModel[] = [],
+    public audienceUsers: UserModel[] = [],
     public categories: NameIdModel[] = [],
     public prereqCategories: NameIdModel[] = [],
     public prereqMissions: NameIdModel[] = []

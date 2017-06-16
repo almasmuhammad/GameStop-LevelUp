@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http, Response, RequestOptions, Headers } from '@angular/http';
 
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs/Rx';
 import { Subject } from 'rxjs/Subject';
 import { ErrorObservable } from 'rxjs/observable/ErrorObservable';
 
@@ -20,6 +20,8 @@ export class AppService {
   // private appSettingLoadSubject = new Subject<boolean>();
   // public appSettingLoadComplete = this.appSettingLoadSubject.asObservable();
 
+  private logger: LoggerService;
+
   public loggedOutEvent = this.loggedOutSubject.asObservable();
   public serviceErrorEvent = this.serviceErrorSubject.asObservable();
 
@@ -29,7 +31,9 @@ export class AppService {
     private _http: Http,
     private _cookies: CookieService,
     private _logger: LoggerService
-  ) { }
+  ) {
+    this.logger = _logger;
+  }
 
   public buildApiActionURL(actionUrl: string): string {
     return this.appSettings.apiURL + actionUrl;
@@ -50,7 +54,7 @@ export class AppService {
     return (token || '').length > 0;
   }
 
-  public handleServiceError(error: Response | any): ErrorObservable<string> {
+  public handleServiceError(error: Response | any): ErrorObservable<Response> {
     if (!error) {
       return;
     }

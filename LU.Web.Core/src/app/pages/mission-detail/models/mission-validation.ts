@@ -37,7 +37,6 @@ export class MissionValidation {
 
     return errors;
   }
-
   public static getAudienceValidationFailures(model: MissionModel): string[] {
     const errors: string[] = [];
 
@@ -64,5 +63,20 @@ export class MissionValidation {
       errors.push('translate need badge image');
     }
     return errors;
+  }
+
+  public static isMissionDetailDirty(model: MissionModel, originalModel: MissionModel): boolean {
+    return !(model.missionName === originalModel.missionName &&
+      model.badgeImagePath === originalModel.badgeImagePath &&
+      model.description === originalModel.description &&
+      model.allowDoubleXP === originalModel.allowDoubleXP &&
+      model.allowPoints === originalModel.allowPoints &&
+      model.allowRating === originalModel.allowRating &&
+      model.allowReleaseNotifications === originalModel.allowReleaseNotifications &&
+      model.allowUpdatedNotifications === originalModel.allowUpdatedNotifications)
+  }
+
+  public static isAudienceDirty(model: MissionModel, originalModel: MissionModel): boolean {
+    return true;
   }
 }

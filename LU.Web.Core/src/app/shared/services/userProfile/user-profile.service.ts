@@ -64,7 +64,7 @@ export class UserProfileService {
             userProfileModel.roles = applicationProfileViewModel.roles;
             return userProfileModel;
           })
-          .catch(this._appService.handleServiceError);
+          .catch((err, caught) => this._appService.handleServiceError(err));
     // }
 
   }

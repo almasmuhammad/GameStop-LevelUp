@@ -16,6 +16,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 // Cookies used with authentication from API server and possible local storage
 import { CookieModule, CookieService } from 'ngx-cookie';
+import { ToasterModule, ToasterService, ToasterContainerComponent } from 'angular2-toaster';
 
 // Logger,Window and User Services
 import { UserContextService } from './shared/services/userContext/user-context.service';
@@ -49,6 +50,7 @@ export function HttpLoaderFactory(http: Http) {
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    ToasterModule,
     TranslateModule.forRoot({
             loader: {
               provide: TranslateLoader,
@@ -63,6 +65,7 @@ export function HttpLoaderFactory(http: Http) {
   ],
   providers: [
     TranslateService,
+    ToasterService,
     CookieService,
     LoggerService,
     WindowService,

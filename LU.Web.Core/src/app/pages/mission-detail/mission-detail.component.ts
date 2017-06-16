@@ -3,6 +3,7 @@ import { Router, ActivatedRoute, CanDeactivate } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
 import { Subject } from 'rxjs/Subject';
 import { ModalDirective } from 'ngx-bootstrap/modal';
+import { ToasterService } from 'angular2-toaster';
 import { AccordionComponent, AccordionTabComponent } from '../../shared';
 
 import {
@@ -29,11 +30,12 @@ export class MissionDetailComponent implements OnInit {
 
   public model: MissionModel;
   public missionState = new MissionStateModel();
-  public isBusy = true;
+  public isBusy = false;
   public validationErrors: string[];
 
   constructor(
     private activatedRoute: ActivatedRoute,
+    private toasterService: ToasterService,
     private missionDetailService: MissionDetailService) { }
 
   ngOnInit() {
@@ -41,7 +43,6 @@ export class MissionDetailComponent implements OnInit {
     .subscribe(params => {
       const id = +params['id'] || 0;
       this.loadDetails(id);
-      this.isBusy = false;
     });
   }
 
@@ -59,7 +60,7 @@ export class MissionDetailComponent implements OnInit {
         return;
       }
 
-      // if new then hold all until mission created
+      // if new mission then hold all steps until mission created
       if (this.model.missionId < 1) {
         this.missionState.detailIsBusy = true;
 
@@ -68,26 +69,27 @@ export class MissionDetailComponent implements OnInit {
           (missionId: number) => {
             if (!missionId || missionId < 1) {
               this.missionState.detailSaveFailed = true;
-              // fire alert
+              this.toasterService.popAsync('error', '', 'Mission creation failed.');
             }
 
+            this.missionState.detailIsBusy = false;
             this.missionState.detailSaveFailed = false;
-            this.originalModel = this.model;
+            this.originalModel = JSON.parse(JSON.stringify(this.model));
             this.model.missionId = missionId;
+            this.toasterService.popAsync('success', '', 'Mission Created');
 
-            // fire alert
-
-            tab._handleClick(event);
             this.lastTab = tab;
+            tab.disabled = false;
+            tab._handleClick(event);
           },
           (error) => {
             this.missionState.detailSaveFailed = true;
-            // fire alert
-          },
-          () => { this.missionState.detailIsBusy = false; });
+            this.missionState.detailIsBusy = false;
+            this.toasterService.popAsync('error', '', 'Mission creation failed.');
+          });
       } else {
+            this.lastTab = tab;
           tab._handleClick(event);
-          this.lastTab = tab;
       }
     }
   }
@@ -152,29 +154,70 @@ export class MissionDetailComponent implements OnInit {
     // route if save completes
   }
 
-  protected saveDetails(_this: MissionDetailComponent): string[] {
-    const errors = MissionValidation.getDetailValidationFailures(_this.model);
+  protected saveDetails(this_: MissionDetailComponent): string[] {
+
+    const errors = MissionValidation.getDetailValidationFailures(this_.model);
     if (errors && errors.length > 0) {
       return errors;
     }
 
-    if (_this.model.missionId < 1) {
-      return null;
+// TODO abstract
+    if (this_.model.missionId > 0) {
+      if (!MissionValidation.isMissionDetailDirty(this_.model, this_.originalModel)) {
+        return null;
+      }
+
+    this_.missionState.detailIsBusy = true;
+
+    this_.missionDetailService.saveMission(this_.model)
+        .subscribe(
+          (missionId: number) => {
+            this_.missionState.detailSaveFailed = false;
+            this_.missionState.detailIsBusy = false;
+            this_.originalModel = JSON.parse(JSON.stringify(this_.model));
+            this_.toasterService.popAsync('success', '', 'Mission saved.');
+          },
+          (error) => {
+            this_.missionState.detailSaveFailed = true;
+            this_.missionState.detailIsBusy = false;
+            if (error && error.status && error.status === 404) {
+              this_.toasterService.popAsync('error', '', 'Mission does not exist.');
+            } else {
+              this_.toasterService.popAsync('error', '', 'Mission save failed.');
+            }
+          });
     }
-
-    _this.missionState.detailIsBusy = true;
-    // call service
-    // show alert for good or bad return
-
     return null;
   }
-  protected saveAudience(_this: MissionDetailComponent): string[] {
-    const errors = MissionValidation.getAudienceValidationFailures(_this.model);
+  protected saveAudience(this_: MissionDetailComponent): string[] {
+    const errors = MissionValidation.getAudienceValidationFailures(this_.model);
     if (errors && errors.length > 0) {
       return errors;
     }
 
-    // persist
+    if (MissionValidation.isAudienceDirty(this_.model, this_.originalModel)) {
+     //  return null;
+    }
+
+    this_.missionState.audienceIsBusy = true;
+
+    this_.missionDetailService.saveAudience(this_.model)
+    .subscribe(
+          () => {
+            this_.missionState.audienceSaveFailed = false;
+            this_.missionState.audienceIsBusy = false;
+            this_.toasterService.popAsync('success', '', 'Audience saved.');
+          },
+          (error) => {
+            this_.missionState.audienceSaveFailed = true;
+            this_.missionState.audienceIsBusy = false;
+            if (error && error.status && error.status === 404) {
+              this_.toasterService.popAsync('error', '', 'Mission does not exist.');
+            } else {
+              this_.toasterService.popAsync('error', '', 'Audience save failed.');
+            }
+          });
+
     return null;
   }
   protected saveCategory(_this: MissionDetailComponent): string[] {
@@ -198,19 +241,34 @@ export class MissionDetailComponent implements OnInit {
 
   private loadDetails(id: number): void {
     if (id > 0) {
-      // load from service
-      this.model = new MissionModel();
-      this.model.missionId = id;
-      this.model.missionName = 'Mission ' + id;
-      this.model.description = 'detailed mission description';
-      this.model.badgeImagePath = 'something.png';
+      this.isBusy = true;
+      this.missionDetailService.getMission(id)
+      .subscribe((mission) => {
+        this.isBusy = false;
+        if (!mission) {
+          this.createEmptyMission();
+          this.toasterService.popAsync('error', '', 'Mission does not exist.');
+        } else {
+        this.model = mission;
+        this.originalModel = mission;
+        }
+      },
+      (error) => {
+        this.isBusy = false;
+        this.createEmptyMission();
+        this.toasterService.popAsync('error', '', 'Mission retrieval failed.');
+      });
     } else {
+      this.createEmptyMission();
+    }
+  }
+
+  private createEmptyMission(): void {
       this.model = new MissionModel();
       this.model.missionId = 0;
       this.model.missionName = '';
       this.model.description = '';
       this.model.badgeImagePath = 'defaultBadge.png';
-    }
   }
 }
 

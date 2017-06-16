@@ -4,3 +4,6 @@ export * from './tab-component';
 export * from './mission-state-model';
 export * from './mission-validation';
 export * from './publish-model';
+export * from './group-model';
+export * from './user-model';
+export * from './mission-audience-model';

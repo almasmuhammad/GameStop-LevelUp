@@ -7,27 +7,26 @@ import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
 
 // Services
-import { LoggerService } from '../../../../../shared/services/logs';
-import { AppService } from './../../../../../shared/services/appService';
+import { LoggerService } from '../../../shared/services/logs';
+import { AppService } from '../../../shared/services/appService';
 
-// Models
-import { UserInformationViewModel } from '../models';
+import { GroupModel } from '../models';
 
 @Injectable()
-export class UserInfoService {
-
+export class UserGroupService {
   constructor(
     private _http: Http,
     private _logger: LoggerService,
     private _appService: AppService) {}
 
-    public getUserInfo(): Observable<UserInformationViewModel> {
+    getGroups(): Observable<GroupModel[]> {
       return this._http.get(
-        this._appService.buildApiActionURL('User/UserInfo'),
+        this._appService.buildApiActionURL('MissionAudience/Groups/'),
         this._appService.buildRequestOptions())
         .map((response: Response) => {
-            return <UserInformationViewModel>response.json();
+            return <GroupModel[]>response.json();
           })
         .catch((err, caught) => this._appService.handleServiceError(err));
     }
+
 }

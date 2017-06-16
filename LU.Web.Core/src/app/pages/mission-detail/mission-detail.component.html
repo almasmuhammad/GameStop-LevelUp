@@ -7,32 +7,32 @@
                 <app-mission-detail-details [model]="model" [busyState]="missionState" #detailStep
                 (onNextStep)="changeLinkedTab(audienceTab, saveDetails, this)"></app-mission-detail-details>
             </app-accordion-tab>
-            <app-accordion-tab header="Audience" #audienceTab [disabled]="model.id === 0">
-                <app-mission-detail-audience [model]="model" #audienceStep
+            <app-accordion-tab active="false" header="Audience" #audienceTab [disabled]="!model.missionId" [active]="audienceStep.onActivated(audienceTab)">
+                <app-mission-detail-audience [model]="model" [busyState]="missionState" #audienceStep
                     (onNextStep)="changeLinkedTab(categoryTab, saveAudience, this)"
                     (onPreviousStep)="changeLinkedTab(detailTab, saveAudience, this)">
                 </app-mission-detail-audience>
             </app-accordion-tab>
-            <app-accordion-tab header="Category Selection" #categoryTab [disabled]="model.id === 0">
-                <app-mission-detail-category [model]="model" #categoryStep
+            <app-accordion-tab active="false" header="Category Selection" #categoryTab [disabled]="!model.missionId">
+                <app-mission-detail-category [model]="model" [busyState]="missionState" #categoryStep
                     (onNextStep)="changeLinkedTab(prereqTab, saveCategory, this)"
                     (onPreviousStep)="changeLinkedTab(audienceTab, saveCategory, this)">
                 </app-mission-detail-category>
             </app-accordion-tab>
-            <app-accordion-tab header="Prerequisites" #prereqTab [disabled]="model.id ===0">
-                <app-mission-detail-prereq [model]="model" #prereqStep
+            <app-accordion-tab active="false" header="Prerequisites" #prereqTab [disabled]="!model.missionId">
+                <app-mission-detail-prereq [model]="model" [busyState]="missionState" #prereqStep
                     (onNextStep)="changeLinkedTab(pubTab, savePrereq, this)"
                     (onPreviousStep)="changeLinkedTab(categoryTab, savePrereq, this)">
                 </app-mission-detail-prereq>
             </app-accordion-tab>
-            <app-accordion-tab header="Publication Dates" #pubTab [disabled]="model.id === 0">
-                <app-mission-detail-publication [model]="model"></app-mission-detail-publication>
+            <app-accordion-tab active="false" header="Publication Dates" #pubTab [disabled]="!model.missionId">
+                <app-mission-detail-publication [model]="model" [busyState]="missionState" #pubStep></app-mission-detail-publication>
             </app-accordion-tab>
         </app-accordion>
         </div>
         <div class="row">
             <div class="col-xs-12">
-                <button type="button" id="NextWizard" name="NextWizard" [disabled]="model.id === 0"
+                <button type="button" id="NextWizard" name="NextWizard" [disabled]="model.missionId === 0"
                 (click)="saveAndAddContent()"
                 class="button-orange center-block">{{'Save and Begin Adding Content'|translate}}</button>
             </div>

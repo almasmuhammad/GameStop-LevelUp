@@ -4,23 +4,51 @@
             <div class="col-xs-2 colOne"><p><img src="./assets/img/Mission-Central_08.png" alt="mission central">{{'mission-central' | translate}}</p></div>
         </div>
 
-    <div class="missionCentralRow secondRow">
-        <div class="col-xs-6">
-          <p routerLink="../../mission-detail">
-              <img src="./assets/img/createNewMission.png" alt="new mission">{{'create-new-mission' | translate}}
-              </p>
+        <div class="missionCentralRow secondRow">
+            <div class="col-xs-12">
+            <p routerLink="../../mission-detail">
+                <img src="./assets/img/createNewMission.png" alt="new mission">{{'create-new-mission' | translate}}
+                </p>
+            </div>
+
+            <div class="inner-addon right-addon search-box col-xs-3">
+                <i class="fa fa-search "></i>
+                <input type="text" placeholder="search missions by name..." class="form-control search" />
+            </div>
         </div>
+        <hr>
+        <table style="border-collapse: collapse;width: 100%; color:black">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Created Date</th>
+                    <th>Created By</th>
+                    <th>Date Published</th>
+                    <th>Status</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><i class="fa fa-file-text-o missionCentralChatIcon" data-missioncontentid="224"></i></td>
+                    <td>Quiz Filled Test</td>
+                    <td>Just to get a bunch of perfect scores in a row</td>
+                    <td>4/20/2017 </td>
+                    <td>Adam Scott</td>
+                    <td>4/19/2017</td>
+                    <td>Published</td>
+                    <td>
+                        <div class="text-nowrap">
+                            <button class="btn btn-sm button-next" style="width:50%; height:50%; font-size:12px" type="button">Delete</button>
+                            <button class="btn btn-sm button-next" style="width:50%; height:50%; font-size:12px" type="button" routerLink="../../mission-detail/3">Edit</button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+            <br><br><br><br><br><br>
 
-<div class="inner-addon right-addon search-box col-xs-6">
-    <i class="fa fa-search "></i>
-    <input type="text" placeholder="search missions by name..." class="form-control search" />
-</div>
     </div>
-    <hr>
-
-        <br><br><br><br><br><br>
-        <br><br><br>
-        <br><br><br><br><br><br>
-
-</div>
 </div>
