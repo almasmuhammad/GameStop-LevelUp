@@ -29,5 +29,10 @@
     "english":"English",
     "french":"French",
     "spanish":"Spanish",
-    "Mission Badge Image":"Mission Badge Image"
+    "Mission Badge Image":"Mission Badge Image",
+    "tooltip-avatar-background": "Click to change your Avatar & Background!",
+    "tooltip-rank": "Your RANK is determined by your length of service. Rank up!",
+    "tooltip-unlock-icon": "You have NEW items unlocked!",
+    "tooltip-profile-mission-percent": "Complete all MY POSITION missions to become CERTIFIED.",
+    "tooltip-topcategories": "Your progress with GameStop’s Top Categories"
 }

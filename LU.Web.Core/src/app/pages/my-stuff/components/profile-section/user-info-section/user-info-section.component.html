@@ -3,7 +3,7 @@
     <!--User Name Section of User Info Section-->
      <div class="username">{{model.firstName | uppercase}} {{model.lastName | uppercase}}</div>
 
-    <div class="userrank masterTooltip" title="Your RANK is determined by your length of service. Rank Up!">{{model.rank | uppercase}}</div>
+    <div class="userrank masterTooltip" title="{{ 'tooltip-rank' | translate }}">{{model.rank | uppercase}}</div>
 
     <div class="row certs">
         <div class="col-xs-2 col-xs-2 col-xs-5 nopad leaderboard-col-star masterTooltip"
